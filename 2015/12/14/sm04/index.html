@@ -56,7 +56,7 @@
 <meta name="description" content="Windows环境下编译的VLC或通过Linux交叉编译的VLC，调试起来非常麻烦，之前的51CTO的博客写过老版本的VLC的调试，改动太多，速度也很慢，故新版本并没有继续在类似环境下继续折腾VLC的调试。偶然发现Ubuntu下直接编译VLC很快很好很方便，而且配合GDB调试只要加一条指令即可。另外，配合QT Creator，在IDE中设置断点，读取打印变量等都非常的直观。本文介绍VLC2.2.1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="流媒体04：VLC2.2.1的Linux编译及调试">
-<meta property="og:url" content="http://yoursite.com/2015/12/14/sm04/index.html">
+<meta property="og:url" content="http://higoge.github.io/2015/12/14/sm04/index.html">
 <meta property="og:site_name" content="LearnIT">
 <meta property="og:description" content="Windows环境下编译的VLC或通过Linux交叉编译的VLC，调试起来非常麻烦，之前的51CTO的博客写过老版本的VLC的调试，改动太多，速度也很慢，故新版本并没有继续在类似环境下继续折腾VLC的调试。偶然发现Ubuntu下直接编译VLC很快很好很方便，而且配合GDB调试只要加一条指令即可。另外，配合QT Creator，在IDE中设置断点，读取打印变量等都非常的直观。本文介绍VLC2.2.1">
 <meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/sm/07.png">
@@ -294,7 +294,7 @@
 
       
         <span itemprop="articleBody"><p>Windows环境下编译的VLC或通过Linux交叉编译的VLC，调试起来非常麻烦，之前的51CTO的博客写过老版本的<a href="http://jeremiah.blog.51cto.com/539865/291032" target="_blank" rel="external">VLC的调试</a>，改动太多，速度也很慢，故新版本并没有继续在类似环境下继续折腾VLC的调试。偶然发现Ubuntu下直接编译VLC很快很好很方便，而且配合GDB调试只要加一条指令即可。<br>另外，配合QT Creator，在IDE中设置断点，读取打印变量等都非常的直观。<br>本文介绍VLC2.2.1的Linux编译，当然，编译的主要目的是：<strong>调试</strong>。<br><a id="more"></a></p>
-<h3 id="u73AF_u5883"><a href="#u73AF_u5883" class="headerlink" title="环境"></a>环境</h3><p>与交叉编译VLC2.2.1一样的环境，请参考<a href="http://higoge.github.io/2015/07/17/sm02/" target="_blank" rel="external">流媒体02：Linux交叉编译VLC-2.2.1</a>。</p>
+<h3 id="u73AF_u5883"><a href="#u73AF_u5883" class="headerlink" title="环境"></a>环境</h3><p>与交叉编译VLC2.2.1一样的环境，请参考<a href="http://higoge.github.io/2015/07/17/sm02/">流媒体02：Linux交叉编译VLC-2.2.1</a>。</p>
 <h3 id="u7F16_u8BD1"><a href="#u7F16_u8BD1" class="headerlink" title="编译"></a>编译</h3><p>在此只记录命令。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get build-dep vlc -y</span><br><span class="line">$ tar xJvf vlc-<span class="number">2.2</span>.<span class="number">1</span>.tar.xz</span><br><span class="line">$ <span class="built_in">cd</span> vlc-<span class="number">2.2</span>.<span class="number">1</span>/</span><br><span class="line">$ ./bootstrap</span><br><span class="line">$ ./configure --enable-debug</span><br><span class="line">$ make -j2</span><br></pre></td></tr></table></figure></p>
 <p>编译完成后，运行测试。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./vlc ~/<span class="number">01</span>.avi</span><br></pre></td></tr></table></figure></p>
 <p>从运行结果看，VLC的播放窗口与原有界面分离了，没有找到解决原因。<br><img src="https://raw.githubusercontent.com/higoge/image/master/sm/07.png" class="img-center"></p>
@@ -362,7 +362,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2015/12/14/sm04/"
-           data-title="流媒体04：VLC2.2.1的Linux编译及调试" data-url="http://yoursite.com/2015/12/14/sm04/">
+           data-title="流媒体04：VLC2.2.1的Linux编译及调试" data-url="http://higoge.github.io/2015/12/14/sm04/">
       </div>
     
   </div>

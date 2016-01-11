@@ -56,7 +56,7 @@
 <meta name="description" content="I hurry and do not delay to keep your commandments.(PSM119:60)">
 <meta property="og:type" content="website">
 <meta property="og:title" content="LearnIT">
-<meta property="og:url" content="http://yoursite.com/page/6/index.html">
+<meta property="og:url" content="http://higoge.github.io/page/6/index.html">
 <meta property="og:site_name" content="LearnIT">
 <meta property="og:description" content="I hurry and do not delay to keep your commandments.(PSM119:60)">
 <meta name="twitter:card" content="summary">
@@ -220,11 +220,6 @@
 
     
     
-      
-      
-
-      
-    
 
     
       
@@ -248,8 +243,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/07/06/git-remote02/" itemprop="url">
-                  Git远程02：git clone都做了什么
+                <a class="post-title-link" href="/2015/06/23/basic02/" itemprop="url">
+                  基础02：内存的大小端
                 </a>
               
             
@@ -259,633 +254,8 @@
         <div class="post-meta">
           <span class="post-time">
             發表於
-            <time itemprop="dateCreated" datetime="2015-07-06T20:42:19+08:00" content="2015-07-06">
-              2015-07-06
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/07/06/git-remote02/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/06/git-remote02/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> git@github0123:jeremy0123/fetch.git fetch-local</span><br></pre></td></tr></table></figure>
-<p>执行如上<code>git clone</code>指令，相对于执行了如下工作。</p>
-<ul>
-<li>创建一个文件夹fetch-local，执行<code>git init</code>初始化为一个仓库，<code>git remote add origin</code>到远程仓库。</li>
-<li>创建远程跟踪分支remote/origin/*。
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/07/06/git-remote02/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/07/06/git-remote01/" itemprop="url">
-                  Git远程01：git remote相关操作
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            發表於
-            <time itemprop="dateCreated" datetime="2015-07-06T19:36:13+08:00" content="2015-07-06">
-              2015-07-06
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/07/06/git-remote01/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/06/git-remote01/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="u6DFB_u52A0_u8FDC_u7A0B_u4ED3_u5E93_u5173_u8054"><a href="#u6DFB_u52A0_u8FDC_u7A0B_u4ED3_u5E93_u5173_u8054" class="headerlink" title="添加远程仓库关联"></a>添加远程仓库关联</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add [远程仓库名] [远程仓库url]</span><br></pre></td></tr></table></figure>
-<p>举个栗子：
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/07/06/git-remote01/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/07/03/git-basic04/" itemprop="url">
-                  Git基础04
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            發表於
-            <time itemprop="dateCreated" datetime="2015-07-03T23:06:06+08:00" content="2015-07-03">
-              2015-07-03
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/07/03/git-basic04/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/03/git-basic04/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="u4E34_u65F6_u5B58_u50A8_u5DE5_u4F5C_u533A"><a href="#u4E34_u65F6_u5B58_u50A8_u5DE5_u4F5C_u533A" class="headerlink" title="临时存储工作区"></a>临时存储工作区</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git stash <span class="comment"># 把当前工作现场(工作区及暂存区的修改)“储藏”起来，以后可恢复现场后继续工作</span></span><br><span class="line">Saved working directory and index state WIP on master: e353f90 Merge branch <span class="string">'br03'</span></span><br><span class="line">HEAD 现在位于 e353f90 Merge branch <span class="string">'br03'</span></span><br></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/07/03/git-basic04/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/07/03/git-basic03/" itemprop="url">
-                  Git基础03
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            發表於
-            <time itemprop="dateCreated" datetime="2015-07-03T21:54:10+08:00" content="2015-07-03">
-              2015-07-03
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/07/03/git-basic03/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/03/git-basic03/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="u5206_u652F"><a href="#u5206_u652F" class="headerlink" title="分支"></a>分支</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git branch br01 <span class="comment"># 创建br01分支</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout br01 <span class="comment"># 切换到br01分支</span></span><br><span class="line">切换到分支 <span class="string">'br01'</span></span><br></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/07/03/git-basic03/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/07/03/git-basic02/" itemprop="url">
-                  Git基础02
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            發表於
-            <time itemprop="dateCreated" datetime="2015-07-03T20:45:38+08:00" content="2015-07-03">
-              2015-07-03
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/07/03/git-basic02/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/03/git-basic02/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="u4E09_u79CD_u72B6_u6001"><a href="#u4E09_u79CD_u72B6_u6001" class="headerlink" title="三种状态"></a>三种状态</h2><h3 id="u4EC5_u4FEE_u6539_u4F46_u6CA1_u6709_u6DFB_u52A0_u5230_u6682_u5B58_u533A"><a href="#u4EC5_u4FEE_u6539_u4F46_u6CA1_u6709_u6DFB_u52A0_u5230_u6682_u5B58_u533A" class="headerlink" title="仅修改但没有添加到暂存区"></a>仅修改但没有添加到暂存区</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">位于分支 master</span><br><span class="line">尚未暂存以备提交的变更：</span><br><span class="line">  （使用 <span class="string">"git add &lt;file&gt;..."</span> 更新要提交的内容）</span><br><span class="line">  （使用 <span class="string">"git checkout -- &lt;file&gt;..."</span> 丢弃工作区的改动）</span><br><span class="line"></span><br><span class="line">        修改：     <span class="number">01</span>.txt</span><br><span class="line"></span><br><span class="line">修改尚未加入提交（使用 <span class="string">"git add"</span> 和/或 <span class="string">"git commit -a"</span>）</span><br></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/07/03/git-basic02/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/07/03/git-basic01/" itemprop="url">
-                  Git基础01
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            發表於
-            <time itemprop="dateCreated" datetime="2015-07-03T19:42:52+08:00" content="2015-07-03">
-              2015-07-03
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/07/03/git-basic01/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/03/git-basic01/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>Git基础教程，只介绍Git的基础命令，因为篇幅问题，将其分为4篇博客。</p>
-<h2 id="u4E3A_u4EC0_u4E48_u662FGit"><a href="#u4E3A_u4EC0_u4E48_u662FGit" class="headerlink" title="为什么是Git"></a>为什么是Git</h2><p>一句话：Git简单，上手快，支持本地无网络提交，多人协作方便。<br>缺点：要精通，需要一定的过程。推荐使用命令行模式，对于没有看惯了GUI的人，不习惯。<br>Git入门教程很多，最简单的教程是《<a href="http://rogerdudler.github.io/git-guide/index.zh.html">git - 简明指南</a>》，稍微详细点的是廖雪峰的《<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">Git教程</a>》。<br>Git最全的教程是《<a href="http://git-scm.com/doc">Pro Git</a>》(有<a href="http://git-scm.com/book/zh/v1">中文版本</a>)。<br>2015.09.17更新：有个歪果仁给我发邮件让我添加他的教程，有兴趣的请自行查看。<a href="https://blog.udemy.com/git-tutorial-a-comprehensive-guide/">Git Tutorial: A Comprehensive Guide</a><br>Git基础系列不准备详细的展开，因为跟上述教程的内容没有太大区别。只是把最常用的基础命令介绍出来。<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/07/03/git-basic01/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/07/02/basic04/" itemprop="url">
-                  基础04：移码和浮点数的二进制表示
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            發表於
-            <time itemprop="dateCreated" datetime="2015-07-02T20:28:13+08:00" content="2015-07-02">
-              2015-07-02
+            <time itemprop="dateCreated" datetime="2015-06-23T18:47:39+08:00" content="2015-06-23">
+              2015-06-23
             </time>
           </span>
 
@@ -910,8 +280,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/07/02/basic04/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/02/basic04/" itemprop="commentsCount"></span>
+                <a href="/2015/06/23/basic02/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/23/basic02/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -931,10 +301,10 @@
 
       
         
-          <p>本文介绍移码以及浮点数的二进制表示。其中浮点数的二进制表示比较难理解，需要一点点数学知识。</p>
-<h2 id="u6807_u51C6_u79FB_u7801"><a href="#u6807_u51C6_u79FB_u7801" class="headerlink" title="标准移码"></a>标准移码</h2><p>在一般情况下，移码就是将补码的符号位取反。<br>-118D = -1110110B (真值)<br>-118D表示-118的十进制；-1110110B表示二进制。<br>原码: 11110110<br>反码: 10001001<br>补码: 10001010<br>移码: 00001010<br>
+          <p><img src="https://raw.githubusercontent.com/higoge/image/master/basic02/00.jpg" class="img-topic" /><br>本文介绍内存的大小端，中间有一段代码需要有一点点C语言基础。</p>
+<h2 id="u6E90_u5934"><a href="#u6E90_u5934" class="headerlink" title="源头"></a>源头</h2><p>内存的大小端，始于鸡蛋的大小端，你信么？至于你信不信，我反正信了。<br>Jonathan Swift的《格列佛游记》(Gulliver’s Travels)：Lilliput和Blefuscu这两个强国在过去的36个月中一直在苦战。战争的原因：大家都知道，吃鸡蛋的时候，原始的方法是打破鸡蛋较大的一端，可以那时的皇帝的祖父由于小时侯吃鸡蛋，按这种方法把手指弄破了，因此他的父亲，就下令，命令所有的子民吃鸡蛋的时候，必须先打破鸡蛋较小的一端，违令者重罚。然后老百姓对此法令极为反感，期间发生了多次叛乱，其中一个皇帝因此送命，另一个丢了王位，产生叛乱的原因就是另一个国家Blefuscu的国王大臣煽动起来的，叛乱平息后，就逃到这个帝国避难。据估计，先后几次有11000余人情愿死也不肯去打破鸡蛋较小的端吃鸡蛋。Danny Cohen一位网络协议的开创者，第一次使用这两个术语指代字节顺序，后来就被大家广泛接受。<br>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/07/02/basic04/#more" rel="contents">
+            <a class="btn" href="/2015/06/23/basic02/#more" rel="contents">
               閱讀全文 &raquo;
             </a>
           </div>
@@ -977,8 +347,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/07/02/basic03/" itemprop="url">
-                  基础03：原码、反码、补码
+                <a class="post-title-link" href="/2015/06/23/basic01/" itemprop="url">
+                  基础01：比特、字节及进制
                 </a>
               
             
@@ -988,8 +358,8 @@
         <div class="post-meta">
           <span class="post-time">
             發表於
-            <time itemprop="dateCreated" datetime="2015-07-02T19:13:51+08:00" content="2015-07-02">
-              2015-07-02
+            <time itemprop="dateCreated" datetime="2015-06-23T18:27:39+08:00" content="2015-06-23">
+              2015-06-23
             </time>
           </span>
 
@@ -1014,8 +384,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/07/02/basic03/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/02/basic03/" itemprop="commentsCount"></span>
+                <a href="/2015/06/23/basic01/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/23/basic01/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1035,10 +405,10 @@
 
       
         
-          <p>本文介绍原码、反码、补码，以及为什么要使用补码。需要了解数学的取模运算。</p>
-<h2 id="u673A_u5668_u6570_u4E0E_u771F_u503C"><a href="#u673A_u5668_u6570_u4E0E_u771F_u503C" class="headerlink" title="机器数与真值"></a>机器数与真值</h2><p>机器数，即数字在计算机中的二进制表示形式。<br>真值，第一位用+-表示数字的正负，其余为二进制数。<br>举个栗子：-3的机器数是10000011，真值是-0000011。<br>
+          <p><img src="https://raw.githubusercontent.com/higoge/image/master/basic01/00.jpg" class="img-topic" /><br>位和字节及进制关系，是最基本的计算机基础知识，但实际使用中，是否真的理解清楚了？</p>
+<h2 id="u6BD4_u7279_u548C_u5B57_u8282"><a href="#u6BD4_u7279_u548C_u5B57_u8282" class="headerlink" title="比特和字节"></a>比特和字节</h2><p>Bit，比特，也叫二进制位，是信息的最小单位。一个比特可以理解为一个开关量，0就是关，1就是开。<br>Byte，字节，由8个Bit组成。它通常用作计算机信息计量单位。字节在一些规范中称作Octet。<br>Bit简写为b，Byte简写为B。<br>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/07/02/basic03/#more" rel="contents">
+            <a class="btn" href="/2015/06/23/basic01/#more" rel="contents">
               閱讀全文 &raquo;
             </a>
           </div>
@@ -1081,8 +451,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/07/01/vm13/" itemprop="url">
-                  虚拟机13：VMware Workstation 11发布
+                <a class="post-title-link" href="/2015/06/19/essay01/" itemprop="url">
+                  随笔01：第一篇
                 </a>
               
             
@@ -1092,8 +462,8 @@
         <div class="post-meta">
           <span class="post-time">
             發表於
-            <time itemprop="dateCreated" datetime="2015-07-01T22:57:43+08:00" content="2015-07-01">
-              2015-07-01
+            <time itemprop="dateCreated" datetime="2015-06-19T13:00:00+08:00" content="2015-06-19">
+              2015-06-19
             </time>
           </span>
 
@@ -1102,8 +472,8 @@
               &nbsp; | &nbsp; 分類於
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/虚拟机/" itemprop="url" rel="index">
-                    <span itemprop="name">虚拟机</span>
+                  <a href="/categories/随笔/" itemprop="url" rel="index">
+                    <span itemprop="name">随笔</span>
                   </a>
                 </span>
 
@@ -1118,8 +488,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/07/01/vm13/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/01/vm13/" itemprop="commentsCount"></span>
+                <a href="/2015/06/19/essay01/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/19/essay01/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -1139,118 +509,15 @@
 
       
         
-          <p>2014年12月，VMware Workstation 11发布。<br>新版本特性：</p>
-<ul>
-<li>支持 Windows 10 技术预览版。</li>
-<li>支持最新的处理器，支持最新的Intel 64 位 x86 处理器。</li>
-<li>可创建功能强大的虚拟机，可以创建拥有多达 16 个虚拟 CPU、8 TB 虚拟磁盘以及 64 GB 内存的虚拟机。</li>
-<li>支持最新的笔记本电脑和平板电脑，Workstation 11 已经过了优化，可以支持更高分辨率的显示器。</li>
-<li>用户界面改进，提高易用性和工作效率，保护您的工作并节省时间。
+          <p>这新博客开篇第一篇。</p>
+<p>回顾到现在的职业生涯，折腾了一阵某技术网站的博客，因后来工作太忙而放弃。</p>
+<p>对社交媒体的不感冒，也没有赶上什么微博及微信着装发展期，到了末了，才想着开个微信公众号。同时在简书、GitHub以及微信上写基础系列文章。但对微信公众号的评估是错误的，微信的后台编辑太糟糕，而微信内置浏览器却并不适合IT技术的学习，最后也草草的放弃了。</p>
+<p>想的太多，做的太少，没有评估，没有坚持，容易放弃，但内心知道，这是不对的。</p>
+<p>直到最近，把GitHub Pages研究了一番，折腾了下Hexo和一个主题<s>Jacman</s>，才发现以前只用GitHub的wiki写博客是多么的低级。<br>2015.12.07更新：主题更换为NexT.Mist。</p>
+<p>不管如何，这才是我最终要寻找的知识记录和传播的方式。</p>
+<p>爱折腾，才会有进步。流泪撒种的，必欢呼收割。忘记背后，努力面前的，向着标竿直跑。<br>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2015/07/01/vm13/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/07/01/vm12/" itemprop="url">
-                  虚拟机12：其他功能
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            發表於
-            <time itemprop="dateCreated" datetime="2015-07-01T21:50:43+08:00" content="2015-07-01">
-              2015-07-01
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/虚拟机/" itemprop="url" rel="index">
-                    <span itemprop="name">虚拟机</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/07/01/vm12/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/01/vm12/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="vmx_u6587_u4EF6"><a href="#vmx_u6587_u4EF6" class="headerlink" title="vmx文件"></a>vmx文件</h2><p>每个虚拟机都有vmx文件，保存了虚拟机的配置信息。<br>使用文本编辑器打开虚拟机保存目录的Win7.vmx，就可以看到相关信息。虚拟机设置就是读取的这个文件。可以直接更改此vmx文件，等于对虚拟机进行了设置。<br><strong>注意</strong>：对于不知道的参数，不要轻易修改。
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/07/01/vm12/#more" rel="contents">
+            <a class="btn" href="/2015/06/19/essay01/#more" rel="contents">
               閱讀全文 &raquo;
             </a>
           </div>
@@ -1277,7 +544,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span>
   </nav>
 
 

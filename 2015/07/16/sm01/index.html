@@ -60,7 +60,7 @@ VLC的wiki中Win32Compile，提供了三个环境的编译方法：
 Windows下使用MSYS+MinGW，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="流媒体01：VLC-2.2.1编译">
-<meta property="og:url" content="http://yoursite.com/2015/07/16/sm01/index.html">
+<meta property="og:url" content="http://higoge.github.io/2015/07/16/sm01/index.html">
 <meta property="og:site_name" content="LearnIT">
 <meta property="og:description" content="海狗哥的流媒体空间大部分介绍VLC的编译，跟踪了0.8.6i到1.0.X版本的编译方法，最近又把VLC-2.2.1编译了一下。比起几年前的编译过程，VLC-2.2.1的编译错误更少，只是编译的文档还是没有同步更新。
 VLC的wiki中Win32Compile，提供了三个环境的编译方法：
@@ -311,7 +311,7 @@ Windows下使用MSYS+MinGW，">
 <li>Windows下使用Cygwin编译，此方法为容易出错的(error-prone)和龟速的(slow)，不被推荐。</li>
 </ul>
 <p>其实，Linux下使用MinGW和Cygwin下使用MinGW本质上是一样的。本文就介绍在Cygwin下编译VLC-2.2.1。<br><a id="more"></a></p>
-<h2 id="u73AF_u5883_u642D_u5EFA"><a href="#u73AF_u5883_u642D_u5EFA" class="headerlink" title="环境搭建"></a>环境搭建</h2><p>请阅读前一篇博文<a href="http://higoge.github.io/2015/07/15/cw01/" target="_blank" rel="external">Cygwin01：Cygwin的安装配置</a>，安装好Cygwin环境。如果对于Cygwin操作不熟悉，请先看几年前录制的<a href="http://higoge.github.io/2015/06/23/eassy02/" target="_blank" rel="external">VLC编译视频</a>。<br>参考：<a href="https://wiki.videolan.org/Win32CompileMSYS/" target="_blank" rel="external">Win32CompileMSYS</a><br>源码：<a href="ftp://ftp.videolan.org/pub/videolan/vlc/2.2.1/vlc-2.2.1.tar.xz" target="_blank" rel="external">vlc-2.2.1.tar.xz</a>。<br>库： <a href="ftp://ftp.videolan.org/pub/videolan/contrib/i686-w64-mingw32/vlc-contrib-i686-w64-mingw32-20150630.tar.bz2" target="_blank" rel="external">vlc-contrib-i686-w64-mingw32-20150630.tar.bz2</a>。<br><code>rcc.exe</code>：使用压缩工具打开vlc-contrib-i686-w64-mingw32-20150630.tar.bz2，提取<code>i686-w64-mingw32/bin/rcc.exe</code>。<br>以上资料也可到汪汪的网盘下载，路径为<code>/VLC/2.1.1</code>。<br>请将以上三个文件放置到<code>D:\</code>下。</p>
+<h2 id="u73AF_u5883_u642D_u5EFA"><a href="#u73AF_u5883_u642D_u5EFA" class="headerlink" title="环境搭建"></a>环境搭建</h2><p>请阅读前一篇博文<a href="http://higoge.github.io/2015/07/15/cw01/">Cygwin01：Cygwin的安装配置</a>，安装好Cygwin环境。如果对于Cygwin操作不熟悉，请先看几年前录制的<a href="http://higoge.github.io/2015/06/23/eassy02/">VLC编译视频</a>。<br>参考：<a href="https://wiki.videolan.org/Win32CompileMSYS/" target="_blank" rel="external">Win32CompileMSYS</a><br>源码：<a href="ftp://ftp.videolan.org/pub/videolan/vlc/2.2.1/vlc-2.2.1.tar.xz" target="_blank" rel="external">vlc-2.2.1.tar.xz</a>。<br>库： <a href="ftp://ftp.videolan.org/pub/videolan/contrib/i686-w64-mingw32/vlc-contrib-i686-w64-mingw32-20150630.tar.bz2" target="_blank" rel="external">vlc-contrib-i686-w64-mingw32-20150630.tar.bz2</a>。<br><code>rcc.exe</code>：使用压缩工具打开vlc-contrib-i686-w64-mingw32-20150630.tar.bz2，提取<code>i686-w64-mingw32/bin/rcc.exe</code>。<br>以上资料也可到汪汪的网盘下载，路径为<code>/VLC/2.1.1</code>。<br>请将以上三个文件放置到<code>D:\</code>下。</p>
 <p>开启Cygwin，执行如下命令。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cp /cygdrive/d/vlc-* .</span><br><span class="line">$ cp /cygdrive/d/rcc.exe .</span><br></pre></td></tr></table></figure></p>
 <p>完成后，大概是如下样子。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">learnit@learnit-PC ~</span><br><span class="line">$ ls</span><br><span class="line">rcc.exe  vlc-<span class="number">2.2</span>.<span class="number">1</span>.tar.xz  vlc-contrib-i686-w64-mingw32-<span class="number">20150630</span>.tar.bz2</span><br></pre></td></tr></table></figure></p>
 <h2 id="u89E3_u538B_u6E90_u7801"><a href="#u89E3_u538B_u6E90_u7801" class="headerlink" title="解压源码"></a>解压源码</h2><p>执行如下命令。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ tar xJvf vlc-<span class="number">2.2</span>.<span class="number">1</span>.tar.xz</span><br><span class="line">$ <span class="built_in">cd</span> vlc-<span class="number">2.2</span>.<span class="number">1</span>/</span><br></pre></td></tr></table></figure></p>
@@ -387,7 +387,7 @@ Windows下使用MSYS+MinGW，">
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2015/07/16/sm01/"
-           data-title="流媒体01：VLC-2.2.1编译" data-url="http://yoursite.com/2015/07/16/sm01/">
+           data-title="流媒体01：VLC-2.2.1编译" data-url="http://higoge.github.io/2015/07/16/sm01/">
       </div>
     
   </div>

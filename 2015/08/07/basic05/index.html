@@ -56,7 +56,7 @@
 <meta name="description" content="最近学习Linux硬盘分区，研究了GPT分区表以及硬盘模式，记录在此。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基础05：硬盘分区和硬盘模式">
-<meta property="og:url" content="http://yoursite.com/2015/08/07/basic05/index.html">
+<meta property="og:url" content="http://higoge.github.io/2015/08/07/basic05/index.html">
 <meta property="og:site_name" content="LearnIT">
 <meta property="og:description" content="最近学习Linux硬盘分区，研究了GPT分区表以及硬盘模式，记录在此。">
 <meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/basic-new/01.png">
@@ -298,7 +298,7 @@
 <p>但Windows7安装在GPT分区表中可能会出现找不到硬盘的情况，解决方法见<a href="http://blog.csdn.net/techzero/article/details/8921206" target="_blank" rel="external">此</a> (此文章没有亲自验证)。</p>
 <p>个人电脑BIOS切换为UEFI方式，见图。<br><img src="https://raw.githubusercontent.com/higoge/image/master/basic-new/01.png" class="img-center"></p>
 <p>VMWare Workstation建立Windows 10虚拟机时，会提示固件类型，可选择EFI方式。<br><img src="https://raw.githubusercontent.com/higoge/image/master/basic-new/02.png" class="img-center"></p>
-<p>如果VMware Workstation没有提示，如安装Linux系统时，则可在建立虚拟机后，修改<a href="http://higoge.github.io/2015/07/01/vm12/#vmx文件" target="_blank" rel="external">虚拟机配置文件</a><code>.vmx</code>，加入一行。<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="setting">firmware=<span class="value"><span class="string">"efi"</span></span></span></span><br></pre></td></tr></table></figure></p>
+<p>如果VMware Workstation没有提示，如安装Linux系统时，则可在建立虚拟机后，修改<a href="http://higoge.github.io/2015/07/01/vm12/#vmx文件">虚拟机配置文件</a><code>.vmx</code>，加入一行。<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="setting">firmware=<span class="value"><span class="string">"efi"</span></span></span></span><br></pre></td></tr></table></figure></p>
 <h2 id="u786C_u76D8_u6A21_u5F0F"><a href="#u786C_u76D8_u6A21_u5F0F" class="headerlink" title="硬盘模式"></a>硬盘模式</h2><p>主要是ATA和AHCI的区别。<br>ATA(Advanced Technology Attachment)是IDE硬盘的接口规范，也可以理解为一种工作模式。<br>AHCI(Advanced Host Controller Interface)是串行ATA高级主控接口的一种硬盘工作模式，主要用于SATA接口硬盘。此种工作模式会提高硬盘运行速度。<br>所以，SATA硬盘选用AHCI模式即可。</p>
 <p>~~ EOF ~~</p>
 </span>
@@ -358,7 +358,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2015/08/07/basic05/"
-           data-title="基础05：硬盘分区和硬盘模式" data-url="http://yoursite.com/2015/08/07/basic05/">
+           data-title="基础05：硬盘分区和硬盘模式" data-url="http://higoge.github.io/2015/08/07/basic05/">
       </div>
     
   </div>

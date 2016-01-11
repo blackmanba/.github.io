@@ -56,7 +56,7 @@
 <meta name="description" content="文本接上一篇博文，介绍CentOS6.6下安装VMware Tools、配置和Windows宿主机的共享文件夹。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux理论03：CentOS6.6安装VMware Tools和配置共享文件夹">
-<meta property="og:url" content="http://yoursite.com/2015/07/31/th-linux03/index.html">
+<meta property="og:url" content="http://higoge.github.io/2015/07/31/th-linux03/index.html">
 <meta property="og:site_name" content="LearnIT">
 <meta property="og:description" content="文本接上一篇博文，介绍CentOS6.6下安装VMware Tools、配置和Windows宿主机的共享文件夹。">
 <meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/centos/33.jpg">
@@ -302,7 +302,7 @@
       
         <span itemprop="articleBody"><p>文本接上一篇博文，介绍CentOS6.6下安装VMware Tools、配置和Windows宿主机的共享文件夹。<br><a id="more"></a></p>
 <h2 id="u5B89_u88C5VMware_Tools"><a href="#u5B89_u88C5VMware_Tools" class="headerlink" title="安装VMware Tools"></a>安装VMware Tools</h2><p>VMware Workstation菜单点击虚拟机-&gt;安装VMware Tools。CentOS系统桌面会出现一个光盘图标。<br><img src="https://raw.githubusercontent.com/higoge/image/master/centos/33.jpg" class="img-center"><br>双击图标后，复制VMware Tools的<code>tar.gz</code>文件。<br><img src="https://raw.githubusercontent.com/higoge/image/master/centos/34.jpg" class="img-center"><br>打开主文件夹，粘贴。<br><img src="https://raw.githubusercontent.com/higoge/image/master/centos/35.jpg" class="img-center"><br>桌面点击右键-&gt;在终端中打开。<br><img src="https://raw.githubusercontent.com/higoge/image/master/centos/36.jpg" class="img-center"><br>输入命令<code>cd ~</code>，<code>tar xzvf VMwareTools-9.9.0-2304977.tar.gz</code><br><img src="https://raw.githubusercontent.com/higoge/image/master/centos/37.jpg" class="img-center"><br>输入命令<code>su -</code>，输入root用户密码，<code>cd /home/learnit/vmware-tools-distrib</code>，<code>./vmware-install.pl -d</code>。<code>-d</code>表示所有的配置均默认处理。<br><img src="https://raw.githubusercontent.com/higoge/image/master/centos/38.jpg" class="img-center"><br>安装完成后，输入命令<code>reboot</code>重启。<br><img src="https://raw.githubusercontent.com/higoge/image/master/centos/39.jpg" class="img-center"></p>
-<h2 id="u914D_u7F6E_u5171_u4EAB_u6587_u4EF6_u5939"><a href="#u914D_u7F6E_u5171_u4EAB_u6587_u4EF6_u5939" class="headerlink" title="配置共享文件夹"></a>配置共享文件夹</h2><p><a href="http://higoge.github.io/2015/07/01/vm11/" target="_blank" rel="external">虚拟机11：共享文件夹</a>是通过Windows操作系统举得例子。本章介绍CentOS配置与Windows宿主机共用的共享文件夹。</p>
+<h2 id="u914D_u7F6E_u5171_u4EAB_u6587_u4EF6_u5939"><a href="#u914D_u7F6E_u5171_u4EAB_u6587_u4EF6_u5939" class="headerlink" title="配置共享文件夹"></a>配置共享文件夹</h2><p><a href="http://higoge.github.io/2015/07/01/vm11/">虚拟机11：共享文件夹</a>是通过Windows操作系统举得例子。本章介绍CentOS配置与Windows宿主机共用的共享文件夹。</p>
 <p>快捷键<code>Ctrl+d</code>打开虚拟机设置-&gt;选项-&gt;共享文件夹-&gt;点击“总是启用”-&gt;点击“添加”-&gt;下一步-&gt;设置主路径和名称-&gt;选中“启用此共享”-&gt;完成即可。<br>本例设置主路径为<code>E:/Linux_share</code>，名称为<code>Linux_share</code>。<br><img src="https://raw.githubusercontent.com/higoge/image/master/centos/54.jpg" class="img-center"><br>CentOS中，此共享文件夹路径为<code>/mnt/hgfs/Linux_share</code>。写个脚本测试下。<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>echo <span class="string">"hello windows"</span> &gt; <span class="regexp">/mnt/hgfs</span><span class="regexp">/Linux_share/</span><span class="number">01</span>.txt</span><br></pre></td></tr></table></figure></p>
 <p>Windows宿主机上查看一下。<br><img src="https://raw.githubusercontent.com/higoge/image/master/centos/55.jpg" class="img-center"><br>Windows上新建02.txt，内容为<code>hello linux</code>。<br><img src="https://raw.githubusercontent.com/higoge/image/master/centos/56.jpg" class="img-center"><br>CentOS上查看一下。<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cat <span class="regexp">/mnt/</span>hgfs<span class="regexp">/Linux_share/</span><span class="number">02</span>.txt</span><br><span class="line">hello Linux</span><br></pre></td></tr></table></figure></p>
 <p>CentOS虚拟机和Windows宿主机之间就通过此文件夹共享文件。</p>
@@ -364,7 +364,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2015/07/31/th-linux03/"
-           data-title="Linux理论03：CentOS6.6安装VMware Tools和配置共享文件夹" data-url="http://yoursite.com/2015/07/31/th-linux03/">
+           data-title="Linux理论03：CentOS6.6安装VMware Tools和配置共享文件夹" data-url="http://higoge.github.io/2015/07/31/th-linux03/">
       </div>
     
   </div>
