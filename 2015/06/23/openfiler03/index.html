@@ -1,0 +1,784 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Openfiler," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="LearnIT" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/fv1.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="新注：这是2010年在51CTO写的一篇旧文，目前相关的软件都有更新，但核心的内容是一致的。
+本篇博客主要介绍iSCSI客户端及SMB/CIFS客户端的安装配置使用。
+环境
+iSCSI客户端：open-iscsi-2.0-871。
+SMB/CIFS客户端：Samba-3.4.0。
+操作系统：CentOS5.3。新注：相关软件的最新下载链接没有验证，若不对，请自行搜索最新版本吧。命令前面的#表示当前">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Openfiler03：open-iscsi安装配置及smbclient的安装">
+<meta property="og:url" content="http://yoursite.com/2015/06/23/openfiler03/index.html">
+<meta property="og:site_name" content="LearnIT">
+<meta property="og:description" content="新注：这是2010年在51CTO写的一篇旧文，目前相关的软件都有更新，但核心的内容是一致的。
+本篇博客主要介绍iSCSI客户端及SMB/CIFS客户端的安装配置使用。
+环境
+iSCSI客户端：open-iscsi-2.0-871。
+SMB/CIFS客户端：Samba-3.4.0。
+操作系统：CentOS5.3。新注：相关软件的最新下载链接没有验证，若不对，请自行搜索最新版本吧。命令前面的#表示当前">
+<meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/openfiler03/01.jpg">
+<meta property="og:updated_time" content="2016-01-11T02:27:25.233Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Openfiler03：open-iscsi安装配置及smbclient的安装">
+<meta name="twitter:description" content="新注：这是2010年在51CTO写的一篇旧文，目前相关的软件都有更新，但核心的内容是一致的。
+本篇博客主要介绍iSCSI客户端及SMB/CIFS客户端的安装配置使用。
+环境
+iSCSI客户端：open-iscsi-2.0-871。
+SMB/CIFS客户端：Samba-3.4.0。
+操作系统：CentOS5.3。新注：相关软件的最新下载链接没有验证，若不对，请自行搜索最新版本吧。命令前面的#表示当前">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'always',
+    motion: true
+  };
+</script>
+
+  <title> Openfiler03：open-iscsi安装配置及smbclient的安装 | LearnIT </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">LearnIT</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">跟汪汪学IT</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分類
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            標籤
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            關於
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'eABHoirrWVnE3nGRrvNM','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Openfiler03：open-iscsi安装配置及smbclient的安装
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2015-06-23T21:46:42+08:00" content="2015-06-23">
+              2015-06-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/存储/" itemprop="url" rel="index">
+                    <span itemprop="name">存储</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/06/23/openfiler03/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/23/openfiler03/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p><strong>新注</strong>：这是2010年在51CTO写的一篇旧文，目前相关的软件都有更新，但核心的内容是一致的。</p>
+<p>本篇博客主要介绍iSCSI客户端及SMB/CIFS客户端的安装配置使用。</p>
+<h2 id="u73AF_u5883"><a href="#u73AF_u5883" class="headerlink" title="环境"></a>环境</h2><ul>
+<li>iSCSI客户端：<a href="http://www.open-iscsi.org/bits/open-iscsi-2.0-871.tar.gz" target="_blank" rel="external">open-iscsi-2.0-871</a>。</li>
+<li>SMB/CIFS客户端：<a href="http://samba.org/samba/ftp/stable/samba-3.4.0.tar.gz" target="_blank" rel="external">Samba-3.4.0</a>。</li>
+<li>操作系统：CentOS5.3。<br><strong>新注</strong>：相关软件的最新下载链接没有验证，若不对，请自行搜索最新版本吧。命令前面的<code>#</code>表示当前使用root用户。</li>
+</ul>
+<a id="more"></a>
+<h2 id="open-iscsi_u7684_u5B89_u88C5"><a href="#open-iscsi_u7684_u5B89_u88C5" class="headerlink" title="open-iscsi的安装"></a>open-iscsi的安装</h2><p>首先下载open-iscsi-2.0-871，然后执行：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># tar xzvf open-iscsi-2.0-871.tar.gz    </span></span><br><span class="line"><span class="comment"># cd open-iscsi-2.0-871 </span></span><br><span class="line"><span class="comment"># make </span></span><br><span class="line"><span class="comment"># make install</span></span><br></pre></td></tr></table></figure></p>
+<p>其中<code>make install</code>命令需要<strong>超级用户权限</strong>。</p>
+<h2 id="u5F00_u542F_u505C_u6B62open-iscsi_u670D_u52A1"><a href="#u5F00_u542F_u505C_u6B62open-iscsi_u670D_u52A1" class="headerlink" title="开启停止open-iscsi服务"></a>开启停止open-iscsi服务</h2><p>本节所有命令需要<strong>超级用户权限</strong>。<br>开启open-iscsi服务命令。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># service open-iscsi start</span></span><br></pre></td></tr></table></figure></p>
+<p>停止open-iscsi服务命令。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># service open-iscsi stop</span></span><br></pre></td></tr></table></figure></p>
+<p>可以通过以下命令查看open-iscsi的运行状态。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># service open-iscsi status </span></span><br><span class="line">iscsid (pid <span class="number">5119</span> <span class="number">5118</span>) is running...</span><br></pre></td></tr></table></figure></p>
+<p>开机默认启动open-iscsi<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># chkconfig open-iscsi on</span></span><br></pre></td></tr></table></figure></p>
+<p>关闭开机默认启动open-iscsi<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># chkconfig open-iscsi off</span></span><br></pre></td></tr></table></figure></p>
+<p>可以通过一下命令查看open-iscsi的是否开机运行<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># chkconfig --list open-iscsi </span></span><br><span class="line">open-iscsi            <span class="number">0</span>:off     <span class="number">1</span>:off     <span class="number">2</span>:on        <span class="number">3</span>:on        <span class="number">4</span>:on        <span class="number">5</span>:on        <span class="number">6</span>:off</span><br></pre></td></tr></table></figure></p>
+<p>其中0~6是什么意思，请Google。</p>
+<h2 id="u767B_u5F55_u767B_u51FAiSCSI"><a href="#u767B_u5F55_u767B_u51FAiSCSI" class="headerlink" title="登录登出iSCSI"></a>登录登出iSCSI</h2><p>以上一篇博客为例，查找(discovery)某IP下的target。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># iscsiadm -m discovery -t st -p 172.16.5.226 </span></span><br><span class="line"><span class="number">172.16</span>.<span class="number">5.226</span>:<span class="number">3260</span>,<span class="number">1</span> iqn.openfiler:jeremiah01</span><br></pre></td></tr></table></figure></p>
+<p>可以看到open-iscsi发现了Openfiler上配置的iSCSI target。<br>执行以下命令登录iSCSI target。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># iscsiadm -m node -T iqn.openfiler:jeremiah01 -l </span></span><br><span class="line">Logging <span class="keyword">in</span> to [iface: default, target: iqn.openfiler:jeremiah01, portal: <span class="number">172.16</span>.<span class="number">5.226</span>,<span class="number">3260</span>] </span><br><span class="line">Login to [iface: default, target: iqn.openfiler:jeremiah01, portal: <span class="number">172.16</span>.<span class="number">5.226</span>,<span class="number">3260</span>]: successful</span><br></pre></td></tr></table></figure></p>
+<p>登录成功后会发现/dev下多了一个设备：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ls /dev/sd* </span></span><br><span class="line">/dev/sda    /dev/sda1    /dev/sda2    /dev/sdb</span><br></pre></td></tr></table></figure></p>
+<p>本例中是/dev/sdb。如果执行以下命令会发现很有意思的问题。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ll /dev/disk/by-path/ </span></span><br><span class="line">total <span class="number">0</span> </span><br><span class="line">lrwxrwxrwx <span class="number">1</span> root root    <span class="number">9</span> Feb <span class="number">24</span> <span class="number">19</span>:<span class="number">50</span> ip-<span class="number">172.16</span>.<span class="number">5.226</span>:<span class="number">3260</span>-iscsi-iqn.openfiler:jeremiah01-lun-<span class="number">0</span> -&gt; ../../sdb</span><br></pre></td></tr></table></figure></p>
+<p>可以看到<code>/dev/disk/by-path/ip-172.16.5.226:3260-iscsi-iqn.openfiler:jeremiah01-lun-0</code>是多出来新硬盘的快捷方式。<br>剩下的分区等在此不再赘述。请参考<code>fdisk</code>命令。</p>
+<p>登出target。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># iscsiadm -m node -T iqn.openfiler:jeremiah01 --logout </span></span><br><span class="line">Logging out of session [sid: <span class="number">1</span>, target: iqn.openfiler:jeremiah01, portal: <span class="number">172.16</span>.<span class="number">5.226</span>,<span class="number">3260</span>] </span><br><span class="line">Logout of [sid: <span class="number">1</span>, target: iqn.openfiler:jeremiah01, portal: <span class="number">172.16</span>.<span class="number">5.226</span>,<span class="number">3260</span>]: successful</span><br></pre></td></tr></table></figure></p>
+<h2 id="u5E26_u7528_u6237_u540D_u548C_u5BC6_u7801_u7684target_u767B_u5F55"><a href="#u5E26_u7528_u6237_u540D_u548C_u5BC6_u7801_u7684target_u767B_u5F55" class="headerlink" title="带用户名和密码的target登录"></a>带用户名和密码的target登录</h2><p>如果服务器端的target添加了权限，需要用户名密码才能登录，如图所示。<br><img src="https://raw.githubusercontent.com/higoge/image/master/openfiler03/01.jpg" class="img-center"><br>那么客户端不能正常的登录iSCSI target。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># iscsiadm -m node -T iqn.openfiler:jeremiah01 -l </span></span><br><span class="line">Logging <span class="keyword">in</span> to [iface: default, target: iqn.openfiler:jeremiah01, portal: <span class="number">172.16</span>.<span class="number">5.226</span>,<span class="number">3260</span>] </span><br><span class="line">iscsiadm: Could not login to [iface: default, target: iqn.openfiler:jeremiah01, portal: <span class="number">172.16</span>.<span class="number">5.226</span>,<span class="number">3260</span>]:    </span><br><span class="line">iscsiadm: initiator reported error (<span class="number">19</span> - encountered non-retryable iSCSI login failure)</span><br></pre></td></tr></table></figure></p>
+<p>需要修改<code>/etc/iscsi/node</code>的节点信息。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># vi /etc/iscsi/nodes/iqn.openfiler\:jeremiah01/172.16.5.226\,3260\,1/default</span></span><br></pre></td></tr></table></figure></p>
+<p>找到如下信息。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node.session.auth.authmethod = None</span><br></pre></td></tr></table></figure></p>
+<p>修改为如下配置。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node.session.auth.authmethod = CHAP </span><br><span class="line">node.session.auth.username = jeremiah </span><br><span class="line">node.session.auth.password = vlc</span><br></pre></td></tr></table></figure></p>
+<p>然后再次登录就可以成功。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># iscsiadm -m node -T iqn.openfiler:jeremiah01 -l </span></span><br><span class="line">Logging <span class="keyword">in</span> to [iface: default, target: iqn.openfiler:jeremiah01, portal: <span class="number">172.16</span>.<span class="number">5.226</span>,<span class="number">3260</span>] </span><br><span class="line">Login to [iface: default, target: iqn.openfiler:jeremiah01, portal: <span class="number">172.16</span>.<span class="number">5.226</span>,<span class="number">3260</span>]: successful</span><br></pre></td></tr></table></figure></p>
+<p><strong>注意，如果执行了discovery后，上述修改将会被还原。</strong></p>
+<h2 id="Samba-3-4-0_u7684_u5B89_u88C5"><a href="#Samba-3-4-0_u7684_u5B89_u88C5" class="headerlink" title="Samba-3.4.0的安装"></a>Samba-3.4.0的安装</h2><p>一般linux都默认Samba客户端。执行以下命令进行检查。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># smbclient --version</span></span><br></pre></td></tr></table></figure></p>
+<p>如果没有安装，下载Samba-3.4.0，执行以下命令。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># tar xzvf samba-3.4.0.tar.gz </span></span><br><span class="line"><span class="comment"># cd samba-3.4.0/source4 </span></span><br><span class="line"><span class="comment"># ./autogen.sh </span></span><br><span class="line"><span class="comment"># ./configure </span></span><br><span class="line"><span class="comment"># make</span></span><br><span class="line"><span class="comment"># cd bin</span></span><br><span class="line"><span class="comment"># smbclient --version</span></span><br></pre></td></tr></table></figure></p>
+<p>到此，就可以执行smbclient的相关命令了。</p>
+<p>~~ EOF ~~</p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Openfiler/" rel="tag">#Openfiler</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/06/23/openfiler02/" rel="next" title="Openfiler02：Openfiler的配置">
+                <i class="fa fa-chevron-left"></i> Openfiler02：Openfiler的配置
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/06/23/essay02/" rel="prev" title="随笔02：关于海狗哥的流媒体空间资料一些说明">
+                随笔02：关于海狗哥的流媒体空间资料一些说明 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/06/23/openfiler03/"
+           data-title="Openfiler03：open-iscsi安装配置及smbclient的安装" data-url="http://yoursite.com/2015/06/23/openfiler03/">
+      </div>
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            本站概覽
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/author.jpg" alt="Jeremy Wong" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Jeremy Wong</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">I hurry and do not delay to keep your commandments.(PSM119:60)</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">78</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-name">分類</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">標籤</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/higoge" target="_blank">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/higoge" target="_blank">
+                  
+                    <i class="fa fa-weibo"></i> Weibo
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">友情连接</p>
+            
+              <span class="links-of-author-item">
+                <a href="http://pan.baidu.com/s/1o6Meksi" target="_blank">汪汪的网盘(解压密码higoge)</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u73AF_u5883"><span class="nav-number">1.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#open-iscsi_u7684_u5B89_u88C5"><span class="nav-number">2.</span> <span class="nav-text">open-iscsi的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u5F00_u542F_u505C_u6B62open-iscsi_u670D_u52A1"><span class="nav-number">3.</span> <span class="nav-text">开启停止open-iscsi服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u767B_u5F55_u767B_u51FAiSCSI"><span class="nav-number">4.</span> <span class="nav-text">登录登出iSCSI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u5E26_u7528_u6237_u540D_u548C_u5BC6_u7801_u7684target_u767B_u5F55"><span class="nav-number">5.</span> <span class="nav-text">带用户名和密码的target登录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Samba-3-4-0_u7684_u5B89_u88C5"><span class="nav-number">6.</span> <span class="nav-text">Samba-3.4.0的安装</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jeremy Wong</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"higoge"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post' || CONFIG.sidebar === 'always') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>

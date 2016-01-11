@@ -1,0 +1,752 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Streaming Media," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="LearnIT" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/fv1.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="Windows环境下编译的VLC或通过Linux交叉编译的VLC，调试起来非常麻烦，之前的51CTO的博客写过老版本的VLC的调试，改动太多，速度也很慢，故新版本并没有继续在类似环境下继续折腾VLC的调试。偶然发现Ubuntu下直接编译VLC很快很好很方便，而且配合GDB调试只要加一条指令即可。另外，配合QT Creator，在IDE中设置断点，读取打印变量等都非常的直观。本文介绍VLC2.2.1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="流媒体04：VLC2.2.1的Linux编译及调试">
+<meta property="og:url" content="http://yoursite.com/2015/12/14/sm04/index.html">
+<meta property="og:site_name" content="LearnIT">
+<meta property="og:description" content="Windows环境下编译的VLC或通过Linux交叉编译的VLC，调试起来非常麻烦，之前的51CTO的博客写过老版本的VLC的调试，改动太多，速度也很慢，故新版本并没有继续在类似环境下继续折腾VLC的调试。偶然发现Ubuntu下直接编译VLC很快很好很方便，而且配合GDB调试只要加一条指令即可。另外，配合QT Creator，在IDE中设置断点，读取打印变量等都非常的直观。本文介绍VLC2.2.1">
+<meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/sm/07.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/sm/08.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/sm/09.png">
+<meta property="og:updated_time" content="2016-01-11T02:27:25.233Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="流媒体04：VLC2.2.1的Linux编译及调试">
+<meta name="twitter:description" content="Windows环境下编译的VLC或通过Linux交叉编译的VLC，调试起来非常麻烦，之前的51CTO的博客写过老版本的VLC的调试，改动太多，速度也很慢，故新版本并没有继续在类似环境下继续折腾VLC的调试。偶然发现Ubuntu下直接编译VLC很快很好很方便，而且配合GDB调试只要加一条指令即可。另外，配合QT Creator，在IDE中设置断点，读取打印变量等都非常的直观。本文介绍VLC2.2.1">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'always',
+    motion: true
+  };
+</script>
+
+  <title> 流媒体04：VLC2.2.1的Linux编译及调试 | LearnIT </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">LearnIT</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">跟汪汪学IT</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分類
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            標籤
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            關於
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'eABHoirrWVnE3nGRrvNM','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                流媒体04：VLC2.2.1的Linux编译及调试
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2015-12-14T20:19:51+08:00" content="2015-12-14">
+              2015-12-14
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/流媒体/" itemprop="url" rel="index">
+                    <span itemprop="name">流媒体</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/14/sm04/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/14/sm04/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>Windows环境下编译的VLC或通过Linux交叉编译的VLC，调试起来非常麻烦，之前的51CTO的博客写过老版本的<a href="http://jeremiah.blog.51cto.com/539865/291032" target="_blank" rel="external">VLC的调试</a>，改动太多，速度也很慢，故新版本并没有继续在类似环境下继续折腾VLC的调试。偶然发现Ubuntu下直接编译VLC很快很好很方便，而且配合GDB调试只要加一条指令即可。<br>另外，配合QT Creator，在IDE中设置断点，读取打印变量等都非常的直观。<br>本文介绍VLC2.2.1的Linux编译，当然，编译的主要目的是：<strong>调试</strong>。<br><a id="more"></a></p>
+<h3 id="u73AF_u5883"><a href="#u73AF_u5883" class="headerlink" title="环境"></a>环境</h3><p>与交叉编译VLC2.2.1一样的环境，请参考<a href="http://higoge.github.io/2015/07/17/sm02/" target="_blank" rel="external">流媒体02：Linux交叉编译VLC-2.2.1</a>。</p>
+<h3 id="u7F16_u8BD1"><a href="#u7F16_u8BD1" class="headerlink" title="编译"></a>编译</h3><p>在此只记录命令。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get build-dep vlc -y</span><br><span class="line">$ tar xJvf vlc-<span class="number">2.2</span>.<span class="number">1</span>.tar.xz</span><br><span class="line">$ <span class="built_in">cd</span> vlc-<span class="number">2.2</span>.<span class="number">1</span>/</span><br><span class="line">$ ./bootstrap</span><br><span class="line">$ ./configure --enable-debug</span><br><span class="line">$ make -j2</span><br></pre></td></tr></table></figure></p>
+<p>编译完成后，运行测试。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./vlc ~/<span class="number">01</span>.avi</span><br></pre></td></tr></table></figure></p>
+<p>从运行结果看，VLC的播放窗口与原有界面分离了，没有找到解决原因。<br><img src="https://raw.githubusercontent.com/higoge/image/master/sm/07.png" class="img-center"></p>
+<p>官方的VLC并没有此问题。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install vlc</span><br><span class="line">$ vlc ~/<span class="number">01</span>.avi</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://raw.githubusercontent.com/higoge/image/master/sm/08.png" class="img-center"></p>
+<p>通过运行如下命令，可以看到官网VLC的编译脚本，有兴趣的可以研究下。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vlc --extraintf=logger -vvv ~/<span class="number">01</span>.avi</span><br></pre></td></tr></table></figure></p>
+<p>编译脚本如下。请酌情修改<code>${prefix}</code>相关参数。<br><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">./configure  <span class="string">'--includedir=$&#123;prefix&#125;/include'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--mandir=$&#123;prefix&#125;/share/man'</span> <span class="string">'--infodir=$&#123;prefix&#125;/share/info'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--localstatedir=/var'</span> <span class="string">'--libdir=$&#123;prefix&#125;/lib/x86_64-linux-gnu'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--libexecdir=$&#123;prefix&#125;/lib/x86_64-linux-gnu'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--disable-dependency-tracking'</span> <span class="string">'--build=x86_64-linux-gnu'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'CPPFLAGS=-D_FORTIFY_SOURCE=2'</span> <span class="string">'LDFLAGS=-Wl,-Bsymbolic-functions -Wl,-z,relro'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--config-cache'</span> <span class="string">'--disable-maintainer-mode'</span> <span class="string">'--disable-silent-rules'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--disable-update-check'</span> <span class="string">'--enable-fast-install'</span> <span class="string">'--prefix=/usr'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--docdir=/usr/share/doc/vlc-nox'</span> <span class="string">'--libdir=/usr/lib'</span> <span class="string">'--sysconfdir=/etc'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--with-binary-version=1'</span> <span class="string">'--enable-a52'</span> <span class="string">'--enable-aa'</span> <span class="string">'--enable-bluray'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-bonjour'</span> <span class="string">'--enable-caca'</span> <span class="string">'--enable-chromaprint'</span> <span class="string">'--enable-dbus'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-dca'</span> <span class="string">'--enable-directfb'</span> <span class="string">'--enable-dvbpsi'</span> <span class="string">'--enable-dvdnav'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-faad'</span> <span class="string">'--enable-flac'</span> <span class="string">'--enable-fluidsynth'</span> <span class="string">'--enable-freerdp'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-freetype'</span> <span class="string">'--enable-fribidi'</span> <span class="string">'--enable-gles1'</span> <span class="string">'--enable-gles2'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-gnutls'</span> <span class="string">'--enable-jack'</span> <span class="string">'--enable-kate'</span> <span class="string">'--enable-libass'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-libmpeg2'</span> <span class="string">'--enable-libxml2'</span> <span class="string">'--enable-lirc'</span> <span class="string">'--enable-live555'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-mad'</span> <span class="string">'--enable-mkv'</span> <span class="string">'--enable-mod'</span> <span class="string">'--enable-mpc'</span> <span class="string">'--enable-mtp'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-mux_ogg'</span> <span class="string">'--enable-ncurses'</span> <span class="string">'--enable-notify'</span> <span class="string">'--enable-ogg'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-opus'</span> <span class="string">'--enable-pulse'</span> <span class="string">'--enable-qt'</span> <span class="string">'--enable-realrtsp'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-samplerate'</span> <span class="string">'--enable-schroedinger'</span> <span class="string">'--enable-sdl'</span> <span class="string">'--enable-sftp'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-shine'</span> <span class="string">'--enable-shout'</span> <span class="string">'--enable-skins2'</span> <span class="string">'--enable-speex'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-svg'</span> <span class="string">'--enable-taglib'</span> <span class="string">'--enable-theora'</span> <span class="string">'--enable-twolame'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-upnp'</span> <span class="string">'--enable-vcdx'</span> <span class="string">'--enable-vdpau'</span> <span class="string">'--enable-vnc'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-vorbis'</span> <span class="string">'--enable-x264'</span> <span class="string">'--enable-zvbi'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--with-kde-solid=/usr/share/kde4/apps/solid/actions/'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--disable-decklink'</span> <span class="string">'--disable-dxva2'</span> <span class="string">'--disable-fdkaac'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--disable-gnomevfs'</span> <span class="string">'--disable-goom'</span> <span class="string">'--disable-libtar'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--disable-mfx'</span> <span class="string">'--disable-opencv'</span> <span class="string">'--disable-projectm'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--disable-sndio'</span> <span class="string">'--disable-svgdec'</span> <span class="string">'--disable-telx'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--disable-vpx'</span> <span class="string">'--disable-vsxu'</span> <span class="string">'--disable-wasapi'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-alsa'</span> <span class="string">'--enable-atmo'</span> <span class="string">'--enable-dc1394'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-dv1394'</span> <span class="string">'--enable-linsys'</span> <span class="string">'--enable-omxil'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-udev'</span> <span class="string">'--enable-v4l2'</span> <span class="string">'--enable-libva'</span> <span class="string">'--enable-vcd'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-smbclient'</span> <span class="string">'--disable-oss'</span> <span class="string">'--enable-crystalhd'</span> <span class="string">'--enable-mmx'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-sse'</span> <span class="string">'--disable-neon'</span> <span class="string">'--disable-altivec'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'CFLAGS=-g -O2 -fstack-protector-strong -Wformat -Werror=format-security'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'CXXFLAGS=-g -O2 -fstack-protector-strong -Wformat -Werror=format-security'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'build_alias=x86_64-linux-gnu'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'OBJCFLAGS=-g -O2 -fstack-protector-strong -Wformat -Werror=format-security'</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="GDB_u8C03_u8BD5"><a href="#GDB_u8C03_u8BD5" class="headerlink" title="GDB调试"></a>GDB调试</h3><p>运行GDB。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ gdb ./vlc</span><br><span class="line">$ b <span class="number">115</span></span><br><span class="line">$ run ~/<span class="number">01</span>.avi</span><br></pre></td></tr></table></figure></p>
+<p>程序会在<code>vlc.c</code>第116行停止。这就是<code>main</code>函数的入口。</p>
+<h3 id="QT_Creator_u8C03_u8BD5"><a href="#QT_Creator_u8C03_u8BD5" class="headerlink" title="QT Creator调试"></a>QT Creator调试</h3><p>安装并启动QT Creator。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install qt-creator</span><br><span class="line">$ qtcreator</span><br></pre></td></tr></table></figure></p>
+<p>“New Project” -&gt; “Import Project” -&gt; “Import Existing Project”，输入Project名称，选择VLC-2.2.1的路径。File Selection，默认。<br>在<code>bin/vlc.c</code>的115行设置断点，按F5调试，选取VLC的可执行文件，即可。<br><img src="https://raw.githubusercontent.com/higoge/image/master/sm/09.png" class="img-center"></p>
+<p>~~ EOF ~~</p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Streaming-Media/" rel="tag">#Streaming Media</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/12/11/breakwall07/" rel="next" title="狗急跳墙07：XX-Net">
+                <i class="fa fa-chevron-left"></i> 狗急跳墙07：XX-Net
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/12/17/net01/" rel="prev" title="网络01：双无线路由器无缝对接设置">
+                网络01：双无线路由器无缝对接设置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/12/14/sm04/"
+           data-title="流媒体04：VLC2.2.1的Linux编译及调试" data-url="http://yoursite.com/2015/12/14/sm04/">
+      </div>
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            本站概覽
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/author.jpg" alt="Jeremy Wong" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Jeremy Wong</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">I hurry and do not delay to keep your commandments.(PSM119:60)</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">78</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-name">分類</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">標籤</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/higoge" target="_blank">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/higoge" target="_blank">
+                  
+                    <i class="fa fa-weibo"></i> Weibo
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">友情连接</p>
+            
+              <span class="links-of-author-item">
+                <a href="http://pan.baidu.com/s/1o6Meksi" target="_blank">汪汪的网盘(解压密码higoge)</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u73AF_u5883"><span class="nav-number">1.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u7F16_u8BD1"><span class="nav-number">2.</span> <span class="nav-text">编译</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GDB_u8C03_u8BD5"><span class="nav-number">3.</span> <span class="nav-text">GDB调试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#QT_Creator_u8C03_u8BD5"><span class="nav-number">4.</span> <span class="nav-text">QT Creator调试</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jeremy Wong</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"higoge"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post' || CONFIG.sidebar === 'always') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>

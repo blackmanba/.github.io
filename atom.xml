@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[LearnIT]]></title>
+  <subtitle><![CDATA[跟汪汪学IT]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2016-01-11T02:27:25.233Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name><![CDATA[Jeremy Wong]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[[置顶]-博客目录]]></title>
+    <link href="http://yoursite.com/9999/12/31/toc/"/>
+    <id>http://yoursite.com/9999/12/31/toc/</id>
+    <published>9999-12-31T15:59:59.000Z</published>
+    <updated>2016-01-11T02:27:25.233Z</updated>
+    <content type="html"><![CDATA[<p>博客文章越来越多，分类和标签已经不能满足快速搜索的要求，将所有的文章列一个目录置顶，直接在本文搜索可以大大提高效率。<br>据目测，本文将会很长很长，而且会一直变长。<br><a id="more"></a></p>
+<h2 id="u968F_u7B14"><a href="#u968F_u7B14" class="headerlink" title="随笔"></a>随笔</h2><p>非技术类文章。<br><a href="http://higoge.github.io/2015/06/19/essay01/" target="_blank" rel="external">随笔01：第一篇</a><br><a href="http://higoge.github.io/2015/06/23/essay02/" target="_blank" rel="external">随笔02：关于海狗哥的流媒体空间资料一些说明</a><br><a href="http://higoge.github.io/2015/08/31/essay03/" target="_blank" rel="external">随笔03：无题</a></p>
+<h2 id="Linux_u7406_u8BBA"><a href="#Linux_u7406_u8BBA" class="headerlink" title="Linux理论"></a>Linux理论</h2><p>介绍Linux的理论知识。<br><a href="http://higoge.github.io/2015/07/28/th-linux01/" target="_blank" rel="external">Linux理论01：Linux发行版的选择</a><br><a href="http://higoge.github.io/2015/07/30/th-linux02/" target="_blank" rel="external">Linux理论02：CentOS6.6的安装</a><br><a href="http://higoge.github.io/2015/07/31/th-linux03/" target="_blank" rel="external">Linux理论03：CentOS6.6安装VMware Tools和配置共享文件夹</a><br><a href="http://higoge.github.io/2015/08/03/th-linux04/" target="_blank" rel="external">Linux理论04：CentOS6.6的网络配置</a><br><a href="http://higoge.github.io/2015/08/10/th-linux05/" target="_blank" rel="external">Linux理论05：Linux的目录结构</a><br><a href="http://higoge.github.io/2015/08/27/th-linux06/" target="_blank" rel="external">Linux理论06：Linux的启动级别</a></p>
+<h2 id="Linux_u547D_u4EE4"><a href="#Linux_u547D_u4EE4" class="headerlink" title="Linux命令"></a>Linux命令</h2><p>介绍Linux的基础命令，是每个Linux从业者必须掌握的命令。<br><a href="http://higoge.github.io/2015/08/12/cm-linux01/" target="_blank" rel="external">Linux命令01：命令的反馈形式</a><br><a href="http://higoge.github.io/2015/08/13/cm-linux02/" target="_blank" rel="external">Linux命令02：nano编辑器</a><br><a href="http://higoge.github.io/2015/08/17/cm-linux03/" target="_blank" rel="external">Linux命令03：man</a><br><a href="http://higoge.github.io/2015/08/18/cm-linux04/" target="_blank" rel="external">Linux命令04：info</a><br><a href="http://higoge.github.io/2015/08/21/cm-linux05/" target="_blank" rel="external">Linux命令05：重启关机</a></p>
+<h2 id="Linux_u8FDB_u9636"><a href="#Linux_u8FDB_u9636" class="headerlink" title="Linux进阶"></a>Linux进阶</h2><p>介绍Linux的进阶命令和配置，初学者可略过。<br><a href="http://higoge.github.io/2015/07/20/ad-linux01/" target="_blank" rel="external">Linux进阶01：tmux</a><br><a href="http://higoge.github.io/2015/07/21/ad-linux02/" target="_blank" rel="external">Linux进阶02：tmux好基友Tmuxinator</a><br><a href="http://higoge.github.io/2015/08/14/ad-linux03/" target="_blank" rel="external">Linux进阶03：双网卡绑定</a><br><a href="http://higoge.github.io/2015/08/20/ad-linux04/" target="_blank" rel="external">Linux进阶04：cheat–命令的栗子</a><br><a href="http://higoge.github.io/2015/08/28/ad-linux05/" target="_blank" rel="external">Linux进阶05：忘记root密码咋办</a></p>
+<h2 id="u7CFB_u7EDF_u5DE5_u5177"><a href="#u7CFB_u7EDF_u5DE5_u5177" class="headerlink" title="系统工具"></a>系统工具</h2><p>介绍本人包括但不限于Windows的常用工具。<br><a href="http://higoge.github.io/2015/07/15/tools01/" target="_blank" rel="external">工具01：Cygwin的安装配置</a><br><a href="http://higoge.github.io/2015/07/22/tools02/" target="_blank" rel="external">工具02：cmd的替代品ConEmu+Clink</a><br><a href="http://higoge.github.io/2015/07/23/tools03/" target="_blank" rel="external">工具03：PuTTY常用配置</a><br><a href="http://higoge.github.io/2015/07/24/tools04/" target="_blank" rel="external">工具04：PuTTY的小伙伴PuTTYgen和Plink</a><br><a href="http://higoge.github.io/2015/07/27/tools05/" target="_blank" rel="external">工具05：XShell</a><br><a href="http://higoge.github.io/2015/07/29/tools06/" target="_blank" rel="external">工具06：快速打开程序的方法</a><br><a href="http://higoge.github.io/2015/08/04/tools07/" target="_blank" rel="external">工具07：等宽字体</a><br><a href="http://higoge.github.io/2015/12/08/tools08/" target="_blank" rel="external">工具08：Hexo博客搭建过程</a></p>
+<h2 id="u7F51_u7EDC"><a href="#u7F51_u7EDC" class="headerlink" title="网络"></a>网络</h2><p><a href="http://higoge.github.io/2015/12/17/net01/" target="_blank" rel="external">网络01：双无线路由器无缝对接设置</a></p>
+<h2 id="u72D7_u6025_u8DF3_u5899"><a href="#u72D7_u6025_u8DF3_u5899" class="headerlink" title="狗急跳墙"></a>狗急跳墙</h2><p>介绍翻墙方法。<br><a href="http://higoge.github.io/2015/07/08/breakwall01/" target="_blank" rel="external">狗急跳墙01：综述</a><br><a href="http://higoge.github.io/2015/07/09/breakwall02/" target="_blank" rel="external">狗急跳墙02：GoAgent &amp; GoGo Tester</a><br><a href="http://higoge.github.io/2015/07/10/breakwall03/" target="_blank" rel="external">狗急跳墙03：Shadowsocks</a><br><a href="http://higoge.github.io/2015/07/13/breakwall04/" target="_blank" rel="external">狗急跳墙04：OpenDNS</a><br><a href="http://higoge.github.io/2015/07/14/breakwall05/" target="_blank" rel="external">狗急跳墙05：VPN Gate</a><br><a href="http://higoge.github.io/2015/07/14/breakwall06/" target="_blank" rel="external">狗急跳墙06：HostsTool</a><br><a href="http://higoge.github.io/2015/12/11/breakwall07/" target="_blank" rel="external">狗急跳墙07：XX-Net</a></p>
+<h2 id="u6D41_u5A92_u4F53"><a href="#u6D41_u5A92_u4F53" class="headerlink" title="流媒体"></a>流媒体</h2><p>介绍开源流媒体软件相关内容。<br><a href="http://higoge.github.io/2015/07/16/sm01/" target="_blank" rel="external">流媒体01：VLC-2.2.1编译</a><br><a href="http://higoge.github.io/2015/07/17/sm02/" target="_blank" rel="external">流媒体02：Linux交叉编译VLC-2.2.1</a><br><a href="http://higoge.github.io/2015/08/19/sm03/" target="_blank" rel="external">流媒体03：VLC2.2.1的ActiveX编译</a><br><a href="http://higoge.github.io/2015/12/14/sm04/" target="_blank" rel="external">流媒体04：VLC2.2.1的Linux编译及调试</a></p>
+<h2 id="u57FA_u7840"><a href="#u57FA_u7840" class="headerlink" title="基础"></a>基础</h2><p>介绍计算机基础知识。<br><a href="http://higoge.github.io/2015/06/23/basic01/" target="_blank" rel="external">基础01：比特、字节及进制</a><br><a href="http://higoge.github.io/2015/06/23/basic02/" target="_blank" rel="external">基础02：内存的大小端</a><br><a href="http://higoge.github.io/2015/07/02/basic03/" target="_blank" rel="external">基础03：原码、反码、补码</a><br><a href="http://higoge.github.io/2015/07/02/basic04/" target="_blank" rel="external">基础04：移码和浮点数的二进制表示</a><br><a href="http://higoge.github.io/2015/08/07/basic05/" target="_blank" rel="external">基础05：硬盘分区和硬盘模式</a><br><a href="http://higoge.github.io/2015/08/11/basic06/" target="_blank" rel="external">基础06：开源协议</a></p>
+<h2 id="Git_u57FA_u7840"><a href="#Git_u57FA_u7840" class="headerlink" title="Git基础"></a>Git基础</h2><p>介绍Git基础知识和基础命令。<br><a href="http://higoge.github.io/2015/07/03/git-basic01/" target="_blank" rel="external">Git基础01</a><br><a href="http://higoge.github.io/2015/07/03/git-basic02/" target="_blank" rel="external">Git基础02</a><br><a href="http://higoge.github.io/2015/07/03/git-basic03/" target="_blank" rel="external">Git基础03</a><br><a href="http://higoge.github.io/2015/07/03/git-basic04/" target="_blank" rel="external">Git基础04</a><br><a href="http://higoge.github.io/2015/07/07/git-basic05/" target="_blank" rel="external">Git基础05：Git版本控制的最佳实践</a><br><a href="http://higoge.github.io/2015/07/07/git-basic06/" target="_blank" rel="external">Git基础06：介绍一个成功的 Git 分支模型</a></p>
+<h2 id="Git_u8FDC_u7A0B"><a href="#Git_u8FDC_u7A0B" class="headerlink" title="Git远程"></a>Git远程</h2><p>介绍Git远程操作和服务搭建。<br><a href="http://higoge.github.io/2015/07/06/git-remote01/" target="_blank" rel="external">Git远程01：git remote相关操作</a><br><a href="http://higoge.github.io/2015/07/06/git-remote02/" target="_blank" rel="external">Git远程02：git clone都做了什么</a><br><a href="http://higoge.github.io/2015/07/06/git-remote03/" target="_blank" rel="external">Git远程03：分支的upstream</a><br><a href="http://higoge.github.io/2015/07/06/git-remote04/" target="_blank" rel="external">Git远程04：git fetch &amp; git push &amp; git pull</a><br><a href="http://higoge.github.io/2015/07/07/git-remote05/" target="_blank" rel="external">Git远程05：远程分支的删除与同步</a><br><a href="http://higoge.github.io/2015/07/07/git-remote06/" target="_blank" rel="external">Git远程06：push.default设置</a><br><a href="http://higoge.github.io/2015/07/07/git-remote07/" target="_blank" rel="external">Git远程07：远程标签</a><br><a href="http://higoge.github.io/2015/07/07/git-remote08/" target="_blank" rel="external">Git远程08：关于Git远程仓库操作的一些经验</a><br><a href="http://higoge.github.io/2015/08/05/git-remote09/" target="_blank" rel="external">Git远程09：Git服务搭建</a><br><a href="http://higoge.github.io/2015/08/06/git-remote10-md/" target="_blank" rel="external">Git远程10：搭建私有GitLab</a></p>
+<h2 id="u865A_u62DF_u673A"><a href="#u865A_u62DF_u673A" class="headerlink" title="虚拟机"></a>虚拟机</h2><p>介绍VMware Workstation的操作。<br><a href="http://higoge.github.io/2015/06/24/vm01/" target="_blank" rel="external">虚拟机01：虚拟机的安装</a><br><a href="http://higoge.github.io/2015/06/24/vm02/" target="_blank" rel="external">虚拟机02：三种网络模式</a><br><a href="http://higoge.github.io/2015/06/25/vm03/" target="_blank" rel="external">虚拟机03：网络设置</a><br><a href="http://higoge.github.io/2015/06/25/vm04/" target="_blank" rel="external">虚拟机04：新建虚拟机-Win7</a><br><a href="http://higoge.github.io/2015/06/26/vm05/" target="_blank" rel="external">虚拟机05：Win7中安装VMware-Tools</a><br><a href="http://higoge.github.io/2015/06/26/vm06/" target="_blank" rel="external">虚拟机06：快照与克隆</a><br><a href="http://higoge.github.io/2015/06/29/vm07/" target="_blank" rel="external">虚拟机07：常用快捷键</a><br><a href="http://higoge.github.io/2015/06/29/vm08/" target="_blank" rel="external">虚拟机08：通过网卡共享上网</a><br><a href="http://higoge.github.io/2015/06/30/vm09/" target="_blank" rel="external">虚拟机09：添加永久磁盘</a><br><a href="http://higoge.github.io/2015/06/30/vm10/" target="_blank" rel="external">虚拟机10：使用U盘及U盘启动</a><br><a href="http://higoge.github.io/2015/07/01/vm11/" target="_blank" rel="external">虚拟机11：共享文件夹</a><br><a href="http://higoge.github.io/2015/07/01/vm12/" target="_blank" rel="external">虚拟机12：其他功能</a><br><a href="http://higoge.github.io/2015/07/01/vm13/" target="_blank" rel="external">虚拟机13：VMware Workstation 11发布</a></p>
+<h2 id="u5B58_u50A8"><a href="#u5B58_u50A8" class="headerlink" title="存储"></a>存储</h2><p>介绍存储相关知识。<br><a href="http://higoge.github.io/2015/06/23/openfiler01/" target="_blank" rel="external">Openfiler01：Openfiler的安装</a><br><a href="http://higoge.github.io/2015/06/23/openfiler02/" target="_blank" rel="external">Openfiler02：Openfiler的配置</a><br><a href="http://higoge.github.io/2015/06/23/openfiler03/" target="_blank" rel="external">Openfiler03：open-iscsi安装配置及smbclient的安装</a></p>
+<p>~~ EOF ~~</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>博客文章越来越多，分类和标签已经不能满足快速搜索的要求，将所有的文章列一个目录置顶，直接在本文搜索可以大大提高效率。<br>据目测，本文将会很长很长，而且会一直变长。<br>]]>
+    
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[网络01：双无线路由器无缝对接设置]]></title>
+    <link href="http://yoursite.com/2015/12/17/net01/"/>
+    <id>http://yoursite.com/2015/12/17/net01/</id>
+    <published>2015-12-17T12:15:49.000Z</published>
+    <updated>2016-01-11T02:27:25.233Z</updated>
+    <content type="html"><![CDATA[<p>如果家太大或者墙太多，无线路由器总会有覆盖不到的地方。一般有如下解决方法。</p>
+<ol>
+<li>再加一个WiFi，利用两个WiFi的WDS(Wireless Distribution System)，进行中继或桥接。优点是省去了布线的麻烦，缺点是传输速率有所下降。不知道网络延时是否会增加，个人感觉延时会增大。</li>
+<li>使用<a href="http://item.mi.com/1153200003.html" target="_blank" rel="external">小米WiFi放大器</a>。此设备配置简单，价格也便宜(RMB39算是良心价)。从原理来说，也是一个WiFi中继器。所以优缺点同1。</li>
+<li>用网线连接两个WiFi。优点是通过网线会降低延时，不会影响传输速率，缺点是物理上要布线，配置也比较麻烦。如果两个WiFi不能很好的配合，会造成客户端仅连接一个WiFi，而不会根据信号强度自动切换WiFi，达不到实际使用效果。</li>
+</ol>
+<p>本文介绍双无线路由器无缝对接设置。<br><a id="more"></a></p>
+<h3 id="u7406_u8BBA"><a href="#u7406_u8BBA" class="headerlink" title="理论"></a>理论</h3><p>日常使用的无线路由器，其实是有三部分组成。</p>
+<ol>
+<li>无线AP(Access Point)。也就是无线的接入点。仅有无线连接的作用。</li>
+<li>二层交换机。实现无线AP和无线路由器的LAN口的数据交换。</li>
+<li>路由器。将二层交换网络通过路由协议从WAN口路由到下一跳。</li>
+</ol>
+<p>其他方面，一般的无线路由器都会有DHCP功能，给客户端自动分配IP地址。</p>
+<p>双无线路由器无缝对接，理论上就是用网线连接两个二层交换机，每个交换机又连接无线AP，每个AP设置相同的SSID但不同的信道。这样，客户端会根据信号强度自动选择连接相应的无线AP。</p>
+<h3 id="u914D_u7F6E"><a href="#u914D_u7F6E" class="headerlink" title="配置"></a>配置</h3><p>过程如下。</p>
+<ol>
+<li>准备两个无线路由器。主路由器A拨号上网，辅助路由器B作为无线AP的扩展使用。</li>
+<li>A路由器采用日常配置：配置SSID，WiFi密码，PPPoE拨号连接，开启DHCP并配置相关地址池。无线信道设置为1。</li>
+<li>用网线连接A路由器的LAN端口和B路由器的LAN端口。</li>
+<li>路由器B的SSID和WiFi密码设置为跟路由器A相同，关闭DHCP功能，WAN口不用设置，LAN口的IP地址和子网掩码设置的与路由器A的DHCP地址池不在同一个网段。无线信道设置为6或11。<br>这样，客户端会根据信号强弱自动连接对应的WiFi，实现无缝对接。</li>
+</ol>
+<h3 id="u9A8C_u8BC1"><a href="#u9A8C_u8BC1" class="headerlink" title="验证"></a>验证</h3><p>采用Cisco Packet Tracer软件，模拟配置过程。<br>Wireless Router0，作为主路由器，WAN口设置为静态IP地址192.168.10.2，连接服务器192.168.10.1。DHCP连接池从192.168.0.100~192.168.0.127。<br>Wireless Router1，作为扩展路由器，关闭DHCP功能，LAN口地址设置为192.168.1.2/24。<br>两个路由器的SSID为test，信道分别是1和6。<br>开启Physical视图，Laptop拖拽到任何WiFi的信号覆盖范围，都可以打开服务器的主页(Logical视图下用Laptop的浏览器打开<code>http://192.168.10.1</code>)。Laptop的切换连接的WiFi时也不需要重新设定SSID以及用户名密码。<br><img src="https://raw.githubusercontent.com/higoge/image/master/network/01.png" class="img-center"><br><img src="https://raw.githubusercontent.com/higoge/image/master/network/02.png" class="img-center"><br><a href="https://github.com/higoge/file/raw/master/double_wifi.pkt" target="_blank" rel="external">文件下载地址</a>和<a href="http://pan.baidu.com/s/1o6Meksi#path=%252F%25E6%25B1%25AA%25E6%25B1%25AA%25E7%259A%2584%25E7%25BD%2591%25E7%259B%2598%252FCisco%2520Packet%2520Tracer%25206.2" target="_blank" rel="external">软件下载地址</a>(解压密码higoge)。</p>
+<p>参考：<a href="https://www.v2ex.com/t/88368" target="_blank" rel="external">V2EX</a>。</p>
+<p>~~ EOF ~~</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>如果家太大或者墙太多，无线路由器总会有覆盖不到的地方。一般有如下解决方法。</p>
+<ol>
+<li>再加一个WiFi，利用两个WiFi的WDS(Wireless Distribution System)，进行中继或桥接。优点是省去了布线的麻烦，缺点是传输速率有所下降。不知道网络延时是否会增加，个人感觉延时会增大。</li>
+<li>使用<a href="http://item.mi.com/1153200003.html">小米WiFi放大器</a>。此设备配置简单，价格也便宜(RMB39算是良心价)。从原理来说，也是一个WiFi中继器。所以优缺点同1。</li>
+<li>用网线连接两个WiFi。优点是通过网线会降低延时，不会影响传输速率，缺点是物理上要布线，配置也比较麻烦。如果两个WiFi不能很好的配合，会造成客户端仅连接一个WiFi，而不会根据信号强度自动切换WiFi，达不到实际使用效果。</li>
+</ol>
+<p>本文介绍双无线路由器无缝对接设置。<br>]]>
+    
+    </summary>
+    
+      <category term="network" scheme="http://yoursite.com/tags/network/"/>
+    
+      <category term="网络" scheme="http://yoursite.com/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[流媒体04：VLC2.2.1的Linux编译及调试]]></title>
+    <link href="http://yoursite.com/2015/12/14/sm04/"/>
+    <id>http://yoursite.com/2015/12/14/sm04/</id>
+    <published>2015-12-14T12:19:51.000Z</published>
+    <updated>2016-01-11T02:27:25.233Z</updated>
+    <content type="html"><![CDATA[<p>Windows环境下编译的VLC或通过Linux交叉编译的VLC，调试起来非常麻烦，之前的51CTO的博客写过老版本的<a href="http://jeremiah.blog.51cto.com/539865/291032" target="_blank" rel="external">VLC的调试</a>，改动太多，速度也很慢，故新版本并没有继续在类似环境下继续折腾VLC的调试。偶然发现Ubuntu下直接编译VLC很快很好很方便，而且配合GDB调试只要加一条指令即可。<br>另外，配合QT Creator，在IDE中设置断点，读取打印变量等都非常的直观。<br>本文介绍VLC2.2.1的Linux编译，当然，编译的主要目的是：<strong>调试</strong>。<br><a id="more"></a></p>
+<h3 id="u73AF_u5883"><a href="#u73AF_u5883" class="headerlink" title="环境"></a>环境</h3><p>与交叉编译VLC2.2.1一样的环境，请参考<a href="http://higoge.github.io/2015/07/17/sm02/" target="_blank" rel="external">流媒体02：Linux交叉编译VLC-2.2.1</a>。</p>
+<h3 id="u7F16_u8BD1"><a href="#u7F16_u8BD1" class="headerlink" title="编译"></a>编译</h3><p>在此只记录命令。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get build-dep vlc -y</span><br><span class="line">$ tar xJvf vlc-<span class="number">2.2</span>.<span class="number">1</span>.tar.xz</span><br><span class="line">$ <span class="built_in">cd</span> vlc-<span class="number">2.2</span>.<span class="number">1</span>/</span><br><span class="line">$ ./bootstrap</span><br><span class="line">$ ./configure --enable-debug</span><br><span class="line">$ make -j2</span><br></pre></td></tr></table></figure></p>
+<p>编译完成后，运行测试。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./vlc ~/<span class="number">01</span>.avi</span><br></pre></td></tr></table></figure></p>
+<p>从运行结果看，VLC的播放窗口与原有界面分离了，没有找到解决原因。<br><img src="https://raw.githubusercontent.com/higoge/image/master/sm/07.png" class="img-center"></p>
+<p>官方的VLC并没有此问题。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install vlc</span><br><span class="line">$ vlc ~/<span class="number">01</span>.avi</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://raw.githubusercontent.com/higoge/image/master/sm/08.png" class="img-center"></p>
+<p>通过运行如下命令，可以看到官网VLC的编译脚本，有兴趣的可以研究下。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vlc --extraintf=logger -vvv ~/<span class="number">01</span>.avi</span><br></pre></td></tr></table></figure></p>
+<p>编译脚本如下。请酌情修改<code>${prefix}</code>相关参数。<br><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">./configure  <span class="string">'--includedir=$&#123;prefix&#125;/include'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--mandir=$&#123;prefix&#125;/share/man'</span> <span class="string">'--infodir=$&#123;prefix&#125;/share/info'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--localstatedir=/var'</span> <span class="string">'--libdir=$&#123;prefix&#125;/lib/x86_64-linux-gnu'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--libexecdir=$&#123;prefix&#125;/lib/x86_64-linux-gnu'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--disable-dependency-tracking'</span> <span class="string">'--build=x86_64-linux-gnu'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'CPPFLAGS=-D_FORTIFY_SOURCE=2'</span> <span class="string">'LDFLAGS=-Wl,-Bsymbolic-functions -Wl,-z,relro'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--config-cache'</span> <span class="string">'--disable-maintainer-mode'</span> <span class="string">'--disable-silent-rules'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--disable-update-check'</span> <span class="string">'--enable-fast-install'</span> <span class="string">'--prefix=/usr'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--docdir=/usr/share/doc/vlc-nox'</span> <span class="string">'--libdir=/usr/lib'</span> <span class="string">'--sysconfdir=/etc'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--with-binary-version=1'</span> <span class="string">'--enable-a52'</span> <span class="string">'--enable-aa'</span> <span class="string">'--enable-bluray'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-bonjour'</span> <span class="string">'--enable-caca'</span> <span class="string">'--enable-chromaprint'</span> <span class="string">'--enable-dbus'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-dca'</span> <span class="string">'--enable-directfb'</span> <span class="string">'--enable-dvbpsi'</span> <span class="string">'--enable-dvdnav'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-faad'</span> <span class="string">'--enable-flac'</span> <span class="string">'--enable-fluidsynth'</span> <span class="string">'--enable-freerdp'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-freetype'</span> <span class="string">'--enable-fribidi'</span> <span class="string">'--enable-gles1'</span> <span class="string">'--enable-gles2'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-gnutls'</span> <span class="string">'--enable-jack'</span> <span class="string">'--enable-kate'</span> <span class="string">'--enable-libass'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-libmpeg2'</span> <span class="string">'--enable-libxml2'</span> <span class="string">'--enable-lirc'</span> <span class="string">'--enable-live555'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-mad'</span> <span class="string">'--enable-mkv'</span> <span class="string">'--enable-mod'</span> <span class="string">'--enable-mpc'</span> <span class="string">'--enable-mtp'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-mux_ogg'</span> <span class="string">'--enable-ncurses'</span> <span class="string">'--enable-notify'</span> <span class="string">'--enable-ogg'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-opus'</span> <span class="string">'--enable-pulse'</span> <span class="string">'--enable-qt'</span> <span class="string">'--enable-realrtsp'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-samplerate'</span> <span class="string">'--enable-schroedinger'</span> <span class="string">'--enable-sdl'</span> <span class="string">'--enable-sftp'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-shine'</span> <span class="string">'--enable-shout'</span> <span class="string">'--enable-skins2'</span> <span class="string">'--enable-speex'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-svg'</span> <span class="string">'--enable-taglib'</span> <span class="string">'--enable-theora'</span> <span class="string">'--enable-twolame'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-upnp'</span> <span class="string">'--enable-vcdx'</span> <span class="string">'--enable-vdpau'</span> <span class="string">'--enable-vnc'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-vorbis'</span> <span class="string">'--enable-x264'</span> <span class="string">'--enable-zvbi'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--with-kde-solid=/usr/share/kde4/apps/solid/actions/'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--disable-decklink'</span> <span class="string">'--disable-dxva2'</span> <span class="string">'--disable-fdkaac'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--disable-gnomevfs'</span> <span class="string">'--disable-goom'</span> <span class="string">'--disable-libtar'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--disable-mfx'</span> <span class="string">'--disable-opencv'</span> <span class="string">'--disable-projectm'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--disable-sndio'</span> <span class="string">'--disable-svgdec'</span> <span class="string">'--disable-telx'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--disable-vpx'</span> <span class="string">'--disable-vsxu'</span> <span class="string">'--disable-wasapi'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-alsa'</span> <span class="string">'--enable-atmo'</span> <span class="string">'--enable-dc1394'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-dv1394'</span> <span class="string">'--enable-linsys'</span> <span class="string">'--enable-omxil'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-udev'</span> <span class="string">'--enable-v4l2'</span> <span class="string">'--enable-libva'</span> <span class="string">'--enable-vcd'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-smbclient'</span> <span class="string">'--disable-oss'</span> <span class="string">'--enable-crystalhd'</span> <span class="string">'--enable-mmx'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'--enable-sse'</span> <span class="string">'--disable-neon'</span> <span class="string">'--disable-altivec'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'CFLAGS=-g -O2 -fstack-protector-strong -Wformat -Werror=format-security'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'CXXFLAGS=-g -O2 -fstack-protector-strong -Wformat -Werror=format-security'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'build_alias=x86_64-linux-gnu'</span> <span class="string">\</span></span><br><span class="line"><span class="string">'OBJCFLAGS=-g -O2 -fstack-protector-strong -Wformat -Werror=format-security'</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="GDB_u8C03_u8BD5"><a href="#GDB_u8C03_u8BD5" class="headerlink" title="GDB调试"></a>GDB调试</h3><p>运行GDB。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ gdb ./vlc</span><br><span class="line">$ b <span class="number">115</span></span><br><span class="line">$ run ~/<span class="number">01</span>.avi</span><br></pre></td></tr></table></figure></p>
+<p>程序会在<code>vlc.c</code>第116行停止。这就是<code>main</code>函数的入口。</p>
+<h3 id="QT_Creator_u8C03_u8BD5"><a href="#QT_Creator_u8C03_u8BD5" class="headerlink" title="QT Creator调试"></a>QT Creator调试</h3><p>安装并启动QT Creator。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install qt-creator</span><br><span class="line">$ qtcreator</span><br></pre></td></tr></table></figure></p>
+<p>“New Project” -&gt; “Import Project” -&gt; “Import Existing Project”，输入Project名称，选择VLC-2.2.1的路径。File Selection，默认。<br>在<code>bin/vlc.c</code>的115行设置断点，按F5调试，选取VLC的可执行文件，即可。<br><img src="https://raw.githubusercontent.com/higoge/image/master/sm/09.png" class="img-center"></p>
+<p>~~ EOF ~~</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Windows环境下编译的VLC或通过Linux交叉编译的VLC，调试起来非常麻烦，之前的51CTO的博客写过老版本的<a href="http://jeremiah.blog.51cto.com/539865/291032">VLC的调试</a>，改动太多，速度也很慢，故新版本并没有继续在类似环境下继续折腾VLC的调试。偶然发现Ubuntu下直接编译VLC很快很好很方便，而且配合GDB调试只要加一条指令即可。<br>另外，配合QT Creator，在IDE中设置断点，读取打印变量等都非常的直观。<br>本文介绍VLC2.2.1的Linux编译，当然，编译的主要目的是：<strong>调试</strong>。<br>]]>
+    
+    </summary>
+    
+      <category term="Streaming Media" scheme="http://yoursite.com/tags/Streaming-Media/"/>
+    
+      <category term="流媒体" scheme="http://yoursite.com/categories/%E6%B5%81%E5%AA%92%E4%BD%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[狗急跳墙07：XX-Net]]></title>
+    <link href="http://yoursite.com/2015/12/11/breakwall07/"/>
+    <id>http://yoursite.com/2015/12/11/breakwall07/</id>
+    <published>2015-12-11T12:59:44.000Z</published>
+    <updated>2016-01-11T02:27:25.233Z</updated>
+    <content type="html"><![CDATA[<p>XX-Net是集成了GoAgent和GoGotester，自动扫描可用IP地址添加到GoAgent，一体化配置，非常方便跳墙初学者的使用。<br>IP持续扫描出3000个备用，并根据网络状况选取最快的IP进行访问。速度比GoAgent快太多了，配置也简单太多。<br><a id="more"></a></p>
+<h3 id="u6CE8_u610F"><a href="#u6CE8_u610F" class="headerlink" title="注意"></a>注意</h3><p>XX-Net刚开始使用时，速度并不会特别快，因为还没有扫描到足够的IP地址，需要耐性等待几分钟甚至几天的时间，等到其扫描足够多的IP地址，速度就没什么问题了。</p>
+<h3 id="u4E0B_u8F7D"><a href="#u4E0B_u8F7D" class="headerlink" title="下载"></a>下载</h3><p><a href="https://codeload.github.com/XX-Net/XX-Net/zip/2.6.2" target="_blank" rel="external">XX-net的GitHub</a>。操作系统是Windows 7。</p>
+<h3 id="u5B89_u88C5"><a href="#u5B89_u88C5" class="headerlink" title="安装"></a>安装</h3><p>解压后运行<code>start.bat</code>，提示“已导入GoAgent证书”，点击“确定”。桌面上会生成XX-Net的图标。并自动运行浏览器开启配置。</p>
+<h3 id="u914D_u7F6E"><a href="#u914D_u7F6E" class="headerlink" title="配置"></a>配置</h3><p>在XX-Net的配置界面，“配置”项中，输入自己的AppID。不输入AppID无法使用。申请AppID可参考<a href="http://higoge.github.io/2015/07/09/breakwall02/#u4F7F_u7528_u81EA_u5DF1_u7684_u8D26_u53F7_u548Cappid" target="_blank" rel="external">狗急跳墙02：GoAgent &amp; GoGo Tester</a>。临时使用，AppID可填写<code>higoge01</code>。<br>“扫描IP”中，如果是<strong>Windows10用户</strong>，建议关闭“自动调整扫描线程数”并修改“最大扫描线程数”为20，否则会出现声音卡顿的现象。<br>“导入导出IP”中，如果有自己使用的GoGoTester测试出的IP，可在此导入。<br>在“系统”的“配置”页中，根据需求设置“开机自动启动”，“启动时弹出状态页”等。</p>
+<h3 id="u5C40_u57DF_u7F51_u4EE3_u7406"><a href="#u5C40_u57DF_u7F51_u4EE3_u7406" class="headerlink" title="局域网代理"></a>局域网代理</h3><p>XX-Net默认只支持本机代理，若想变为局域网代理，供其他机器上网，则新建配置文件<code>data\gae_proxy\manual.ini</code>，内容如下。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[listen]</span><br><span class="line">ip = <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="u8BBE_u7F6E_u4EE3_u7406"><a href="#u8BBE_u7F6E_u4EE3_u7406" class="headerlink" title="设置代理"></a>设置代理</h3><p>右下角托盘右键，选取代理模式。如选择“全局通过GAEProxy代理”。测试结果如下。<br><img src="https://raw.githubusercontent.com/higoge/image/master/bw07/02.jpg" class="img-center"></p>
+<h3 id="u67E5_u770B_u72B6_u6001"><a href="#u67E5_u770B_u72B6_u6001" class="headerlink" title="查看状态"></a>查看状态</h3><p>”状态“页，看几个参数。<br><code>IP num/good</code>，<code>good</code>的数量越多越好。<br><code>10th IP handshake(ms)</code>越小越好。<br><code>connected link</code>，是未用过的ssl连接池/通用的gae连接池，只要这两个连接池有可用连接，即可正常使用。<br><img src="https://raw.githubusercontent.com/higoge/image/master/bw07/01.jpg" class="img-center"></p>
+<p>参考资料：<br><a href="https://github.com/XX-Net/XX-Net/wiki" target="_blank" rel="external">XX-net的Wiki</a></p>
+<p>~~ EOF ~~</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>XX-Net是集成了GoAgent和GoGotester，自动扫描可用IP地址添加到GoAgent，一体化配置，非常方便跳墙初学者的使用。<br>IP持续扫描出3000个备用，并根据网络状况选取最快的IP进行访问。速度比GoAgent快太多了，配置也简单太多。<br>]]>
+    
+    </summary>
+    
+      <category term="BreakWall" scheme="http://yoursite.com/tags/BreakWall/"/>
+    
+      <category term="狗急跳墙" scheme="http://yoursite.com/categories/%E7%8B%97%E6%80%A5%E8%B7%B3%E5%A2%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[工具08：Hexo博客搭建过程]]></title>
+    <link href="http://yoursite.com/2015/12/08/tools08/"/>
+    <id>http://yoursite.com/2015/12/08/tools08/</id>
+    <published>2015-12-08T12:26:03.000Z</published>
+    <updated>2016-01-11T02:27:25.236Z</updated>
+    <content type="html"><![CDATA[<p>本博客采用<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">Hexo</a>搭建在Github上，Hexo是基于Node.js的博客框架，并配合大量的主题，定制个性化的博客。写文章采用<a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="external">Markdown</a>语法，简单快速，再也不必为各种HTML样式而烦恼。<br>本文记录下搭建的过程。<br><a id="more"></a></p>
+<h3 id="u73AF_u5883"><a href="#u73AF_u5883" class="headerlink" title="环境"></a>环境</h3><p>操作系统：CentOS 7。<br>必备软件：文本编辑器，<a href="http://higoge.github.io/categories/Git/" target="_blank" rel="external">Git</a>。</p>
+<h3 id="Node-js_u5B89_u88C5"><a href="#Node-js_u5B89_u88C5" class="headerlink" title="Node.js安装"></a>Node.js安装</h3><p>执行如下命令。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># curl --silent --location https://rpm.nodesource.com/setup | bash -</span></span><br><span class="line"><span class="comment"># yum makecache fast</span></span><br><span class="line"><span class="comment"># yum install -y nodejs</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Hexo_u5B89_u88C5"><a href="#Hexo_u5B89_u88C5" class="headerlink" title="Hexo安装"></a>Hexo安装</h3><p>执行如下命令。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm install -g hexo-cli --https-proxy=http://192.168.80.2:808 \</span></span><br><span class="line">        --proxy=http://<span class="number">192.168</span>.<span class="number">80.2</span>:<span class="number">808</span> \</span><br><span class="line">        --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure></p>
+<p>参数<code>--https-proxy</code>和<code>--https-proxy</code>是Http代理设置；<code>--registry</code>是从某宝的库安装，原因是Nodejs的官方库被墙了，你懂的。<br>执行过程的时间比较长，需耐心等待。</p>
+<h3 id="u535A_u5BA2_u521D_u59CB_u5316"><a href="#u535A_u5BA2_u521D_u59CB_u5316" class="headerlink" title="博客初始化"></a>博客初始化</h3><p>执行如下命令。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir blog</span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ hexo init</span><br><span class="line">$ npm install  --https-proxy=http://<span class="number">192.168</span>.<span class="number">80.2</span>:<span class="number">808</span> \</span><br><span class="line">        --proxy=http://<span class="number">192.168</span>.<span class="number">80.2</span>:<span class="number">808</span> \</span><br><span class="line">        --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure></p>
+<h3 id="u5B89_u88C5_u63D2_u4EF6"><a href="#u5B89_u88C5_u63D2_u4EF6" class="headerlink" title="安装插件"></a>安装插件</h3><p>我只是用三个插件，<code>hexo-deployer-git</code>是发布到Git托管服务器上的插件，<code>feed</code>是博客RSS的插件，<code>hexo-generator-sitemap</code>是给Google搜索使用的插件。<br>执行如下命令。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save \</span><br><span class="line">        --https-proxy=http://<span class="number">192.168</span>.<span class="number">80.2</span>:<span class="number">808</span> \</span><br><span class="line">        --proxy=http://<span class="number">192.168</span>.<span class="number">80.2</span>:<span class="number">808</span> \</span><br><span class="line">        --registry=https://registry.npm.taobao.org</span><br><span class="line"></span><br><span class="line">$ npm install hexo-generator-feed --save \</span><br><span class="line">        --https-proxy=http://<span class="number">192.168</span>.<span class="number">80.2</span>:<span class="number">808</span> \</span><br><span class="line">        --proxy=http://<span class="number">192.168</span>.<span class="number">80.2</span>:<span class="number">808</span> \</span><br><span class="line">        --registry=https://registry.npm.taobao.org</span><br><span class="line"></span><br><span class="line">$ npm install hexo-generator-sitemap --save \</span><br><span class="line">        --https-proxy=http://<span class="number">192.168</span>.<span class="number">80.2</span>:<span class="number">808</span> \</span><br><span class="line">        --proxy=http://<span class="number">192.168</span>.<span class="number">80.2</span>:<span class="number">808</span> \</span><br><span class="line">        --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure></p>
+<h3 id="Hexo__u5E38_u7528_u547D_u4EE4"><a href="#Hexo__u5E38_u7528_u547D_u4EE4" class="headerlink" title="Hexo 常用命令"></a>Hexo 常用命令</h3><p>执行<code>hexo help</code>可调出命令参考。而<code>hexo</code>命令支持简写。即<code>s</code>可代表<code>server</code>，<code>cl</code>代表<code>clean</code>。<br>常用命令如下。</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hexo cl</td>
+<td>清空生产的文件和缓存</td>
+</tr>
+<tr>
+<td>hexo n <title></title></td>
+<td>生成标题为<title>的文章</title></td>
+</tr>
+<tr>
+<td>hexo g</td>
+<td>生成静态网页</td>
+</tr>
+<tr>
+<td>hexo d</td>
+<td>部署到网站</td>
+</tr>
+<tr>
+<td>hexo d -g</td>
+<td>生成静态网页并部署到网站</td>
+</tr>
+<tr>
+<td>hexo s</td>
+<td>开启Web服务</td>
+</tr>
+<tr>
+<td>–debug</td>
+<td>开启调试模式</td>
+</tr>
+</tbody>
+</table>
+<h3 id="u5168_u5C40_u914D_u7F6E"><a href="#u5168_u5C40_u914D_u7F6E" class="headerlink" title="全局配置"></a>全局配置</h3><p>修改博客目录下<code>_config.yml</code>文档，请遵循<a href="http://yaml.org/" target="_blank" rel="external">YAML</a>语言规范，尤其要注意<code>:</code>后必须有<u>空格</u>。<br>修改的参数记录如下：<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># Site</span></span><br><span class="line"><span class="label">title:</span> XXX</span><br><span class="line"><span class="label">subtitle:</span> XXX</span><br><span class="line"><span class="label">description:</span> XXX</span><br><span class="line"><span class="label">author:</span> XXX</span><br><span class="line"><span class="label">language:</span> XXX</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># URL</span></span><br><span class="line"><span class="label">url:</span> XXX</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Extensions</span></span><br><span class="line"><span class="label">theme:</span> XXX</span><br><span class="line"><span class="label">stylus:</span></span><br><span class="line">    compress: true</span><br><span class="line"></span><br><span class="line"><span class="label">plugins:</span></span><br><span class="line">- hexo-generator-feed</span><br><span class="line">- hexo-generator-sitemap</span><br><span class="line"></span><br><span class="line"><span class="label">feed:</span></span><br><span class="line">  type: atom       <span class="preprocessor">#feed 类型 (atom/rss2)</span></span><br><span class="line">  path: atom.xml   <span class="preprocessor">#rss 路径</span></span><br><span class="line">  limit: <span class="number">20</span>        <span class="preprocessor">#在 rss 中最多生成的文章数(0显示所有)</span></span><br><span class="line"></span><br><span class="line"><span class="label">sitemap:</span></span><br><span class="line">  path: sitemap.xml</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Deployment</span></span><br><span class="line"><span class="label">deploy:</span></span><br><span class="line">  type: git</span><br><span class="line">  repo: XXX</span><br></pre></td></tr></table></figure></p>
+<p>基本过程就是这样，执行<code>hexo s</code>后开启浏览器访问<code>http://IP:4000</code>就可看到博客的样貌了。</p>
+<p>参考文档：<br><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">Hexo Docs</a><br><a href="http://zipperary.com/categories/hexo/" target="_blank" rel="external">Hexo系列教程</a></p>
+<p>~~ EOF ~~</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>本博客采用<a href="https://hexo.io/zh-cn/">Hexo</a>搭建在Github上，Hexo是基于Node.js的博客框架，并配合大量的主题，定制个性化的博客。写文章采用<a href="http://daringfireball.net/projects/markdown/">Markdown</a>语法，简单快速，再也不必为各种HTML样式而烦恼。<br>本文记录下搭建的过程。<br>]]>
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+      <category term="系统工具" scheme="http://yoursite.com/categories/%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[随笔03：无题]]></title>
+    <link href="http://yoursite.com/2015/08/31/essay03/"/>
+    <id>http://yoursite.com/2015/08/31/essay03/</id>
+    <published>2015-08-31T12:07:19.000Z</published>
+    <updated>2016-01-11T02:27:25.233Z</updated>
+    <content type="html"><![CDATA[<p>这篇没想好题目，因为想说的事很凌乱。<br><a id="more"></a></p>
+<ol>
+<li>上周休假了三天，陪孩子去西霞口野生动物园玩了一圈，这个动物园真心不错，规划的非常好，强烈推荐有孩子的带着去玩玩，没孩子的记住这个地方，这也是个把妹的好去处。威海还有几处温泉，顺便去泡了下，也很不错，各种草药的温泉里面泡泡，什么治疗脱发的壮阳的，不知道有没有用，心理作用可能更大一些吧，泡完了身上光滑了这个是事实。</li>
+<li>因为休假，加上本月两个操作失误手机没流量了，导致错过了上海那场著名单口相声曲艺表演的直播。回家后先把这个功课补上了，顺便看了下360的发布会、一加2的发布会。虽然老罗的发布会问题很多，比如被DDOS，比如现场PPT出状况，但都不妨碍那场发布会的效果，不能说成功，只能说效果达到了预期，甚至更好。360的看10分钟就看不下去了，周红衣主教真心的XX，给人的感觉就是其他人都是傻X，就我牛X。一加的刘作虎讲的不错，比雷军说的要好，笑容可掬，至少全程下来，没有让我出门左拐的冲动。</li>
+<li>至于手机么，我不玩游戏，看看微信、刷刷微博、偶尔使用下便签，对拍照的要求也不是特别高，国产的这些手机用着都差不多。但因为有孩子，手头这个小米2S摔了不知道多少次了，有一次还被车碾过，居然还坚挺的活着。未来手机要么抗摔点，要么别给孩子玩。总之，不管坚果还是一加2还是小米Note，时间点不对，没有购买的冲动也欲望。等T2吧，等下一场发布会再被情怀和梦想感染一次再说吧。我也不会觉得拿着iPhone6 Plus就是时髦，拿着小米2S就是土鳖。总之，我不是那种追求时髦的人。</li>
+<li>不过我媳妇是。9月9日之后，iPhone6S Plus出来，必须买一台送媳妇。</li>
+<li>说到360手机，真心没兴趣关注。儿童手表？还是奉劝不要过度依赖这个产品，但凡偷孩子的，估计现在偷到后第一件事就是把孩子手表扔了。教育孩子提升安全意识，如记住家长的电话号码比使用电子跟踪设备更加安全有效。所以，别拿安全说事。就像安全卫士电脑关键之流，不是一个比一个安全，而是一个比一个流氓。百度腾讯就不说了，傅盛做猎豹之前搞的金山杀毒和安全卫士，也强不到哪去，真心不好用。卫士系列还是360的好。可360是流氓头子啊，咋办？我的办法是，安装完了，搞定其他流氓软件之后，把其所有的服务都停了，把自身的自动启动关了，然后退出。用的时候，调出来，处理完了，再关闭。这样能最大限度的降低流氓软件带来伤害，同时也让其为我们服务。至于杀毒么，免费的小红伞就很好用。</li>
+<li>今天看到秋叶大叔(说是大叔，也比我大不了几岁，装回90后)发的评论罗辑思维的文章，里面提到了黑罗胖的那篇知乎，找了看了看，看完后想到一个比喻。你说你花2000块找了个高级失足妇女，结果自己秒射了，然后大呼上当受骗智商被碾压，我只想说，是你那几秒的快感，碾压了你的智商。</li>
+<li>感觉上当了就别再上当了就是了，感觉人家手机做的不好就不关注呗，翻出人家以前的废话打完人家脸过瘾了就够了。最简单的事情就是作个评论家，而且是永远胜利的评论家。现在兴趣小组那么多，盯着别人的情怀，别人的商业化没完没了的，你不是贱那是什么？关于第2条，我承认我犯贱，果断取关360的一切关注。</li>
+<li>非常无语的是，狗急也没用了。百度搜不到这个博客，Google可以。可Google被墙了，那些狗急系列的文章，怎么看都像把解压软件压缩发布一样愚蠢。</li>
+<li>前两天收到了自开博客以来，包括以前在51CTO老博客开通以来的第一笔打赏。一个来自学生的打赏，50元。我退回了45元。只留下了5元。理由有两个：学生有闲钱多买书，请我喝东西5元买杯奶茶就够了；我有工作，养活一家四口没问题，不会去实现什么财务自由，搞什么自媒体，没那个实力。打赏就像游戏掉的装备，满足下个人的成就感；同时，让那些一直喊着请我吃饭请我喝茶的朋友有个渠道实现其诺言。</li>
+<li>本博说到底，是我个人的知识体系。从印象笔记剪贴收藏网络信息，到OneNote自己整理读书笔记，到最后都想整理到博客中。内容都很基础，或许也很无聊。基于7，不想看的别看行了，其他废话别多说。</li>
+</ol>
+<p>~~ EOF ~~</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>这篇没想好题目，因为想说的事很凌乱。<br>]]>
+    
+    </summary>
+    
+      <category term="Essay" scheme="http://yoursite.com/tags/Essay/"/>
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Linux进阶05：忘记root密码咋办]]></title>
+    <link href="http://yoursite.com/2015/08/28/ad-linux05/"/>
+    <id>http://yoursite.com/2015/08/28/ad-linux05/</id>
+    <published>2015-08-28T12:53:57.000Z</published>
+    <updated>2016-01-11T02:27:25.233Z</updated>
+    <content type="html"><![CDATA[<p><code>root</code>密码是Linux管理员绝对不能忘记的，但总有些马虎的人，需要管理很多系统时尤其容易忘记，。那忘记了咋办？<br>首先，面壁思过五分钟。然后，接着往下看。<br>本文介绍个人使用的四个系统的修改方式。<br><a id="more"></a></p>
+<h2 id="CentOS6-6"><a href="#CentOS6-6" class="headerlink" title="CentOS6.6"></a>CentOS6.6</h2><p>重启，进入<code>Grub</code>时，上下方向键选择CentOS6，按<code>e</code>，选择<code>kernel</code>那一项。<br><img src="https://raw.githubusercontent.com/higoge/image/master/adlinux/05.png" class="img-center"><br>按<code>e</code>，在后面输入<code>single</code>，回车，按<code>b</code>启动。<br><img src="https://raw.githubusercontent.com/higoge/image/master/adlinux/06.png" class="img-center"><br>使用命令<code>passwd root</code>修改<code>root</code>密码，重启。</p>
+<h2 id="CentOS7"><a href="#CentOS7" class="headerlink" title="CentOS7"></a>CentOS7</h2><p>重启，进入<code>Grub</code>时，上下方向键选择第一项，按<code>e</code>，进入编辑。<br>在倒数第二行最后，输入<code>rd.break</code>，使用快捷键<code>Ctrl+x</code>启动。<br><img src="https://raw.githubusercontent.com/higoge/image/master/adlinux/07.png" class="img-center"><br>执行如下命令。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">switch_root <span class="comment"># mount -o rw,remount /sysroot/</span></span><br><span class="line">switch_root <span class="comment"># chroot /sysroot/</span></span><br><span class="line">sh-<span class="number">4.2</span> <span class="comment"># passwd root</span></span><br><span class="line">sh-<span class="number">4.2</span> <span class="comment"># touch /.autorelabel</span></span><br><span class="line">sh-<span class="number">4.2</span> <span class="comment"># exit</span></span><br><span class="line">switch_root <span class="comment"># exit</span></span><br></pre></td></tr></table></figure></p>
+<p>若系统启动了SELinux，<code>touch /.autorelabel</code>会保证不出错。最后一个<code>exit</code>之后，SELinux会重新设定文件的Context，需要等待一会，之后就可以正常运行了。<br><img src="https://raw.githubusercontent.com/higoge/image/master/adlinux/08.png" class="img-center"></p>
+<h2 id="Ubuntu15-04/Linuxmint17-2"><a href="#Ubuntu15-04/Linuxmint17-2" class="headerlink" title="Ubuntu15.04/Linuxmint17.2"></a>Ubuntu15.04/Linuxmint17.2</h2><p>Ubuntu系列的修改方式都一样。<br>重启，进入<code>Grub</code>时，上下方向键选择第一项，按<code>e</code>，进入编辑。<br>倒数第二行最后，输入<code>rw init=/bin/bash</code>，快捷键<code>Ctrl+x</code>重启。<br><img src="https://raw.githubusercontent.com/higoge/image/master/adlinux/09.png" class="img-center"><br>使用命令<code>passwd root</code>修改<code>root</code>密码，重启。</p>
+<p>~~ EOF ~~</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><code>root</code>密码是Linux管理员绝对不能忘记的，但总有些马虎的人，需要管理很多系统时尤其容易忘记，。那忘记了咋办？<br>首先，面壁思过五分钟。然后，接着往下看。<br>本文介绍个人使用的四个系统的修改方式。<br>]]>
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="Linux进阶" scheme="http://yoursite.com/categories/Linux%E8%BF%9B%E9%98%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Linux理论06：Linux的启动级别]]></title>
+    <link href="http://yoursite.com/2015/08/27/th-linux06/"/>
+    <id>http://yoursite.com/2015/08/27/th-linux06/</id>
+    <published>2015-08-27T12:30:27.000Z</published>
+    <updated>2016-01-11T02:27:25.233Z</updated>
+    <content type="html"><![CDATA[<p>本文介绍Linux的启动级别，属于基础性理论。<br><a id="more"></a></p>
+<h2 id="u542F_u52A8_u7EA7_u522B"><a href="#u542F_u52A8_u7EA7_u522B" class="headerlink" title="启动级别"></a>启动级别</h2><p>执行如下命令。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ cat /etc/inittab</span><br><span class="line"><span class="comment"># (...)</span></span><br><span class="line"><span class="comment"># Default runlevel. The runlevels used are:</span></span><br><span class="line"><span class="comment">#   0 - halt (Do NOT set initdefault to this)</span></span><br><span class="line"><span class="comment">#   1 - Single user mode</span></span><br><span class="line"><span class="comment">#   2 - Multiuser, without NFS (The same as 3, if you do not have networking)</span></span><br><span class="line"><span class="comment">#   3 - Full multiuser mode</span></span><br><span class="line"><span class="comment">#   4 - unused</span></span><br><span class="line"><span class="comment">#   5 - X11</span></span><br><span class="line"><span class="comment">#   6 - reboot (Do NOT set initdefault to this)</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line">id:<span class="number">5</span>:initdefault:</span><br></pre></td></tr></table></figure></p>
+<p>通过注释，就能了解Linux有7个启动级别，翻译如下。</p>
+<blockquote>
+<p>0 - 关机(默认级别不要设置为此项)<br>1 - 单用户模式<br>2 - 多用户模式，但没有NFS(同3，如果需要网络)<br>3 - 全多用户模式<br>4 - 此项保留未使用<br>5 - X11(即图形界面)<br>6 - 重启(默认级别不要设置为此项)</p>
+</blockquote>
+<p>[上一篇]中使用命令<code>init 0</code>关机，<code>init 6</code>重启，其实就是让Linux系统到达对应的级别。</p>
+<p>常用级别是<code>3</code>命令行界面和<code>5</code>图形界面，<code>1</code>在系统崩溃开机救援时用的较多。</p>
+<h2 id="u8BBE_u7F6E_u542F_u52A8_u7EA7_u522B"><a href="#u8BBE_u7F6E_u542F_u52A8_u7EA7_u522B" class="headerlink" title="设置启动级别"></a>设置启动级别</h2><p><code>/etc/initab</code>中唯一没有注释一行<code>id:5:initdefault:</code>，其中数字就是当前对应的启动级别。</p>
+<p>使用<code>root</code>用户修改保存，然后重启。</p>
+<h2 id="u754C_u9762_u7684_u5207_u6362"><a href="#u754C_u9762_u7684_u5207_u6362" class="headerlink" title="界面的切换"></a>界面的切换</h2><p>如果默认启动基本设置为<code>3</code>，系统不启动图形界面，可以节省许多资源。系统默认可以启动6个命令行界面<code>`tty1~tty6</code>，使用快捷键<code>Alt+F*</code>来切换。<code>*</code>的范围是<code>1-6</code>。</p>
+<p>如果想切换到图像界面，可以使用<code>startx</code>命令。(<code>init 5</code>普通用户无法使用)。若再此退回命令行界面，在X11界面上<code>Log Out</code>或使用快捷键<code>Ctrl + Alt + F*</code>，不退出切换到其他<code>tty</code>，<code>*</code>的范围是<code>1-6</code>。</p>
+<p>如果默认启动级别是<code>5</code>，则占用<code>tty1</code>，使用<code>Log Out</code>会直接登出系统，在图形界面使用快捷键<code>Ctrl + Alt + F*</code>切换到其他<code>tty</code>，再此切换则使用快捷键<code>Alt + F*</code>，如再此切换到图形界面，使用<code>Alt + F1</code>。</p>
+<p>~~ EOF ~~</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>本文介绍Linux的启动级别，属于基础性理论。<br>]]>
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="Linux理论" scheme="http://yoursite.com/categories/Linux%E7%90%86%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Linux命令05：重启关机]]></title>
+    <link href="http://yoursite.com/2015/08/21/cm-linux05/"/>
+    <id>http://yoursite.com/2015/08/21/cm-linux05/</id>
+    <published>2015-08-21T12:07:54.000Z</published>
+    <updated>2016-01-11T02:27:25.233Z</updated>
+    <content type="html"><![CDATA[<p>Linux重启和关机是基本操作，必须掌握。所有操作必须是<code>root</code>或超级管理员权限。普通用户使用<code>su -</code>切换为<code>root</code>用户。<br><a id="more"></a></p>
+<h2 id="shutdown"><a href="#shutdown" class="headerlink" title="shutdown"></a>shutdown</h2><p>最常用关机命令为<code>shutdown</code>。<br>其用法如下。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># shutdown [option] time [message]</span></span><br></pre></td></tr></table></figure></p>
+<p>参数如下。<br><code>-r</code>：reboot<br><code>-h</code>：halted or powered off<br><code>-P</code>：powered off<br><code>-c</code>：cancels a running shutdown<br><code>-k</code>：only send out warning messages and disable logins<br>举个栗子。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># shutdown -h now # 关机</span></span><br><span class="line"><span class="comment"># shutdown -h 09:15 # 09:15 关机</span></span><br><span class="line"><span class="comment"># shutdown -h 10 '10分钟之后关机' # 10分钟后关机并发送信息</span></span><br><span class="line"><span class="comment"># shutdown -k 20:00 '虚假关机信息' # 发送关机信息，但并不真正关机</span></span><br><span class="line"><span class="comment"># shutdown -c # 取消正在准备执行的关机指令</span></span><br><span class="line"><span class="comment"># shutdown -r now # 重启</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="reboot_uFF0Chalt_uFF0Cpoweroff"><a href="#reboot_uFF0Chalt_uFF0Cpoweroff" class="headerlink" title="reboot，halt，poweroff"></a>reboot，halt，poweroff</h2><p><code>reboot</code>，重启。<br><code>halt</code>，挂起。<br><code>poweroff</code>，关机。<br>三个命令有一个共同的参数。<br><code>-f</code>：强制，不去处理<code>init</code>相关操作。</p>
+<h2 id="init"><a href="#init" class="headerlink" title="init"></a>init</h2><p><code>init</code>是到达某个启动级别，其中，级别<code>0</code>是关机，级别<code>6</code>是重启。<br>故关机重启也可以用如下命令。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># init <span class="number">6</span> # 重新启动</span></span><br><span class="line"><span class="preprocessor"># init <span class="number">0</span> # 关机</span></span><br></pre></td></tr></table></figure></p>
+<p>~~ EOF ~~</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Linux重启和关机是基本操作，必须掌握。所有操作必须是<code>root</code>或超级管理员权限。普通用户使用<code>su -</code>切换为<code>root</code>用户。<br>]]>
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="Linux命令" scheme="http://yoursite.com/categories/Linux%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Linux进阶04：cheat--命令的栗子]]></title>
+    <link href="http://yoursite.com/2015/08/20/ad-linux04/"/>
+    <id>http://yoursite.com/2015/08/20/ad-linux04/</id>
+    <published>2015-08-20T13:25:03.000Z</published>
+    <updated>2016-01-11T02:27:25.233Z</updated>
+    <content type="html"><![CDATA[<p>Linux基础命令中介绍了<code>man</code>和<code>info</code>来获得命令的在线帮助文档，获取命令信息还可以使用帮助参数<code>--help</code>，Bash的内建命令可以使用<code>help command</code>的方式。但所有的信息中，大多数介绍参数的用法，真正的栗子很少。<code>cheat</code>命令可以提供命令的很多栗子，很简洁也很实用。<br><a id="more"></a></p>
+<h2 id="u5B89_u88C5"><a href="#u5B89_u88C5" class="headerlink" title="安装"></a>安装</h2><p>基于CentOS6.6解释下安装过程。<br>A. 安装Python和Git<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yum install -y python git</span></span><br></pre></td></tr></table></figure></p>
+<p>B. 安装pip<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># wget https://bootstrap.pypa.io/get-pip.py</span></span><br><span class="line"><span class="comment"># python get-pip.py</span></span><br><span class="line"><span class="comment"># pip install -U pip</span></span><br></pre></td></tr></table></figure></p>
+<p>C. 安装依赖文件<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pip install docopt pygments</span></span><br></pre></td></tr></table></figure></p>
+<p>D. 下载cheat<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># git clone https://github.com/chrisallenlane/cheat.git</span></span><br></pre></td></tr></table></figure></p>
+<p>E. 安装cheat<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cd cheat</span></span><br><span class="line"><span class="comment"># python setup.py install</span></span><br></pre></td></tr></table></figure></p>
+<p>F. 测试<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cheat -v</span><br><span class="line">cheat <span class="number">2.1</span>.<span class="number">13</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="u4F7F_u7528"><a href="#u4F7F_u7528" class="headerlink" title="使用"></a>使用</h2><p>看<code>man</code>的<code>cheat</code>帮助。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ cheat man</span><br><span class="line"><span class="comment"># Convert a man page to pdf</span></span><br><span class="line">man -t bash | ps2pdf - bash.pdf</span><br><span class="line"></span><br><span class="line"><span class="comment"># View the ascii chart</span></span><br><span class="line">man <span class="number">7</span> ascii</span><br></pre></td></tr></table></figure></p>
+<p>查看<code>cheat</code>支持的命令。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ cheat <span class="operator">-l</span></span><br><span class="line"><span class="number">7</span>z             /usr/lib/python2.<span class="number">6</span>/site-packages/cheat/cheatsheets/<span class="number">7</span>z</span><br><span class="line">ab             /usr/lib/python2.<span class="number">6</span>/site-packages/cheat/cheatsheets/ab</span><br><span class="line">apk            /usr/lib/python2.<span class="number">6</span>/site-packages/cheat/cheatsheets/apk</span><br><span class="line">apparmor       /usr/lib/python2.<span class="number">6</span>/site-packages/cheat/cheatsheets/apparmor</span><br><span class="line">apt-cache      /usr/lib/python2.<span class="number">6</span>/site-packages/cheat/cheatsheets/apt-cache</span><br><span class="line">apt-get        /usr/lib/python2.<span class="number">6</span>/site-packages/cheat/cheatsheets/apt-get</span><br><span class="line">aptitude       /usr/lib/python2.<span class="number">6</span>/site-packages/cheat/cheatsheets/aptitude</span><br><span class="line">asciiart       /usr/lib/python2.<span class="number">6</span>/site-packages/cheat/cheatsheets/asciiart</span><br><span class="line">asterisk       /usr/lib/python2.<span class="number">6</span>/site-packages/cheat/cheatsheets/asterisk</span><br><span class="line">at             /usr/lib/python2.<span class="number">6</span>/site-packages/cheat/cheatsheets/at</span><br><span class="line">...... <span class="comment"># 后面省略</span></span><br></pre></td></tr></table></figure></p>
+<p>自己编写<code>foo</code>命令的<code>cheat</code>。前提是要配置好<code>EDITOR</code>变量，<code>export EDITOR=&#39;vim&#39;</code>。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cheat <span class="operator">-e</span> foo</span><br></pre></td></tr></table></figure></p>
+<p>编写好的<code>foo</code>命令的cheatsheet放置在<code>~/.cheat</code>目录下。</p>
+<p>设置语法高亮，不过设置了没啥用感觉。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">export</span> CHEATCOLORS=<span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
+<p>设置自动补全。将以下指令加入到<code>$HOME/.bashrc</code>中。注意<code>cheat.bash</code>的路径。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> <span class="variable">$HOME</span>/cheat/cheat/autocompletion/cheat.bash</span><br></pre></td></tr></table></figure></p>
+<p>执行<code>source $HOME/.bashrc</code>中生效。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cheat [tab][tab]</span><br><span class="line">Display all <span class="number">125</span> possibilities? (y or n)</span><br></pre></td></tr></table></figure></p>
+<p>目前，<code>cheat</code>有125个命令的栗子。</p>
+<p>~~ EOF ~~</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Linux基础命令中介绍了<code>man</code>和<code>info</code>来获得命令的在线帮助文档，获取命令信息还可以使用帮助参数<code>--help</code>，Bash的内建命令可以使用<code>help command</code>的方式。但所有的信息中，大多数介绍参数的用法，真正的栗子很少。<code>cheat</code>命令可以提供命令的很多栗子，很简洁也很实用。<br>]]>
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="Linux进阶" scheme="http://yoursite.com/categories/Linux%E8%BF%9B%E9%98%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[流媒体03：VLC2.2.1的ActiveX编译]]></title>
+    <link href="http://yoursite.com/2015/08/19/sm03/"/>
+    <id>http://yoursite.com/2015/08/19/sm03/</id>
+    <published>2015-08-19T12:58:30.000Z</published>
+    <updated>2016-01-11T02:27:25.233Z</updated>
+    <content type="html"><![CDATA[<p>VLC2.2.1的ActiveX以及Firefox插件已经从原有的代码中移除，另存了一个工程。本文介绍ActiveX的编译。<br><a id="more"></a></p>
+<h2 id="u73AF_u5883"><a href="#u73AF_u5883" class="headerlink" title="环境"></a>环境</h2><p>与交叉编译VLC2.2.1一样的环境，请参考<a href="http://higoge.github.io/2015/07/17/sm02/" target="_blank" rel="external">流媒体02：Linux交叉编译VLC-2.2.1</a>。</p>
+<h2 id="u8FC7_u7A0B"><a href="#u8FC7_u7A0B" class="headerlink" title="过程"></a>过程</h2><p>在此只记录命令。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> git://git.videolan.org/npapi-vlc.git</span><br><span class="line">$ <span class="built_in">cd</span> npapi-vlc</span><br><span class="line">$ git submodule init</span><br><span class="line">$ git submodule update</span><br><span class="line">$ <span class="built_in">export</span> FETCH_NPAPI_FALSE=<span class="string">"#"</span></span><br><span class="line">$ <span class="built_in">export</span> LIBVLC_LIBS=<span class="string">"-L<span class="variable">$HOME</span>/vlc-2.2.1/win32/lib/.libs/ -lvlc"</span></span><br><span class="line">$ <span class="built_in">export</span> LIBVLC_CFLAGS=<span class="string">"-I<span class="variable">$HOME</span>/vlc-2.2.1/win32/_win32/include/ -O2"</span></span><br><span class="line">$ ./autogen.sh</span><br><span class="line">$ ./configure --host=i686-w64-mingw32 --disable-npapi</span><br><span class="line">$ make -j2</span><br></pre></td></tr></table></figure></p>
+<p><code>--disable-npapi</code>目的是不编译Firefox插件。<code>LIBVLC_LIBS</code>及<code>LIBVLC_CFLAGS</code>路径不要写错，否则编译不通过。</p>
+<h2 id="u6D4B_u8BD5"><a href="#u6D4B_u8BD5" class="headerlink" title="测试"></a>测试</h2><p>将<code>npapi-vlc\activex\.lib\axvlc.dll</code>和<code>npapi-vlc\share\test</code>两个文件夹复制到编译好的VLC目录中(Windows下)。编辑<code>install.bat</code>脚本，内容如下。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">regsvr32</span> <span class="tag">axvlc</span><span class="class">.dll</span></span><br></pre></td></tr></table></figure></p>
+<p>编辑<code>uninstall.bat</code>卸载脚本，内容如下。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">regsvr32 axvlc<span class="class">.dll</span> /u</span><br></pre></td></tr></table></figure></p>
+<p>目录结构如图。<br><img src="https://raw.githubusercontent.com/higoge/image/master/sm/03.png" class="img-center"><br>运行<code>install.bat</code>，提示成功。<br><img src="https://raw.githubusercontent.com/higoge/image/master/sm/04.png" class="img-center"><br>用<code>IE</code>打开<code>test/test.html</code>，MRL输入本地视频路径<code>file:///e:/98.temp/01.avi</code>或网络路径<code>http://streams.videolan.org/streams/mp4/Mr_MrsSmith-h264_aac.mp4</code>，点击<code>Go</code>即可播放。<strong>注意</strong>：本地路径一定要加前缀<code>file:///</code>，分隔符用<code>/</code>，否则会提示播放失败。</p>
+<p><code>IE8</code>测试结果。<br><img src="https://raw.githubusercontent.com/higoge/image/master/sm/05.png" class="img-center"><br><code>IE11</code>测试结果。<br><img src="https://raw.githubusercontent.com/higoge/image/master/sm/06.png" class="img-center"></p>
+<p>~~ EOF ~~</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>VLC2.2.1的ActiveX以及Firefox插件已经从原有的代码中移除，另存了一个工程。本文介绍ActiveX的编译。<br>]]>
+    
+    </summary>
+    
+      <category term="Streaming Media" scheme="http://yoursite.com/tags/Streaming-Media/"/>
+    
+      <category term="流媒体" scheme="http://yoursite.com/categories/%E6%B5%81%E5%AA%92%E4%BD%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Linux命令04：info]]></title>
+    <link href="http://yoursite.com/2015/08/18/cm-linux04/"/>
+    <id>http://yoursite.com/2015/08/18/cm-linux04/</id>
+    <published>2015-08-18T12:38:39.000Z</published>
+    <updated>2016-01-11T02:27:25.233Z</updated>
+    <content type="html"><![CDATA[<p><code>info</code>是Linux的另一个帮助文档，相对于<code>man</code>将所有的信息都显示在一页上，<code>info</code>增加了节点(章节)，对于大型文档，对其进行章节分类显得更加友好。<br><a id="more"></a><br><img src="https://raw.githubusercontent.com/higoge/image/master/cmlinux/03.png" class="img-center"><br>如图所示，带<code>*</code>的都是节点，可以移动光标过去，按<code>Enter</code>键进入。</p>
+<h2 id="u64CD_u4F5C_u6309_u952E"><a href="#u64CD_u4F5C_u6309_u952E" class="headerlink" title="操作按键"></a>操作按键</h2><table>
+<thead>
+<tr>
+<th>按键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n</td>
+<td>下一个</td>
+</tr>
+<tr>
+<td>p</td>
+<td>上一个</td>
+</tr>
+<tr>
+<td>u</td>
+<td>上一层节点</td>
+</tr>
+<tr>
+<td>tab</td>
+<td>节点间切换</td>
+</tr>
+<tr>
+<td>PgUp</td>
+<td>上翻页</td>
+</tr>
+<tr>
+<td>PgDn</td>
+<td>下翻页</td>
+</tr>
+<tr>
+<td>b</td>
+<td>第一个node处</td>
+</tr>
+<tr>
+<td>e</td>
+<td>最后一个node处</td>
+</tr>
+<tr>
+<td>s(/)</td>
+<td>搜索</td>
+</tr>
+<tr>
+<td>{</td>
+<td>上一个搜索关键词</td>
+</tr>
+<tr>
+<td>}</td>
+<td>下一个搜索关键词</td>
+</tr>
+<tr>
+<td>h</td>
+<td>帮助</td>
+</tr>
+<tr>
+<td>?</td>
+<td>命令一览表</td>
+</tr>
+<tr>
+<td>q</td>
+<td>退出</td>
+</tr>
+</tbody>
+</table>
+<h2 id="u5E38_u7528_u53C2_u6570"><a href="#u5E38_u7528_u53C2_u6570" class="headerlink" title="常用参数"></a>常用参数</h2><p><code>--vi-keys</code>：使用类似<code>vi</code>或者<code>less</code>命令的操作按键。<br>在此模式下，使用<code>tab</code>切换节点，按<code>ctrl+x Enter</code>进入节点，按<code>PgUp</code>返回上一层节点。<br><code>info</code>是基于<code>emacs</code>的按键，因此使用此参数后，第一章所有的按键均失效。按<code>h</code>调出按键帮助菜单，里面有详细的按键说明。</p>
+<p>~~ EOF ~~</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><code>info</code>是Linux的另一个帮助文档，相对于<code>man</code>将所有的信息都显示在一页上，<code>info</code>增加了节点(章节)，对于大型文档，对其进行章节分类显得更加友好。<br>]]>
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="Linux命令" scheme="http://yoursite.com/categories/Linux%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Linux命令03：man]]></title>
+    <link href="http://yoursite.com/2015/08/17/cm-linux03/"/>
+    <id>http://yoursite.com/2015/08/17/cm-linux03/</id>
+    <published>2015-08-17T12:42:05.000Z</published>
+    <updated>2016-01-11T02:27:25.233Z</updated>
+    <content type="html"><![CDATA[<p><code>man</code>命令是Linux在线参考手册的接口命令，所有的Linux命令都有参考手册，虽然是英文的，但耐心认真的读参考手册，可以学到无穷的知识，也可以解决Linux的大部分问题。<br><a id="more"></a></p>
+<h2 id="u624B_u518C_u5206_u7C7B"><a href="#u624B_u518C_u5206_u7C7B" class="headerlink" title="手册分类"></a>手册分类</h2><p>最常用的是<code>1</code>用户命令，<code>3(p)</code>库函数，<code>7</code>惯例和协议。</p>
+<table>
+<thead>
+<tr>
+<th>分类号</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>User Commands</td>
+</tr>
+<tr>
+<td>2</td>
+<td>System Calls</td>
+</tr>
+<tr>
+<td>3</td>
+<td>C Library Functions</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Devices and Special Files</td>
+</tr>
+<tr>
+<td>5</td>
+<td>File Formats and Conventions</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Games et. Al.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Miscellanea</td>
+</tr>
+<tr>
+<td>8</td>
+<td>System Administration tools and Deamons</td>
+</tr>
+<tr>
+<td>p</td>
+<td>POSIX Programmer’s Manual</td>
+</tr>
+</tbody>
+</table>
+<p>关于Linux Programmer’s Manual和POSIX Programmer’s Manual的区别，也就是如<code>3</code>和<code>3p</code>的区别，见<a href="http://stackoverflow.com/questions/479173/linux-newbie-linux-vs-posix-manual" target="_blank" rel="external">此</a>。</p>
+<blockquote>
+<p>Basically, the linux manuals are documentation of the commands/APIs from their writers; The POSIX manuals are from the POSIX standard. Usually, the “normal” ones are shorter and terser, but deal with the specific implementation; the POSIX ones are longer and more detailed (see man 3p read), but only tell what is in the standard.</p>
+<p>The best is to look in both.</p>
+</blockquote>
+<h2 id="u5E38_u7528_u53C2_u6570"><a href="#u5E38_u7528_u53C2_u6570" class="headerlink" title="常用参数"></a>常用参数</h2><p><code>-f</code>：按照完整全名查找手册。其实，是调用<code>whatis</code>命令，用完整名查询<code>whatis</code>数据库。<br><code>-k</code>：查询匹配的手册。其实，是调用<code>apropos</code>命令，用字符串匹配<code>whatis</code>数据库。<br><code>no</code>：<code>no</code>就是分类号码。直接进入命令的对应分类手册。</p>
+<h2 id="u4E3E_u4E2A_u6817_u5B50"><a href="#u4E3E_u4E2A_u6817_u5B50" class="headerlink" title="举个栗子"></a>举个栗子</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">$ man <span class="operator">-f</span> man <span class="comment"># 查询man的手册分类</span></span><br><span class="line">man (<span class="number">7</span>)              - macros to format man pages</span><br><span class="line">man (<span class="number">1</span>)              - an interface to the on-line reference manuals</span><br><span class="line">man (<span class="number">1</span>p)             - display system documentation</span><br><span class="line"></span><br><span class="line">$ man man <span class="comment"># 进入man命令的参考手册 默认进入分类1</span></span><br><span class="line"></span><br><span class="line">$ man <span class="number">7</span> man <span class="comment"># 进入man的分类7的手册</span></span><br><span class="line"></span><br><span class="line">$ man -k <span class="built_in">printf</span> <span class="comment"># 查询所有包含printf字符串的手册</span></span><br><span class="line">asprintf (<span class="number">3</span>)         - <span class="built_in">print</span> to allocated string</span><br><span class="line">dprintf (<span class="number">3</span>)          - <span class="built_in">print</span> to a file descriptor</span><br><span class="line">fprintf (<span class="number">3</span>)          - formatted output conversion</span><br><span class="line">fprintf (<span class="number">3</span>p)         - <span class="built_in">print</span> formatted output</span><br><span class="line">fwprintf (<span class="number">3</span>)         - formatted wide-character output conversion</span><br><span class="line">fwprintf (<span class="number">3</span>p)        - <span class="built_in">print</span> formatted wide-character output</span><br><span class="line">ldns_buffer_<span class="built_in">printf</span> (<span class="number">3</span>) - (unknown subject)</span><br><span class="line"><span class="built_in">printf</span> (<span class="number">1</span>)           - format and <span class="built_in">print</span> data</span><br><span class="line"><span class="built_in">printf</span> (<span class="number">1</span>p)          - write formatted output</span><br><span class="line"><span class="built_in">printf</span> (<span class="number">3</span>)           - formatted output conversion</span><br><span class="line"><span class="built_in">printf</span> (<span class="number">3</span>p)          - <span class="built_in">print</span> formatted output</span><br><span class="line">...... <span class="comment"># 省略了中间内容</span></span><br><span class="line">wprintf (<span class="number">3</span>p)         - <span class="built_in">print</span> formatted wide-character output</span><br></pre></td></tr></table></figure>
+<h2 id="u64CD_u4F5C_u6309_u952E"><a href="#u64CD_u4F5C_u6309_u952E" class="headerlink" title="操作按键"></a>操作按键</h2><table>
+<thead>
+<tr>
+<th>按键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>j</td>
+<td>向下</td>
+</tr>
+<tr>
+<td>k</td>
+<td>向上</td>
+</tr>
+<tr>
+<td>space</td>
+<td>下翻页</td>
+</tr>
+<tr>
+<td>PgUp/u</td>
+<td>上翻页</td>
+</tr>
+<tr>
+<td>PgDn/d</td>
+<td>下翻页</td>
+</tr>
+<tr>
+<td>Home/gg</td>
+<td>第一页</td>
+</tr>
+<tr>
+<td>End/G</td>
+<td>最后一页</td>
+</tr>
+<tr>
+<td>/string</td>
+<td>向下查找string</td>
+</tr>
+<tr>
+<td>?string</td>
+<td>向上查找string</td>
+</tr>
+<tr>
+<td>n</td>
+<td>下一个</td>
+</tr>
+<tr>
+<td>N</td>
+<td>上一个</td>
+</tr>
+<tr>
+<td>q</td>
+<td>退出</td>
+</tr>
+<tr>
+<td>no</td>
+<td>跳转到no行</td>
+</tr>
+</tbody>
+</table>
+<h2 id="u5176_u4ED6"><a href="#u5176_u4ED6" class="headerlink" title="其他"></a>其他</h2><p><strong>注意</strong>，<code>man</code>命令其实是调用的<code>less</code>命令显示<code>whatis</code>数据库的内容，所以<code>man</code>的按键和<code>less</code>的按键是一样的，而<code>less</code>的命令和<code>vim</code>阅读模式的光标移动的按键是一样的。学了<code>vim</code>后，所有按键都会统一。<br>CentOS6.6的<code>/etc/man.conf</code>是<code>man</code>的配置文档，<code>MANSECT</code>参数可以设置显示分类的顺序。<br>CentOS7对应的是<code>/etc/man_db.conf</code>，参数是<code>SECTION</code>。</p>
+<p>~~ EOF ~~</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><code>man</code>命令是Linux在线参考手册的接口命令，所有的Linux命令都有参考手册，虽然是英文的，但耐心认真的读参考手册，可以学到无穷的知识，也可以解决Linux的大部分问题。<br>]]>
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="Linux命令" scheme="http://yoursite.com/categories/Linux%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Linux进阶03：双网卡绑定]]></title>
+    <link href="http://yoursite.com/2015/08/14/ad-linux03/"/>
+    <id>http://yoursite.com/2015/08/14/ad-linux03/</id>
+    <published>2015-08-14T12:56:48.000Z</published>
+    <updated>2016-01-11T02:27:25.233Z</updated>
+    <content type="html"><![CDATA[<p>昨天有位亲问询我Linux关于双网卡绑定的事，以前折腾过，这回的折腾记录在此。</p>
+<h2 id="u73AF_u5883"><a href="#u73AF_u5883" class="headerlink" title="环境"></a>环境</h2><p>测试环境是CentOS6.6的虚拟机，添加了一个网卡，网络连接模式NAT。<br><a id="more"></a></p>
+<h2 id="u5173_u95ED_u670D_u52A1"><a href="#u5173_u95ED_u670D_u52A1" class="headerlink" title="关闭服务"></a>关闭服务</h2><p><code>NetworkManager</code>服务是供界面使用网盘配置服务，其会影响网络服务的运行，故关闭之。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># service NetworkManager stop</span></span><br><span class="line"><span class="comment"># chkconfig NetworkManager off</span></span><br><span class="line"><span class="comment"># chkconfig --list NetworkManager</span></span><br><span class="line">NetworkManager  <span class="number">0</span>:off   <span class="number">1</span>:off   <span class="number">2</span>:off    <span class="number">3</span>:off    <span class="number">4</span>:off    <span class="number">5</span>:off    <span class="number">6</span>:off</span><br></pre></td></tr></table></figure></p>
+<h2 id="u914D_u7F6E_u811A_u672C"><a href="#u914D_u7F6E_u811A_u672C" class="headerlink" title="配置脚本"></a>配置脚本</h2><p>新建<code>bond0</code>网卡文件，内容如下。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cat /etc/sysconfig/network-scripts/ifcfg-bond0</span></span><br><span class="line">DEVICE=bond0</span><br><span class="line">TYPE=Ethernet</span><br><span class="line">ONBOOT=yes</span><br><span class="line">BOOTPROTO=none</span><br><span class="line">IPADDR=<span class="number">192.168</span>.<span class="number">80.6</span></span><br><span class="line">PREFIX=<span class="number">24</span></span><br><span class="line">GATEWAY=<span class="number">192.168</span>.<span class="number">80.1</span></span><br><span class="line">DNS1=<span class="number">192.168</span>.<span class="number">80.1</span></span><br><span class="line">IPV6INIT=no</span><br><span class="line">NAME=<span class="string">"System bond0"</span></span><br><span class="line">ARPCHECK=NO</span><br></pre></td></tr></table></figure></p>
+<p>修改<code>eth0</code>，<code>eth1</code>网卡文件内容。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cat /etc/sysconfig/network-scripts/ifcfg-eth0</span></span><br><span class="line">DEVICE=eth0</span><br><span class="line">TYPE=Ethernet</span><br><span class="line">ONBOOT=yes</span><br><span class="line">BOOTPROTO=none</span><br><span class="line">MASTER=bond0</span><br><span class="line">SLAVE=yes</span><br><span class="line"><span class="comment"># cat /etc/sysconfig/network-scripts/ifcfg-eth1</span></span><br><span class="line">DEVICE=eth1</span><br><span class="line">TYPE=Ethernet</span><br><span class="line">ONBOOT=yes</span><br><span class="line">BOOTPROTO=none</span><br><span class="line">MASTER=bond0</span><br><span class="line">SLAVE=yes</span><br></pre></td></tr></table></figure></p>
+<p>在文件<code>/etc/modprobe.d/dist.conf</code>文件下添加如下内容。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> bond0 bonding</span><br><span class="line">options bond0 mode=<span class="number">1</span> miimon=<span class="number">100</span></span><br></pre></td></tr></table></figure></p>
+<p><code>mode=0</code>是负载均衡模式，即双网卡分流网络负载。若两个网卡接入同一个交换机，交换机需将这两个网口用聚合方式绑定。<br><code>mode=1</code>是主备模式，一个网卡工作，一个网卡备用，某个网卡断掉，另一个网卡启动工作。<br><code>miimon=100</code>是链路检测时间，100毫秒检测一次。</p>
+<h2 id="u6D4B_u8BD5"><a href="#u6D4B_u8BD5" class="headerlink" title="测试"></a>测试</h2><p>重启虚拟机。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># reboot</span></span><br></pre></td></tr></table></figure></p>
+<p>查看运行信息。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cat /proc/net/bonding/bond0</span></span><br><span class="line">Ethernet Channel Bonding Driver: v3.<span class="number">6.0</span> (September <span class="number">26</span>, <span class="number">2009</span>)</span><br><span class="line"></span><br><span class="line">Bonding Mode: fault-tolerance (active-backup)</span><br><span class="line">Primary Slave: None</span><br><span class="line">Currently Active Slave: eth0</span><br><span class="line">MII Status: up</span><br><span class="line">MII Polling Interval (ms): <span class="number">100</span></span><br><span class="line">Up Delay (ms): <span class="number">0</span></span><br><span class="line">Down Delay (ms): <span class="number">0</span></span><br><span class="line"></span><br><span class="line">Slave Interface: eth0</span><br><span class="line">MII Status: up</span><br><span class="line">Speed: <span class="number">1000</span> Mbps</span><br><span class="line">Duplex: full</span><br><span class="line">Link Failure Count: <span class="number">0</span></span><br><span class="line">Permanent HW addr: <span class="number">00</span>:<span class="number">0</span>c:<span class="number">29</span>:<span class="number">8</span>c:f7:<span class="number">3</span>d</span><br><span class="line">Slave queue ID: <span class="number">0</span></span><br><span class="line"></span><br><span class="line">Slave Interface: eth1</span><br><span class="line">MII Status: up</span><br><span class="line">Speed: <span class="number">1000</span> Mbps</span><br><span class="line">Duplex: full</span><br><span class="line">Link Failure Count: <span class="number">0</span></span><br><span class="line">Permanent HW addr: <span class="number">00</span>:<span class="number">0</span>c:<span class="number">29</span>:<span class="number">8</span>c:f7:<span class="number">47</span></span><br><span class="line">Slave queue ID: <span class="number">0</span></span><br></pre></td></tr></table></figure></p>
+<p><code>Currently Active Slave: eth0</code>现在主要工作的是<code>eth0</code>。<br>虚拟机断开网卡1的连接。<br><img src="https://raw.githubusercontent.com/higoge/image/master/adlinux/03.png" class="img-center"><br>再查看信息。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cat /proc/net/bonding/bond0</span></span><br><span class="line">Ethernet Channel Bonding Driver: v3.<span class="number">6.0</span> (September <span class="number">26</span>, <span class="number">2009</span>)</span><br><span class="line"></span><br><span class="line">Bonding Mode: fault-tolerance (active-backup)</span><br><span class="line">Primary Slave: None</span><br><span class="line">Currently Active Slave: eth1</span><br><span class="line">MII Status: up</span><br><span class="line">MII Polling Interval (ms): <span class="number">100</span></span><br><span class="line">Up Delay (ms): <span class="number">0</span></span><br><span class="line">Down Delay (ms): <span class="number">0</span></span><br><span class="line"></span><br><span class="line">Slave Interface: eth0</span><br><span class="line">MII Status: down</span><br><span class="line">Speed: Unknown</span><br><span class="line">Duplex: Unknown</span><br><span class="line">Link Failure Count: <span class="number">1</span></span><br><span class="line">Permanent HW addr: <span class="number">00</span>:<span class="number">0</span>c:<span class="number">29</span>:<span class="number">8</span>c:f7:<span class="number">3</span>d</span><br><span class="line">Slave queue ID: <span class="number">0</span></span><br><span class="line"></span><br><span class="line">Slave Interface: eth1</span><br><span class="line">MII Status: up</span><br><span class="line">Speed: <span class="number">1000</span> Mbps</span><br><span class="line">Duplex: full</span><br><span class="line">Link Failure Count: <span class="number">0</span></span><br><span class="line">Permanent HW addr: <span class="number">00</span>:<span class="number">0</span>c:<span class="number">29</span>:<span class="number">8</span>c:f7:<span class="number">47</span></span><br><span class="line">Slave queue ID: <span class="number">0</span></span><br></pre></td></tr></table></figure></p>
+<p><code>eth0</code>的<code>MII Status: down</code>，所以现在<code>Currently Active Slave: eth1</code>。<code>ping</code>一下连通性没有问题，中间断了一下，是那个ICMP包正好处于链路检测时间内，系统尚未判断<code>eth0</code>挂掉，也就还没有启动<code>eth1</code>，导致了无响应。<br><img src="https://raw.githubusercontent.com/higoge/image/master/adlinux/04.png" class="img-center"><br>此时，如果再断开网卡2，则网络全部挂掉；或若重启网卡1，由于网卡2工作正常，网卡1变为备用网卡。通过命令<code>cat /proc/net/bonding/bond0</code>均能看到其详细信息。</p>
+<h2 id="u5176_u4ED6"><a href="#u5176_u4ED6" class="headerlink" title="其他"></a>其他</h2><p>本章未亲自测试过。<br>A. CentOS7的双网卡绑定可以采用<a href="https://www.centos.org/forums/viewtopic.php?f=50&amp;t=48744" target="_blank" rel="external">Team模式</a>，或者旧有的<a href="http://phreek.org/blog/2014/11/centos-7-lacp-network-bonding" target="_blank" rel="external">bond模式</a>。<br>B. 多网卡绑定多个<code>bond</code>，只是在<code>/etc/modprobe.d/dist.conf</code>的内容有所不同。<br>多个<code>bond</code>设置成相同的模式。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> bond0 bonding</span><br><span class="line"><span class="built_in">alias</span> bond1 bonding</span><br><span class="line">options bonding max_bonds=<span class="number">2</span> miimon=<span class="number">200</span> mode=<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>多个<code>bond</code>设置成不同的模式。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> bond0 bonding</span><br><span class="line">options bond0 miimon=<span class="number">100</span> mode=<span class="number">1</span></span><br><span class="line">install bond1 /sbin/modprobe bonding -o bond1 miimon=<span class="number">200</span> mode=<span class="number">0</span></span><br></pre></td></tr></table></figure></p>
+<p>具体设置方法可以参考<a href="http://blog.csdn.net/wuweilong/article/details/39720571" target="_blank" rel="external">这篇</a>。</p>
+<p>~~ EOF ~~</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>昨天有位亲问询我Linux关于双网卡绑定的事，以前折腾过，这回的折腾记录在此。</p>
+<h2 id="u73AF_u5883"><a href="#u73AF_u5883" class="headerlink" title="环境"></a>环境</h2><p>测试环境是CentOS6.6的虚拟机，添加了一个网卡，网络连接模式NAT。<br>]]>
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="Linux进阶" scheme="http://yoursite.com/categories/Linux%E8%BF%9B%E9%98%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Linux命令02：nano编辑器]]></title>
+    <link href="http://yoursite.com/2015/08/13/cm-linux02/"/>
+    <id>http://yoursite.com/2015/08/13/cm-linux02/</id>
+    <published>2015-08-13T12:41:09.000Z</published>
+    <updated>2016-01-11T02:27:25.233Z</updated>
+    <content type="html"><![CDATA[<p>nano(Nano’s ANOther editor)是一种简单小巧的文本编辑器，是Linux命令行的记事本。相对于编辑器大神Emacs和vim，nano简单易学上手快，对于初学者编辑文档完全够用。<br><a id="more"></a></p>
+<h2 id="u5B89_u88C5"><a href="#u5B89_u88C5" class="headerlink" title="安装"></a>安装</h2><p>一般的CentOS系统都默认安装了nano，如果未安装，则执行如下命令<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yum install nano</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="u542F_u52A8"><a href="#u542F_u52A8" class="headerlink" title="启动"></a>启动</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nano [filename]</span><br></pre></td></tr></table></figure>
+<p>可直接启动nano，也可启动nano时打开文件。<br>启动后界面如下。<br><img src="https://raw.githubusercontent.com/higoge/image/master/cmlinux/02.png" class="img-center"><br>其中快捷键的<code>^</code>表示<code>Ctrl</code>键，<code>M</code>表示<code>Alt</code>键。<br>编辑文档，上下左右移动，<code>Ctrl+o</code>保存，<code>Ctrl+x</code>退出。</p>
+<h2 id="u5E38_u7528_u5FEB_u6377_u952E"><a href="#u5E38_u7528_u5FEB_u6377_u952E" class="headerlink" title="常用快捷键"></a>常用快捷键</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ctrl+g(F1)</td>
+<td>Get Help</td>
+</tr>
+<tr>
+<td>ctrl+x(F2)</td>
+<td>退出</td>
+</tr>
+<tr>
+<td>ctrl+o(F3)</td>
+<td>保存文件</td>
+</tr>
+<tr>
+<td>ctrl+r(F5)</td>
+<td>读取文件</td>
+</tr>
+<tr>
+<td>ctrl+w(F6)</td>
+<td>搜索字符串</td>
+</tr>
+<tr>
+<td>ctrl+k(F9)</td>
+<td>剪切当前行</td>
+</tr>
+<tr>
+<td>ctrl+u(F10)</td>
+<td>粘贴</td>
+</tr>
+<tr>
+<td>ctrl+_</td>
+<td>到达某行</td>
+</tr>
+</tbody>
+</table>
+<p>~~ EOF ~~</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>nano(Nano’s ANOther editor)是一种简单小巧的文本编辑器，是Linux命令行的记事本。相对于编辑器大神Emacs和vim，nano简单易学上手快，对于初学者编辑文档完全够用。<br>]]>
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="Linux命令" scheme="http://yoursite.com/categories/Linux%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Linux命令01：命令的反馈形式]]></title>
+    <link href="http://yoursite.com/2015/08/12/cm-linux01/"/>
+    <id>http://yoursite.com/2015/08/12/cm-linux01/</id>
+    <published>2015-08-12T11:48:57.000Z</published>
+    <updated>2016-01-11T02:27:25.233Z</updated>
+    <content type="html"><![CDATA[<p>本文开始正式介绍Linux命令。</p>
+<p>Linux的命令一般有三种反馈形式。<br>A. 无任何反馈，表示成功。<br>B. 有输出反馈或交互提示。大部分命令都有输出反馈，如查看文件列表<code>ls</code>，如删除文件的确认<code>rm -r</code>。<br>C. 进入命令环境。<br><a id="more"></a></p>
+<p>举个栗子。<br>A. 在虚拟机中执行<code>yam makecache</code>时，会狂写硬盘导致系统不流畅，可以执行<code>sync</code>命令刷新操作系统缓冲，让其写到硬盘中。<code>sync</code>命令执行成功后无任何反馈。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[learnit@CentOS ~]$ sync</span><br><span class="line">[learnit@CentOS ~]$</span><br></pre></td></tr></table></figure></p>
+<p>B. 大多数命令有输出的，反馈如查看文件列表<code>ls</code>。有些命令会有交互提示，如输入密码，确认等。如普通用户使用<code>sudo</code>开启服务<code>sudo service start XXX</code>时，需要密码提示，删除文件<code>rm -i XXX</code>时需要确认。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[learnit@CentOS ~]$ ls <span class="comment"># 查看文件</span></span><br><span class="line"><span class="number">01</span>.c  Desktop  man.config  man.config.dos</span><br><span class="line">[learnit@CentOS ~]$ sudo service network restart <span class="comment"># 重启网络服务</span></span><br><span class="line">[sudo] password <span class="keyword">for</span> learnit:</span><br><span class="line">Shutting down interface eth0:  Device state: <span class="number">3</span> (disconnected)</span><br><span class="line">                                                           [  OK  ]</span><br><span class="line">Shutting down loopback interface:                          [  OK  ]</span><br><span class="line">Bringing up loopback interface:                            [  OK  ]</span><br><span class="line">Bringing up interface eth0:  Active connection state: activated</span><br><span class="line">Active connection path: /org/freedesktop/NetworkManager/ActiveConnection/<span class="number">1</span></span><br><span class="line">                                                           [  OK  ]</span><br><span class="line">[learnit@CentOS ~]$ rm -i man.config.dos <span class="comment"># 删除文件，删除时确认</span></span><br><span class="line">rm: remove regular file `man.config.dos<span class="string">'? y</span></span><br></pre></td></tr></table></figure></p>
+<p>C. 进入命令环境。最典型的是编辑器或文本查看器。如<code>man XXX</code>，<code>less XXX</code>，<code>vim XXX</code>等。进入命令环境后，根据命令的内部指令进行操作。<br><img src="https://raw.githubusercontent.com/higoge/image/master/cmlinux/01.png" class="img-center"></p>
+<p>~~ EOF ~~</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>本文开始正式介绍Linux命令。</p>
+<p>Linux的命令一般有三种反馈形式。<br>A. 无任何反馈，表示成功。<br>B. 有输出反馈或交互提示。大部分命令都有输出反馈，如查看文件列表<code>ls</code>，如删除文件的确认<code>rm -r</code>。<br>C. 进入命令环境。<br>]]>
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="Linux命令" scheme="http://yoursite.com/categories/Linux%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[基础06：开源协议]]></title>
+    <link href="http://yoursite.com/2015/08/11/basic06/"/>
+    <id>http://yoursite.com/2015/08/11/basic06/</id>
+    <published>2015-08-11T11:46:26.000Z</published>
+    <updated>2016-01-11T02:27:25.233Z</updated>
+    <content type="html"><![CDATA[<p>一直没有把开源协议搞搞清楚，最近研究了下，记录在此。</p>
+<p>主要参考文档：</p>
+<ol>
+<li><a href="http://www.ruanyifeng.com/blog/2011/05/how_to_choose_free_software_licenses.html" target="_blank" rel="external">如何选择开源许可证？</a></li>
+<li><a href="http://coolshell.cn/articles/4657.html" target="_blank" rel="external">狗日的开源软件许可证</a></li>
+<li><a href="http://choosealicense.com/" target="_blank" rel="external">Choosing an OSS license doesn’t need to be scary</a></li>
+<li><a href="http://www.zhihu.com/question/28292322/answer/40238421" target="_blank" rel="external">知乎-开源许可证都有什么区别,一般开源项目用什么许可证?</a><a id="more"></a>
+</li>
+</ol>
+<p>最简单的区别，<a href="http://www.ruanyifeng.com/blog/2011/05/how_to_choose_free_software_licenses.html" target="_blank" rel="external">阮一峰</a>大神的图片。<br><img src="https://raw.githubusercontent.com/higoge/image/master/basic-new/03.png" class="img-center"><br>还有两张来自<a href="http://coolshell.cn/articles/4657.html" target="_blank" rel="external">耗子哥</a>的图片，也可作为参考。<br><img src="https://raw.githubusercontent.com/higoge/image/master/basic-new/04.png" class="img-center"><br><img src="https://raw.githubusercontent.com/higoge/image/master/basic-new/05.png" class="img-center"></p>
+<p>废话不多说，看图比说一万个字更有效。</p>
+<p>~~ EOF ~~</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>一直没有把开源协议搞搞清楚，最近研究了下，记录在此。</p>
+<p>主要参考文档：</p>
+<ol>
+<li><a href="http://www.ruanyifeng.com/blog/2011/05/how_to_choose_free_software_licenses.html">如何选择开源许可证？</a></li>
+<li><a href="http://coolshell.cn/articles/4657.html">狗日的开源软件许可证</a></li>
+<li><a href="http://choosealicense.com/">Choosing an OSS license doesn’t need to be scary</a></li>
+<li><a href="http://www.zhihu.com/question/28292322/answer/40238421">知乎-开源许可证都有什么区别,一般开源项目用什么许可证?</a>]]>
+    
+    </summary>
+    
+      <category term="Basics" scheme="http://yoursite.com/tags/Basics/"/>
+    
+      <category term="基础" scheme="http://yoursite.com/categories/%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Linux理论05：Linux的目录结构]]></title>
+    <link href="http://yoursite.com/2015/08/10/th-linux05/"/>
+    <id>http://yoursite.com/2015/08/10/th-linux05/</id>
+    <published>2015-08-10T13:58:45.000Z</published>
+    <updated>2016-01-11T02:27:25.233Z</updated>
+    <content type="html"><![CDATA[<p>本文介绍Linux的目录结构，属于基础理论。<br><a id="more"></a></p>
+<h2 id="Linux_u7684_u76EE_u5F55"><a href="#Linux_u7684_u76EE_u5F55" class="headerlink" title="Linux的目录"></a>Linux的目录</h2><p>Linux的所有目录都是从根目录开始，根目录表示为<code>/</code>。此与Windows不同，Windows的所有目录是从盘符开始，如<code>C:</code>，<code>D:</code>。<br>根目录下的一级目录有其各自特定的功能，一般是遵循一定的规则。这个规则是由<a href="http://www.pathname.com/fhs/" target="_blank" rel="external">FHS</a>规定的。用脑图展示如下。<br><img src="https://raw.githubusercontent.com/higoge/image/master/thlinux/01.png" class="img-center"><br><strong>注意</strong>：<code>usr</code>不是User的缩写，而是<strong><code>Unix Software Resource</code></strong>的缩写。脑图原版请到汪汪的网盘下载，路径为<code>/Linux/Linux_FHS.xmind</code>。</p>
+<h2 id="u7EDD_u5BF9_u8DEF_u5F84_u4E0E_u76F8_u5BF9_u8DEF_u5F84"><a href="#u7EDD_u5BF9_u8DEF_u5F84_u4E0E_u76F8_u5BF9_u8DEF_u5F84" class="headerlink" title="绝对路径与相对路径"></a>绝对路径与相对路径</h2><p>绝对路径是以根目录开始的路径。如<code>/etc/sysconfig/network-scripts/ifcfg-eno1</code>。<br>相对路径不以根目录开始的路径。如当前目录是<code>~</code>，即<code>/home/learnit</code>，则上述绝对路径的相对于<code>~</code>的路径为<code>../../etc/sysconfig/network-scripts/ifcfg-eno1</code>。<br>每个目录下都有两个文件夹，<code>.</code>表示当前路径，<code>..</code>表示上一层文件夹。根目录的<code>.</code>=<code>..</code>=<code>/</code>。</p>
+<p>~~ EOF ~~</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>本文介绍Linux的目录结构，属于基础理论。<br>]]>
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="Linux理论" scheme="http://yoursite.com/categories/Linux%E7%90%86%E8%AE%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[基础05：硬盘分区和硬盘模式]]></title>
+    <link href="http://yoursite.com/2015/08/07/basic05/"/>
+    <id>http://yoursite.com/2015/08/07/basic05/</id>
+    <published>2015-08-07T12:04:35.000Z</published>
+    <updated>2016-01-11T02:27:25.233Z</updated>
+    <content type="html"><![CDATA[<p>最近学习Linux硬盘分区，研究了GPT分区表以及硬盘模式，记录在此。<br><a id="more"></a></p>
+<h2 id="u786C_u76D8_u5206_u533A_u8868"><a href="#u786C_u76D8_u5206_u533A_u8868" class="headerlink" title="硬盘分区表"></a>硬盘分区表</h2><p>传统分区表采用MBR模式，硬盘的第一个扇区(Sector)512B中，MBR(Master Boot Record)占有446字节；分区表(Partition Table)占有64字节，4个16字节的硬盘分区表(DPT)；结束标识占2B(0x55AA)，MBR分区表不支持容量大于2.2TB(2.2 × 1012字节)的分区，也不支持大于2TB的硬盘，支持最多4个主分区或最多3个主分区+1个扩展分区。扩展分区中，支持多个逻辑分区。一般电脑都会支持MBR模式。</p>
+<p>GPT(GUID Partition Table)全局唯一标识分区表是另一种硬盘分区表结构。相对MBR，GPT支持2TB以上硬盘，分区个数几乎没限制(Windows支持128个分区)，故不存在主分区和扩展分区的概念，每个分区都是主分区。另外，分区表自带备份，在磁盘的首尾部分分别保存了一份相同的分区表，其中一份被破坏后，可以通过另一份恢复。<br>GPT方式需要主板BIOS支持EFI系统(说BIOS支持可能不太准确，因为EFI系统跟BIOS系统是平级的，没具体研究)，操作系统也要支持。目前，Windows Vista以上系统支持GPT分区表，Linux主流发行版大部分均支持GPT分区表。</p>
+<p>但Windows7安装在GPT分区表中可能会出现找不到硬盘的情况，解决方法见<a href="http://blog.csdn.net/techzero/article/details/8921206" target="_blank" rel="external">此</a> (此文章没有亲自验证)。</p>
+<p>个人电脑BIOS切换为UEFI方式，见图。<br><img src="https://raw.githubusercontent.com/higoge/image/master/basic-new/01.png" class="img-center"></p>
+<p>VMWare Workstation建立Windows 10虚拟机时，会提示固件类型，可选择EFI方式。<br><img src="https://raw.githubusercontent.com/higoge/image/master/basic-new/02.png" class="img-center"></p>
+<p>如果VMware Workstation没有提示，如安装Linux系统时，则可在建立虚拟机后，修改<a href="http://higoge.github.io/2015/07/01/vm12/#vmx文件" target="_blank" rel="external">虚拟机配置文件</a><code>.vmx</code>，加入一行。<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="setting">firmware=<span class="value"><span class="string">"efi"</span></span></span></span><br></pre></td></tr></table></figure></p>
+<h2 id="u786C_u76D8_u6A21_u5F0F"><a href="#u786C_u76D8_u6A21_u5F0F" class="headerlink" title="硬盘模式"></a>硬盘模式</h2><p>主要是ATA和AHCI的区别。<br>ATA(Advanced Technology Attachment)是IDE硬盘的接口规范，也可以理解为一种工作模式。<br>AHCI(Advanced Host Controller Interface)是串行ATA高级主控接口的一种硬盘工作模式，主要用于SATA接口硬盘。此种工作模式会提高硬盘运行速度。<br>所以，SATA硬盘选用AHCI模式即可。</p>
+<p>~~ EOF ~~</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>最近学习Linux硬盘分区，研究了GPT分区表以及硬盘模式，记录在此。<br>]]>
+    
+    </summary>
+    
+      <category term="Basics" scheme="http://yoursite.com/tags/Basics/"/>
+    
+      <category term="VMware" scheme="http://yoursite.com/tags/VMware/"/>
+    
+      <category term="基础" scheme="http://yoursite.com/categories/%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Git远程10：搭建私有GitLab]]></title>
+    <link href="http://yoursite.com/2015/08/06/git-remote10-md/"/>
+    <id>http://yoursite.com/2015/08/06/git-remote10-md/</id>
+    <published>2015-08-06T12:57:19.000Z</published>
+    <updated>2016-01-11T02:27:25.233Z</updated>
+    <content type="html"><![CDATA[<p><a href="/&quot;http://higoge.github.io/2015/08/05/git-remote09/&quot;">上一篇</a>博文介绍了搭建私有的Git Server。此方式适合小型团队使用，而且项目最好比较单一。如果是人数较多的团队，工程比较多，日常的维护工作量会很大。GitHub和GitLab很好用，但GitHub只能提供Public机制的库。GitLab可以提供Private机制的库，但其速度实在是太慢了。最好的方法是在团队服务器上搭建类似的服务，安全性和服务均可保障，本文介绍如何搭建GitLab服务。<br><a id="more"></a></p>
+<h2 id="u73AF_u5883_u548C_u51C6_u5907_u5DE5_u4F5C"><a href="#u73AF_u5883_u548C_u51C6_u5907_u5DE5_u4F5C" class="headerlink" title="环境和准备工作"></a>环境和准备工作</h2><p>操作系统：CentOS6.6<br>IP地址：192.168.80.6<br>建立<code>git</code>用户。<br><figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># useradd git</span></span><br><span class="line"><span class="preprocessor"># passwd git # 输入git密码</span></span><br><span class="line">Changing password <span class="keyword">for</span> user git.</span><br><span class="line"><span class="keyword">New</span> password:</span><br><span class="line">BAD PASSWORD: it <span class="keyword">is</span> WAY too <span class="built_in">short</span></span><br><span class="line">BAD PASSWORD: <span class="keyword">is</span> too simple</span><br><span class="line">Retype <span class="keyword">new</span> password:</span><br><span class="line">passwd: all authentication tokens updated successfully.</span><br></pre></td></tr></table></figure></p>
+<p>关闭防火墙。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># service iptables stop</span></span><br><span class="line"><span class="comment"># chkconfig iptables off</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="u5B89_u88C5_u4F9D_u8D56_u5E93"><a href="#u5B89_u88C5_u4F9D_u8D56_u5E93" class="headerlink" title="安装依赖库"></a>安装依赖库</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yum install curl openssh-server postfix cronie</span></span><br><span class="line"><span class="comment"># service postfix start</span></span><br><span class="line"><span class="comment"># chkconfig postfix on</span></span><br><span class="line"><span class="comment"># lokkit -s http -s ssh</span></span><br></pre></td></tr></table></figure>
+<h2 id="u5B89_u88C5GitLab"><a href="#u5B89_u88C5GitLab" class="headerlink" title="安装GitLab"></a>安装GitLab</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash</span></span><br><span class="line"><span class="comment"># yum install gitlab-ce</span></span><br></pre></td></tr></table></figure>
+<p>整个包有300多MB，如果使用<code>yum</code>无法下载，可以直接<a href="https://packages.gitlab.com/gitlab/gitlab-ce" target="_blank" rel="external">下载RPM包</a>。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># wget -c https://packages.gitlab.com/gitlab/gitlab-ce/el/6/x86_64/gitlab-ce-7.13.3-ce.1.el6.x86_64.rpm</span></span><br></pre></td></tr></table></figure></p>
+<p>若还是很慢，复制下载地址用下载工具下载。汪汪的网盘也提供了下载，路径为<code>/GitLab</code>。<br>手动安装rpm包。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># rpm -ivh gitlab-ce-7.13.3-ce.1.el6.x86_64.rpm</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="u914D_u7F6EGitLab"><a href="#u914D_u7F6EGitLab" class="headerlink" title="配置GitLab"></a>配置GitLab</h2><p>直接启动GitLab并不能正常工作，需要进行配置，其所有的配置都在配置文件<code>/etc/gitlab/gitlab.rb</code>中。此文件太长，太多的注释，后期研究可以查看此文档，在此从简配置。<br><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># mv /etc/gitlab/gitlab.rb&#123;,.bck&#125;</span></span><br><span class="line"><span class="preprocessor"># echo external_url \<span class="string">'http://192.168.80.6:8081\'</span> &gt;&gt; /etc/gitlab/gitlab.rb</span></span><br><span class="line"><span class="preprocessor"># echo gitlab_rails[\<span class="string">'gitlab_email_from\'</span>] = \<span class="string">'higoge@learnit.com\'</span> &gt;&gt; /etc/gitlab/gitlab.rb</span></span><br><span class="line"><span class="preprocessor"># echo git_data_dir \<span class="string">"/home/git\"</span> &gt;&gt; /etc/gitlab/gitlab.rb</span></span><br></pre></td></tr></table></figure></p>
+<p>解释如下：第一个命令是备份配置文件，第二个命令是配置访问IP和端口，第三个命令是发送确认邮件的邮箱(无需真实存在)，第四个命令是git的数据dir。<br>每次修改完配置文件，都需要执行如下命令。<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># gitlab-ctl reconfigure</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="u6D4B_u8BD5_u53CA_u6CE8_u518C_u7528_u6237"><a href="#u6D4B_u8BD5_u53CA_u6CE8_u518C_u7528_u6237" class="headerlink" title="测试及注册用户"></a>测试及注册用户</h2><p>开启浏览器输入<code>http://192.168.80.6:8081</code>，应该就可以看到主界面了。<br><img src="https://raw.githubusercontent.com/higoge/image/master/git/github01.png" class="img-center"><br>按照步骤进行注册，会给注册邮箱发送确认信息邮件。Gmail直接把邮件当垃圾邮件了，不管如何，点击“Confirm your account”，确认即可。<br><img src="https://raw.githubusercontent.com/higoge/image/master/git/github02.png" class="img-center"><br>之后就可以创建Project，配置SSH Key，进行Clone和推送拉取了。<br><img src="https://raw.githubusercontent.com/higoge/image/master/git/github03.png" class="img-center"><br>新建的项目在服务器的地址是<code>/home/git/repositories/learnit</code>下，每个项目有两个git目录，一个是项目本身的，一个是项目WIKI的。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ls /home/git/repositories/learnit</span></span><br><span class="line">firstproject.git  firstproject.wiki.git</span><br></pre></td></tr></table></figure></p>
+<h2 id="u5176_u4ED6"><a href="#u5176_u4ED6" class="headerlink" title="其他"></a>其他</h2><p><a href="/#环境和准备工作">第一章</a>为了简化配置，我们关闭了防火墙，如有需要，请自行配置防火墙。<br>关于GitLab的更加详细的配置，请参考GitLab的<a href="http://doc.gitlab.com/omnibus/" target="_blank" rel="external">官方文档</a>。<br>GitLab的免费社区版和收费企业版的区别<a href="https://about.gitlab.com/features/#compare" target="_blank" rel="external">见此</a>。</p>
+<p>~~ EOF ~~</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><a href="/&quot;http://higoge.github.io/2015/08/05/git-remote09/&quot;">上一篇</a>博文介绍了搭建私有的Git Server。此方式适合小型团队使用，而且项目最好比较单一。如果是人数较多的团队，工程比较多，日常的维护工作量会很大。GitHub和GitLab很好用，但GitHub只能提供Public机制的库。GitLab可以提供Private机制的库，但其速度实在是太慢了。最好的方法是在团队服务器上搭建类似的服务，安全性和服务均可保障，本文介绍如何搭建GitLab服务。<br>]]>
+    
+    </summary>
+    
+      <category term="Git Remote" scheme="http://yoursite.com/tags/Git-Remote/"/>
+    
+      <category term="GitLab" scheme="http://yoursite.com/tags/GitLab/"/>
+    
+      <category term="Git" scheme="http://yoursite.com/categories/Git/"/>
+    
+  </entry>
+  
+</feed>

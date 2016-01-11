@@ -1,0 +1,761 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Linux," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="LearnIT" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/fv1.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="上一篇介绍的tmux，存在一个比较严重的问题，当运行tmux server的机器重启后，所有tmux的信息都将失效。我们需要重新开启tmux，分配并调整窗格，每个窗格再开启相关的命令。很麻烦。本文介绍tmux的好基友Tmuxinator可以根据配置快速创建tmux的session。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux进阶02：tmux好基友Tmuxinator">
+<meta property="og:url" content="http://yoursite.com/2015/07/21/ad-linux02/index.html">
+<meta property="og:site_name" content="LearnIT">
+<meta property="og:description" content="上一篇介绍的tmux，存在一个比较严重的问题，当运行tmux server的机器重启后，所有tmux的信息都将失效。我们需要重新开启tmux，分配并调整窗格，每个窗格再开启相关的命令。很麻烦。本文介绍tmux的好基友Tmuxinator可以根据配置快速创建tmux的session。">
+<meta property="og:updated_time" content="2016-01-11T02:27:25.233Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux进阶02：tmux好基友Tmuxinator">
+<meta name="twitter:description" content="上一篇介绍的tmux，存在一个比较严重的问题，当运行tmux server的机器重启后，所有tmux的信息都将失效。我们需要重新开启tmux，分配并调整窗格，每个窗格再开启相关的命令。很麻烦。本文介绍tmux的好基友Tmuxinator可以根据配置快速创建tmux的session。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'always',
+    motion: true
+  };
+</script>
+
+  <title> Linux进阶02：tmux好基友Tmuxinator | LearnIT </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">LearnIT</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">跟汪汪学IT</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分類
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            標籤
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            關於
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'eABHoirrWVnE3nGRrvNM','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Linux进阶02：tmux好基友Tmuxinator
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2015-07-21T20:14:07+08:00" content="2015-07-21">
+              2015-07-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Linux进阶/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux进阶</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/07/21/ad-linux02/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/21/ad-linux02/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>上一篇介绍的tmux，存在一个比较严重的问题，当运行tmux server的机器重启后，所有tmux的信息都将失效。我们需要重新开启tmux，分配并调整窗格，每个窗格再开启相关的命令。很麻烦。<br>本文介绍tmux的好基友<a href="https://github.com/tmuxinator/tmuxinator" target="_blank" rel="external">Tmuxinator</a>可以根据配置快速创建tmux的session。<br><a id="more"></a></p>
+<h2 id="Tmuxinator_u7684_u5B89_u88C5"><a href="#Tmuxinator_u7684_u5B89_u88C5" class="headerlink" title="Tmuxinator的安装"></a>Tmuxinator的安装</h2><p>Tmuxinator基于Ruby，首先安装Ruby。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yum install ruby</span></span><br></pre></td></tr></table></figure></p>
+<p>安装Tmuxinator。<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># gem install tmuxinator</span></span><br></pre></td></tr></table></figure></p>
+<p>若由于(你懂得的)网络原因无法安装，则更新Ruby的gem源后再次尝试。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># gem source -a https://ruby.taobao.org/</span></span><br><span class="line"><span class="comment"># gem source -r https://rubygems.org/</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="u57FA_u7840_u8BBE_u7F6E"><a href="#u57FA_u7840_u8BBE_u7F6E" class="headerlink" title="基础设置"></a>基础设置</h2><p>将下述文本保存为<code>$HOME/.tmuxinator/.tmuxinator.bash</code>，提供<code>tab</code>键提示功能。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/usr/bin/env bash</span><br><span class="line"></span></span><br><span class="line"><span class="function"><span class="title">_tmuxinator</span></span>() &#123;</span><br><span class="line">    COMPREPLY=()</span><br><span class="line">    <span class="built_in">local</span> word</span><br><span class="line">    word=<span class="string">"<span class="variable">$&#123;COMP_WORDS[COMP_CWORD]&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> [ <span class="string">"<span class="variable">$COMP_CWORD</span>"</span> <span class="operator">-eq</span> <span class="number">1</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="built_in">local</span> commands=<span class="string">"<span class="variable">$(compgen -W "$(tmuxinator commands)</span>"</span> -- <span class="string">"<span class="variable">$word</span>"</span>)<span class="string">"</span><br><span class="line">        local projects="</span>$(compgen -W <span class="string">"<span class="variable">$(tmuxinator completions start)</span>"</span> -- <span class="string">"<span class="variable">$word</span>"</span>)<span class="string">"</span><br><span class="line"></span><br><span class="line">        COMPREPLY=( <span class="variable">$commands</span> <span class="variable">$projects</span> )</span><br><span class="line">    elif [ "</span><span class="variable">$COMP_CWORD</span><span class="string">" -eq 2 ]; then</span><br><span class="line">        local words</span><br><span class="line">        words=("</span><span class="variable">$&#123;COMP_WORDS[@]&#125;</span><span class="string">")</span><br><span class="line">        unset words[0]</span><br><span class="line">        unset words[<span class="variable">$COMP_CWORD</span>]</span><br><span class="line">        local completions</span><br><span class="line">        completions=<span class="variable">$(tmuxinator completions "$&#123;words[@]&#125;")</span></span><br><span class="line">        COMPREPLY=( <span class="variable">$(compgen -W "$completions" -- "$word")</span> )</span><br><span class="line">    fi</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">complete -F _tmuxinator tmuxinator mux</span></span><br></pre></td></tr></table></figure></p>
+<p><code>$HOME/.bashrc</code>下增加下述内容。<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source <span class="variable">$HOME</span>/.tmuxinator/.tmuxinator.bash</span><br><span class="line">export EDITOR=<span class="string">'vim'</span></span><br></pre></td></tr></table></figure></p>
+<p><code>source $HOME/.bashrc</code>使其生效。</p>
+<h2 id="u5E38_u7528_u547D_u4EE4"><a href="#u5E38_u7528_u547D_u4EE4" class="headerlink" title="常用命令"></a>常用命令</h2><p>Tmuxinator的一个工程(Project)对应tmux的一个session<br><code>tmuxinator</code>命令已<code>alias</code>为<code>mux</code>。<br><code>new</code>简写为<code>n</code>，<code>open</code>简写为<code>o</code>，<code>edit</code>简写为<code>e</code>，<code>list</code>简写为<code>l</code>，<code>copy</code>简写为<code>c</code>，<code>delete</code>简写为<code>d</code>。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ mux n ws      <span class="comment"># 创建工程ws</span></span><br><span class="line">$ mux o ws      <span class="comment"># 打开工程ws的配置文件</span></span><br><span class="line">$ mux e ws      <span class="comment"># 同上</span></span><br><span class="line">$ mux c ws ws1  <span class="comment"># 复制ws工程到ws1</span></span><br><span class="line">$ mux d ws      <span class="comment"># 删除ws工程</span></span><br><span class="line">$ mux l         <span class="comment"># 显示所有工程</span></span><br><span class="line">$ mux ws        <span class="comment"># 开启ws工程</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="u914D_u7F6E"><a href="#u914D_u7F6E" class="headerlink" title="配置"></a>配置</h2><p>当<code>new</code>一个工程后，会出现如下信息(省略注释)。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">name: ws <span class="comment"># session名称</span></span><br><span class="line">root: ~/ <span class="comment"># 工程根目录，活动Pane会首先cd到此目录</span></span><br><span class="line"></span><br><span class="line">windows:</span><br><span class="line">  - editor: <span class="comment"># 第1个名为Editor的Window</span></span><br><span class="line">      layout: main-vertical <span class="comment"># Pane的布局</span></span><br><span class="line">      panes: <span class="comment"># 各个Pane</span></span><br><span class="line">        - vim <span class="comment"># 第一个Pane运行vim命令</span></span><br><span class="line">        - guard <span class="comment"># 第二个Pane运行guard命令</span></span><br><span class="line">  - server: bundle <span class="built_in">exec</span> rails s <span class="comment"># 第2个名为server的Window，运行命令为bundle</span></span><br><span class="line">  - logs: tail <span class="operator">-f</span> <span class="built_in">log</span>/development.log <span class="comment"># 第3个名为logs的Window，运行命令为tail</span></span><br></pre></td></tr></table></figure></p>
+<p>可以根据注释配置自己的工程。</p>
+<h2 id="u81EA_u5B9A_u4E49layout"><a href="#u81EA_u5B9A_u4E49layout" class="headerlink" title="自定义layout"></a>自定义layout</h2><p>工程配置中的layout项，有5个默认的值。</p>
+<ul>
+<li>even-horizontal</li>
+<li>even-vertical</li>
+<li>main-horizontal</li>
+<li>main-vertical</li>
+<li>tiled</li>
+</ul>
+<p>开启tmux后，可以使用快捷键<code>prefix space</code>切换layout，建议开启4个Pane进行测试。</p>
+<p>其中main-horizontal和main-vertical可以设置默认主Pane的宽度和高度。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># .tmux.conf</span></span><br><span class="line"><span class="built_in">set</span>-window-option -g main-pane-width <span class="number">100</span> <span class="comment"># 设置主Pane宽度</span></span><br><span class="line"><span class="built_in">set</span>-window-option -g main-pane-height <span class="number">80</span> <span class="comment"># 设置主Pane高度</span></span><br></pre></td></tr></table></figure></p>
+<p>如果不满足layout默认值，layout项可以自定义值。<br>首先调整好窗口的Pane，<code>prefix d</code>关闭Session。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ tmux <span class="built_in">list</span>-windows</span><br><span class="line"><span class="number">1</span>: bash* (<span class="number">4</span> panes) [<span class="number">211</span>x47] [layout <span class="number">9</span>a0a,<span class="number">211</span>x47,<span class="number">0</span>,<span class="number">0</span>&#123;<span class="number">110</span>x47,<span class="number">0</span>,<span class="number">0</span>,<span class="number">12</span>,<span class="number">100</span>x47,<span class="number">111</span>,<span class="number">0</span>[<span class="number">100</span>x23,<span class="number">111</span>,<span class="number">0</span>,<span class="number">13</span>,<span class="number">100</span>x23,<span class="number">111</span>,<span class="number">24</span>&#123;<span class="number">49</span>x23,<span class="number">111</span>,<span class="number">24</span>,<span class="number">14</span>,<span class="number">50</span>x23,<span class="number">161</span>,<span class="number">24</span>,<span class="number">15</span>&#125;]&#125;] @<span class="number">3</span> (active)</span><br></pre></td></tr></table></figure></p>
+<p>将上述信息之后layout之后的信息(到最后一个<code>]</code>前)，复制到工程配置中的layout项即可。<strong>注意</strong>pane的个数必须与执行命令的个数对应。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">windows:</span><br><span class="line">  - editor:</span><br><span class="line">      layout: <span class="number">9</span>a0a,<span class="number">211</span>x47,<span class="number">0</span>,<span class="number">0</span>&#123;<span class="number">110</span>x47,<span class="number">0</span>,<span class="number">0</span>,<span class="number">12</span>,<span class="number">100</span>x47,<span class="number">111</span>,<span class="number">0</span>[<span class="number">100</span>x23,<span class="number">111</span>,<span class="number">0</span>,<span class="number">13</span>,<span class="number">100</span>x23,<span class="number">111</span>,<span class="number">24</span>&#123;<span class="number">49</span>x23,<span class="number">111</span>,<span class="number">24</span>,<span class="number">14</span>,<span class="number">50</span>x23,<span class="number">161</span>,<span class="number">24</span>,<span class="number">15</span>&#125;]&#125;</span><br><span class="line">        - <span class="comment"># empty</span></span><br><span class="line">        - <span class="comment"># empty</span></span><br><span class="line">        - <span class="comment"># empty</span></span><br><span class="line">        - <span class="comment"># empty</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="u591A_u547D_u4EE4"><a href="#u591A_u547D_u4EE4" class="headerlink" title="多命令"></a>多命令</h2><p>当某个Pane需要执行多命令时，官方不推荐使用<code>&amp;&amp;</code>或<code>;</code>的形式。可以采用如下方式发送命令。<br><figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">windows:</span><br><span class="line">  -<span class="ruby"> <span class="symbol">editor:</span></span><br><span class="line"></span>      layout: main-vertical</span><br><span class="line">      panes:</span><br><span class="line">        -<span class="ruby"> <span class="symbol">list:</span> <span class="comment"># 多命令方式</span></span><br><span class="line"></span>          -<span class="ruby"> cd ~<span class="regexp">/temp</span><br><span class="line"></span></span>          -<span class="ruby"><span class="regexp"> ls -la</span><br><span class="line"></span></span>        -<span class="ruby"><span class="regexp"> # empty</span></span></span><br></pre></td></tr></table></figure></p>
+<h2 id="CentOS6-X_u624B_u52A8_u5B89_u88C5Ruby"><a href="#CentOS6-X_u624B_u52A8_u5B89_u88C5Ruby" class="headerlink" title="CentOS6.X手动安装Ruby"></a>CentOS6.X手动安装Ruby</h2><p><strong>2015.08.03新增本章</strong>。<br>上述篇章是在CentOS7安装的，没有问题。CenOS6.X默认安装的Ruby版本太低不符合Tmuxinator的要求，需要手动下载Ruby源码安装，之后在下载安装Tmuxinator。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yum remove -y ruby</span></span><br><span class="line"><span class="comment"># yum -y install zlib-devel curl-devel openssl-devel httpd-devel apr-devel apr-util-devel mysql-devel</span></span><br><span class="line"><span class="comment"># wget https://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p598.tar.gz</span></span><br><span class="line"><span class="comment"># tar zxvf ruby-2.0.0-p598.tar.gz &amp;&amp; cd ruby-2.0.0-p598</span></span><br><span class="line"><span class="comment"># ./configure --disable-install-doc &amp;&amp; make &amp;&amp; make install</span></span><br><span class="line"><span class="comment"># cd -</span></span><br><span class="line"><span class="comment"># wget http://production.cf.rubygems.org/rubygems/rubygems-2.0.14.tgz</span></span><br><span class="line"><span class="comment"># tar zxvf rubygems-2.0.14.tgz &amp;&amp; cd rubygems-2.0.14</span></span><br><span class="line"><span class="comment"># ruby setup.rb</span></span><br></pre></td></tr></table></figure></p>
+<p>安装完成后，继续执行<a href="/#Tmuxinator的安装">第1步</a>。</p>
+<p>~~ EOF ~~</p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag">#Linux</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/07/20/ad-linux01/" rel="next" title="Linux进阶01：tmux">
+                <i class="fa fa-chevron-left"></i> Linux进阶01：tmux
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/07/22/tools02/" rel="prev" title="工具02：cmd的替代品ConEmu+Clink">
+                工具02：cmd的替代品ConEmu+Clink <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/07/21/ad-linux02/"
+           data-title="Linux进阶02：tmux好基友Tmuxinator" data-url="http://yoursite.com/2015/07/21/ad-linux02/">
+      </div>
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            本站概覽
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/author.jpg" alt="Jeremy Wong" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Jeremy Wong</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">I hurry and do not delay to keep your commandments.(PSM119:60)</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">78</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-name">分類</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">標籤</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/higoge" target="_blank">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/higoge" target="_blank">
+                  
+                    <i class="fa fa-weibo"></i> Weibo
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">友情连接</p>
+            
+              <span class="links-of-author-item">
+                <a href="http://pan.baidu.com/s/1o6Meksi" target="_blank">汪汪的网盘(解压密码higoge)</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Tmuxinator_u7684_u5B89_u88C5"><span class="nav-number">1.</span> <span class="nav-text">Tmuxinator的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u57FA_u7840_u8BBE_u7F6E"><span class="nav-number">2.</span> <span class="nav-text">基础设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u5E38_u7528_u547D_u4EE4"><span class="nav-number">3.</span> <span class="nav-text">常用命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u914D_u7F6E"><span class="nav-number">4.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u81EA_u5B9A_u4E49layout"><span class="nav-number">5.</span> <span class="nav-text">自定义layout</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u591A_u547D_u4EE4"><span class="nav-number">6.</span> <span class="nav-text">多命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CentOS6-X_u624B_u52A8_u5B89_u88C5Ruby"><span class="nav-number">7.</span> <span class="nav-text">CentOS6.X手动安装Ruby</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jeremy Wong</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"higoge"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post' || CONFIG.sidebar === 'always') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>

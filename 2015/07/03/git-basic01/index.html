@@ -1,0 +1,758 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Git Basic," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="LearnIT" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/fv1.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="Git基础教程，只介绍Git的基础命令，因为篇幅问题，将其分为4篇博客。
+为什么是Git一句话：Git简单，上手快，支持本地无网络提交，多人协作方便。缺点：要精通，需要一定的过程。推荐使用命令行模式，对于没有看惯了GUI的人，不习惯。Git入门教程很多，最简单的教程是《git - 简明指南》，稍微详细点的是廖雪峰的《Git教程》。Git最全的教程是《Pro Git》(有中文版本)。2015.09.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git基础01">
+<meta property="og:url" content="http://yoursite.com/2015/07/03/git-basic01/index.html">
+<meta property="og:site_name" content="LearnIT">
+<meta property="og:description" content="Git基础教程，只介绍Git的基础命令，因为篇幅问题，将其分为4篇博客。
+为什么是Git一句话：Git简单，上手快，支持本地无网络提交，多人协作方便。缺点：要精通，需要一定的过程。推荐使用命令行模式，对于没有看惯了GUI的人，不习惯。Git入门教程很多，最简单的教程是《git - 简明指南》，稍微详细点的是廖雪峰的《Git教程》。Git最全的教程是《Pro Git》(有中文版本)。2015.09.">
+<meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/git/b01.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/git/b04.jpg">
+<meta property="og:updated_time" content="2016-01-11T02:27:25.233Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git基础01">
+<meta name="twitter:description" content="Git基础教程，只介绍Git的基础命令，因为篇幅问题，将其分为4篇博客。
+为什么是Git一句话：Git简单，上手快，支持本地无网络提交，多人协作方便。缺点：要精通，需要一定的过程。推荐使用命令行模式，对于没有看惯了GUI的人，不习惯。Git入门教程很多，最简单的教程是《git - 简明指南》，稍微详细点的是廖雪峰的《Git教程》。Git最全的教程是《Pro Git》(有中文版本)。2015.09.">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'always',
+    motion: true
+  };
+</script>
+
+  <title> Git基础01 | LearnIT </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">LearnIT</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">跟汪汪学IT</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分類
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            標籤
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            關於
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'eABHoirrWVnE3nGRrvNM','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Git基础01
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2015-07-03T19:42:52+08:00" content="2015-07-03">
+              2015-07-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Git/" itemprop="url" rel="index">
+                    <span itemprop="name">Git</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/07/03/git-basic01/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/03/git-basic01/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>Git基础教程，只介绍Git的基础命令，因为篇幅问题，将其分为4篇博客。</p>
+<h2 id="u4E3A_u4EC0_u4E48_u662FGit"><a href="#u4E3A_u4EC0_u4E48_u662FGit" class="headerlink" title="为什么是Git"></a>为什么是Git</h2><p>一句话：Git简单，上手快，支持本地无网络提交，多人协作方便。<br>缺点：要精通，需要一定的过程。推荐使用命令行模式，对于没有看惯了GUI的人，不习惯。<br>Git入门教程很多，最简单的教程是《<a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="external">git - 简明指南</a>》，稍微详细点的是廖雪峰的《<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git教程</a>》。<br>Git最全的教程是《<a href="http://git-scm.com/doc" target="_blank" rel="external">Pro Git</a>》(有<a href="http://git-scm.com/book/zh/v1" target="_blank" rel="external">中文版本</a>)。<br>2015.09.17更新：有个歪果仁给我发邮件让我添加他的教程，有兴趣的请自行查看。<a href="https://blog.udemy.com/git-tutorial-a-comprehensive-guide/" target="_blank" rel="external">Git Tutorial: A Comprehensive Guide</a><br>Git基础系列不准备详细的展开，因为跟上述教程的内容没有太大区别。只是把最常用的基础命令介绍出来。<br><a id="more"></a></p>
+<h2 id="Git_u7684_u5B89_u88C5"><a href="#Git_u7684_u5B89_u88C5" class="headerlink" title="Git的安装"></a>Git的安装</h2><p>在《<a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="external">git - 简明指南</a>》上提供了三个系统的下载连接。我个人推荐在Windows上使用Cygwin的Git，或在Linux下使用Git。</p>
+<h2 id="u521B_u5EFA"><a href="#u521B_u5EFA" class="headerlink" title="创建"></a>创建</h2><h3 id="u521D_u59CB_u5316_u4ED3_u5E93"><a href="#u521D_u59CB_u5316_u4ED3_u5E93" class="headerlink" title="初始化仓库"></a>初始化仓库</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir gittest <span class="comment"># 创建文件夹</span></span><br><span class="line">$ <span class="built_in">cd</span> gittest/ <span class="comment">#切换到到文件夹</span></span><br><span class="line">$ git init <span class="comment"># 初始化仓库</span></span><br></pre></td></tr></table></figure>
+<p>初始化空的 Git 版本库于/home/Jeremy/gittest/.git/<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init --bare <span class="comment"># 初始化裸仓库</span></span><br></pre></td></tr></table></figure></p>
+<p>初始化空的 Git 版本库于 /home/Jeremy/gittest/</p>
+<h3 id="u514B_u9686_u4ED3_u5E93"><a href="#u514B_u9686_u4ED3_u5E93" class="headerlink" title="克隆仓库"></a>克隆仓库</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> /remote/url/of/repo.git <span class="built_in">local</span>-repo</span><br></pre></td></tr></table></figure>
+<h2 id="u914D_u7F6E"><a href="#u914D_u7F6E" class="headerlink" title="配置"></a>配置</h2><p>加入<code>--global</code>参数将作为全局配置，否则，所有配置<strong>只针对本仓库</strong>有效。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name learnit <span class="comment">#设置用户名</span></span><br><span class="line">$ git config --global user.email higoge@gmail.com <span class="comment"># 设置用户邮箱</span></span><br></pre></td></tr></table></figure></p>
+<p>以上两条指令若不执行，则无法commit。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global core.autocrlf <span class="literal">false</span> <span class="comment"># 取消git根据操作系统进行crlf的转换</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="u6DFB_u52A0_u548C_u63D0_u4EA4"><a href="#u6DFB_u52A0_u548C_u63D0_u4EA4" class="headerlink" title="添加和提交"></a>添加和提交</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git add <span class="number">01</span>.txt <span class="comment"># 将01.txt添加到暂存区</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git commit -m <span class="string">"添加01.txt文档"</span> <span class="comment"># 将暂存区的内容提交到仓库，并添加日志</span></span><br><span class="line">[master（根提交） <span class="number">49805</span>b0] 添加<span class="number">01</span>.txt文档</span><br><span class="line"> <span class="number">1</span> file changed, <span class="number">1</span> insertion(+)</span><br><span class="line"> create mode <span class="number">100644</span> <span class="number">01</span>.txt</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit <span class="operator">-a</span> -m [msg] <span class="comment"># 提交所有已跟踪的文件的修改</span></span><br></pre></td></tr></table></figure>
+<p>只要被add过的文件均为跟踪文件，新增的文件没有被跟踪，需要手动add。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit <span class="comment"># 如果不输入-m [msg]，则调出COMMIT_EDITMSG，编写详细的提交信息</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git commit --amend <span class="comment"># 修改最后一次提交</span></span><br></pre></td></tr></table></figure>
+<p><strong>注意</strong>：如果是已经push的commit，最好不要amend，否者会产生分支。</p>
+<h2 id="u5DE5_u4F5C_u533A_u4E0E_u6682_u5B58_u533A"><a href="#u5DE5_u4F5C_u533A_u4E0E_u6682_u5B58_u533A" class="headerlink" title="工作区与暂存区"></a>工作区与暂存区</h2><p><img src="https://raw.githubusercontent.com/higoge/image/master/git/b01.jpg" alt="图片来自廖雪峰的官方网站"><br>工作区就是我们工作的文件夹。暂存区叫stage或者index。<br><code>git add</code>就是把文件修改添加到暂存区。<br><code>git commit</code>就是把暂存区的所有内容提交到当前分支。</p>
+<h2 id="Git_u57FA_u672C_u5DE5_u4F5C_u6D41_u7A0B"><a href="#Git_u57FA_u672C_u5DE5_u4F5C_u6D41_u7A0B" class="headerlink" title="Git基本工作流程"></a>Git基本工作流程</h2><p>一图胜前言，无耻的盗图了。<br><img src="https://raw.githubusercontent.com/higoge/image/master/git/b04.jpg" alt="图片来自网络"></p>
+<p>~~ EOF ~~</p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Git-Basic/" rel="tag">#Git Basic</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/07/02/basic04/" rel="next" title="基础04：移码和浮点数的二进制表示">
+                <i class="fa fa-chevron-left"></i> 基础04：移码和浮点数的二进制表示
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/07/03/git-basic02/" rel="prev" title="Git基础02">
+                Git基础02 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/07/03/git-basic01/"
+           data-title="Git基础01" data-url="http://yoursite.com/2015/07/03/git-basic01/">
+      </div>
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            本站概覽
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/author.jpg" alt="Jeremy Wong" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Jeremy Wong</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">I hurry and do not delay to keep your commandments.(PSM119:60)</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">78</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-name">分類</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">標籤</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/higoge" target="_blank">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/higoge" target="_blank">
+                  
+                    <i class="fa fa-weibo"></i> Weibo
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">友情连接</p>
+            
+              <span class="links-of-author-item">
+                <a href="http://pan.baidu.com/s/1o6Meksi" target="_blank">汪汪的网盘(解压密码higoge)</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u4E3A_u4EC0_u4E48_u662FGit"><span class="nav-number">1.</span> <span class="nav-text">为什么是Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git_u7684_u5B89_u88C5"><span class="nav-number">2.</span> <span class="nav-text">Git的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u521B_u5EFA"><span class="nav-number">3.</span> <span class="nav-text">创建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u521D_u59CB_u5316_u4ED3_u5E93"><span class="nav-number">3.1.</span> <span class="nav-text">初始化仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u514B_u9686_u4ED3_u5E93"><span class="nav-number">3.2.</span> <span class="nav-text">克隆仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u914D_u7F6E"><span class="nav-number">4.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u6DFB_u52A0_u548C_u63D0_u4EA4"><span class="nav-number">5.</span> <span class="nav-text">添加和提交</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u5DE5_u4F5C_u533A_u4E0E_u6682_u5B58_u533A"><span class="nav-number">6.</span> <span class="nav-text">工作区与暂存区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git_u57FA_u672C_u5DE5_u4F5C_u6D41_u7A0B"><span class="nav-number">7.</span> <span class="nav-text">Git基本工作流程</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jeremy Wong</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"higoge"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post' || CONFIG.sidebar === 'always') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>

@@ -1,0 +1,766 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="VMware," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="LearnIT" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/fv1.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="虚拟机有三种网络模式，(a)桥接模式，(b)仅主机模式，(c)NAT模式。本文介绍如何设置这三种模式。
+开启虚拟网络编辑器打开VMware Workstation，点击“编辑”-&amp;gt;“虚拟网络编辑器”。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="虚拟机03：网络设置">
+<meta property="og:url" content="http://yoursite.com/2015/06/25/vm03/index.html">
+<meta property="og:site_name" content="LearnIT">
+<meta property="og:description" content="虚拟机有三种网络模式，(a)桥接模式，(b)仅主机模式，(c)NAT模式。本文介绍如何设置这三种模式。
+开启虚拟网络编辑器打开VMware Workstation，点击“编辑”-&amp;gt;“虚拟网络编辑器”。">
+<meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/vm03/01.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/vm03/02.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/vm03/03.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/vm03/04.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/vm03/05.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/vm03/06.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/vm03/07.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/vm03/08.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/vm03/09.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/vm03/10.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/vm03/11.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/vm03/12.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/vm03/13.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/vm03/14.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/vm03/15.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/vm03/16.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/vm03/17.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/higoge/image/master/vm03/18.jpg">
+<meta property="og:updated_time" content="2016-01-11T02:27:25.236Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="虚拟机03：网络设置">
+<meta name="twitter:description" content="虚拟机有三种网络模式，(a)桥接模式，(b)仅主机模式，(c)NAT模式。本文介绍如何设置这三种模式。
+开启虚拟网络编辑器打开VMware Workstation，点击“编辑”-&amp;gt;“虚拟网络编辑器”。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'always',
+    motion: true
+  };
+</script>
+
+  <title> 虚拟机03：网络设置 | LearnIT </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">LearnIT</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">跟汪汪学IT</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分類
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            標籤
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            關於
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'eABHoirrWVnE3nGRrvNM','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                虚拟机03：网络设置
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2015-06-25T19:42:57+08:00" content="2015-06-25">
+              2015-06-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/虚拟机/" itemprop="url" rel="index">
+                    <span itemprop="name">虚拟机</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/06/25/vm03/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/06/25/vm03/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>虚拟机有三种网络模式，(a)桥接模式，(b)仅主机模式，(c)NAT模式。本文介绍如何设置这三种模式。</p>
+<h2 id="u5F00_u542F_u865A_u62DF_u7F51_u7EDC_u7F16_u8F91_u5668"><a href="#u5F00_u542F_u865A_u62DF_u7F51_u7EDC_u7F16_u8F91_u5668" class="headerlink" title="开启虚拟网络编辑器"></a>开启虚拟网络编辑器</h2><p>打开VMware Workstation，点击“编辑”-&gt;“虚拟网络编辑器”。<br><img src="https://raw.githubusercontent.com/higoge/image/master/vm03/01.jpg" class="img-center"><br><a id="more"></a></p>
+<h2 id="u6865_u63A5_u6A21_u5F0F"><a href="#u6865_u63A5_u6A21_u5F0F" class="headerlink" title="桥接模式"></a>桥接模式</h2><p>点击VMnet0，VMnet信息中“桥接模式”-&gt;“桥接到”，点击下拉框，选择要桥接的网卡。<br><strong>注意</strong>：如果选择“自动”，可能会出问题，因为“自动”模式并不知道桥接到哪块网卡，而这块网卡也并不知道是否能连接到网络。所以，<strong>最好手动指定网卡</strong>。<br><img src="https://raw.githubusercontent.com/higoge/image/master/vm03/02.jpg" class="img-center"></p>
+<h2 id="u4EC5_u4E3B_u673A_u6A21_u5F0F"><a href="#u4EC5_u4E3B_u673A_u6A21_u5F0F" class="headerlink" title="仅主机模式"></a>仅主机模式</h2><p>点击VMnet1，VMnet信息中，选择“仅主机模式”，勾选“将主机虚拟适配器连接到此网络“，即让物理机的VMware Network Adapter VMnet1网卡连接到此网络。<br>子网的IP选择一个网段。<br>子网可填写192.168.10.0，子网掩码填写255.255.255.0。<br><img src="https://raw.githubusercontent.com/higoge/image/master/vm03/03.jpg" class="img-center"><br>启用VMware Network Adapter VMnet1网卡，并设置IP地址为192.168.10.X，子网掩码为255.255.255.0 。（X可以使从1到254）<br><img src="https://raw.githubusercontent.com/higoge/image/master/vm03/04.jpg" class="img-center"></p>
+<h2 id="NAT_u6A21_u5F0F_u8BBE_u7F6E"><a href="#NAT_u6A21_u5F0F_u8BBE_u7F6E" class="headerlink" title="NAT模式设置"></a>NAT模式设置</h2><p>点击VMnet8，VMnet信息中，选择“NAT模式”，勾选“将主机虚拟适配器连接到此网络”，即让物理机的VMware Network Adapter VMnet8网卡连接到此网络。<br>子网的IP选择一个网段。<br>子网IP可填写192.168.80.0，子网掩码填写255.255.255.0。<br><img src="https://raw.githubusercontent.com/higoge/image/master/vm03/05.jpg" class="img-center"><br>点击NAT设置，将网关改成192.168.80.1。<br><strong>注意</strong>，请先在上一步设置好子网IP后，再修改网关IP。<br>要改成192.168.80.1的目的是，网关最好是一个网络的第一个或最后一个可用IP，即192.168.80.1或192.168.80.254。<br><img src="https://raw.githubusercontent.com/higoge/image/master/vm03/06.jpg" class="img-center"><br>启用VMware Network Adapter VMnet8网卡，并设置IP地址为192.168.80.X，子网掩码为255.255.255.0 。（X可以使从2到254）<br><img src="https://raw.githubusercontent.com/higoge/image/master/vm03/07.jpg" class="img-center"><br>手动启动NAT服务。使用快捷键<code>win+r</code>，开启运行输入框，输入<code>services.msc</code>，开启系统“服务”。<br><img src="https://raw.githubusercontent.com/higoge/image/master/vm03/08.jpg" class="img-center"><br>向下浏览到VMware的5个服务，在VMware NAT Service点击右键，点击“启动”。<br><img src="https://raw.githubusercontent.com/higoge/image/master/vm03/09.jpg" class="img-center"></p>
+<h2 id="NAT_u6A21_u5F0F_u7684_u7AEF_u53E3_u6620_u5C04"><a href="#NAT_u6A21_u5F0F_u7684_u7AEF_u53E3_u6620_u5C04" class="headerlink" title="NAT模式的端口映射"></a>NAT模式的端口映射</h2><p>本节请根据具体服务进行配置，如没有相关需求，可以不用配置。<br>因为NAT模式，其他物理机无法直接访问虚拟机。可以通过端口映射，将虚拟机的指定端口映射到物理机的端口，访问物理机的IP地址加端口，就相当于访问虚拟机的指定端口。<br>举个栗子：假如虚拟机的IP地址是192.168.80.3，开通了一个Web服务，默认是80端口，映射到物理机的端口为8080。<br>在NAT设置中，点击“端口转发”下的“添加”按钮。<br><img src="https://raw.githubusercontent.com/higoge/image/master/vm03/10.jpg" class="img-center"><br>“主机端口”，即物理机的端口为“8080”，类型为TCP，“虚拟机IP地址”填写“192.168.80.3”，“虚拟机端口”填写“80”，“描述”就是备注，写“Web”。<br><img src="https://raw.githubusercontent.com/higoge/image/master/vm03/11.jpg" class="img-center"><br>可使用telnet测试端口是本机端口配置成功。<code>win+r</code>调出运行窗口，输入<code>cmd</code>，调出“命令提示符”。<br>执行：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">telnet <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> <span class="number">8080</span></span><br></pre></td></tr></table></figure></p>
+<p>不成功会提示“连接失败”。<br><img src="https://raw.githubusercontent.com/higoge/image/master/vm03/12.jpg" class="img-center"><br>成功则会黑屏。<br><img src="https://raw.githubusercontent.com/higoge/image/master/vm03/13.jpg" class="img-center"><br><strong>注</strong>：Win7默认没有安装telnet，安装方法：控制面板-&gt;程序-&gt;打开或关闭Windows功能-&gt;勾选“Telnet客户端”，确定即可。</p>
+<h2 id="DHCP_u6A21_u5F0F_u8BBE_u7F6E"><a href="#DHCP_u6A21_u5F0F_u8BBE_u7F6E" class="headerlink" title="DHCP模式设置"></a>DHCP模式设置</h2><p>仅主机模式和NAT模式都可以配置DHCP服务。DHCP服务，可以给虚拟机自动分配IP地址。当然，虚拟机的网络需要配置“自动获取IP地址”。<br>以NAT模式举个栗子。点击“DHCP设置”。<br><img src="https://raw.githubusercontent.com/higoge/image/master/vm03/14.jpg" class="img-center"><br>配置地址池，“开始IP地址”设置为192.168.80.20，“结束IP地址”设置为192.168.80.254。那么DHCP服务就从地址池中按照规则给虚拟机配置IP地址。<br><img src="https://raw.githubusercontent.com/higoge/image/master/vm03/15.jpg" class="img-center"><br>192.168.80.1设置为网关，192.168.80.2-192.168.80.19，可以手动分配给虚拟机及物理机的VMware Network Adapter VMnet8网卡。<br>手动启动NAT服务。使用快捷键“win+r”，开启运行输入框，输入services.msc，开启系统“服务”。<br><img src="https://raw.githubusercontent.com/higoge/image/master/vm03/16.jpg" class="img-center"><br>向下浏览到VMware的5个服务，在VMware DHCP Service点击右键，点击“启动”。<br><img src="https://raw.githubusercontent.com/higoge/image/master/vm03/17.jpg" class="img-center"><br>DHCP是根据地址池的地址分配IP，当物理机需要与虚拟机通讯时，必须查看虚拟机的网络详情才能知晓其IP地址，在需要定点通讯的情况下，不是很方便。所以DHCP服务要根据实际需求进行配置。</p>
+<h2 id="6-__u9519_u8BEF_u7684_u5904_u7406"><a href="#6-__u9519_u8BEF_u7684_u5904_u7406" class="headerlink" title="6. 错误的处理"></a>6. 错误的处理</h2><p>当无法启动服务，提示诸如<strong>“VMware DHCP Service服务启动后停止”</strong>时，打开“虚拟网络编辑器”，点击左下角“恢复默认设置”，再对各个网络模式重新设置即可。<br><img src="https://raw.githubusercontent.com/higoge/image/master/vm03/18.jpg" class="img-center"></p>
+<p>~~ EOF ~~</p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/VMware/" rel="tag">#VMware</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/06/24/vm02/" rel="next" title="虚拟机02：三种网络模式">
+                <i class="fa fa-chevron-left"></i> 虚拟机02：三种网络模式
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/06/25/vm04/" rel="prev" title="虚拟机04：新建虚拟机-Win7">
+                虚拟机04：新建虚拟机-Win7 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/06/25/vm03/"
+           data-title="虚拟机03：网络设置" data-url="http://yoursite.com/2015/06/25/vm03/">
+      </div>
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            本站概覽
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/author.jpg" alt="Jeremy Wong" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Jeremy Wong</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">I hurry and do not delay to keep your commandments.(PSM119:60)</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">78</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-name">分類</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-name">標籤</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/higoge" target="_blank">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/higoge" target="_blank">
+                  
+                    <i class="fa fa-weibo"></i> Weibo
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">友情连接</p>
+            
+              <span class="links-of-author-item">
+                <a href="http://pan.baidu.com/s/1o6Meksi" target="_blank">汪汪的网盘(解压密码higoge)</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u5F00_u542F_u865A_u62DF_u7F51_u7EDC_u7F16_u8F91_u5668"><span class="nav-number">1.</span> <span class="nav-text">开启虚拟网络编辑器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u6865_u63A5_u6A21_u5F0F"><span class="nav-number">2.</span> <span class="nav-text">桥接模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u4EC5_u4E3B_u673A_u6A21_u5F0F"><span class="nav-number">3.</span> <span class="nav-text">仅主机模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NAT_u6A21_u5F0F_u8BBE_u7F6E"><span class="nav-number">4.</span> <span class="nav-text">NAT模式设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NAT_u6A21_u5F0F_u7684_u7AEF_u53E3_u6620_u5C04"><span class="nav-number">5.</span> <span class="nav-text">NAT模式的端口映射</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DHCP_u6A21_u5F0F_u8BBE_u7F6E"><span class="nav-number">6.</span> <span class="nav-text">DHCP模式设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-__u9519_u8BEF_u7684_u5904_u7406"><span class="nav-number">7.</span> <span class="nav-text">6. 错误的处理</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jeremy Wong</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"higoge"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post' || CONFIG.sidebar === 'always') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+
+</body>
+</html>
