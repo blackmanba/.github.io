@@ -67,6 +67,11 @@
   </url>
   
   <url>
+    <loc>http://higoge.github.io/about/index.html</loc>
+    <lastmod>2016-01-11T02:27:25.236Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://higoge.github.io/2015/12/08/tools08/</loc>
     <lastmod>2016-01-11T02:27:25.236Z</lastmod>
   </url>
@@ -77,7 +82,7 @@
   </url>
   
   <url>
-    <loc>http://higoge.github.io/about/index.html</loc>
+    <loc>http://higoge.github.io/2015/07/01/vm11/</loc>
     <lastmod>2016-01-11T02:27:25.236Z</lastmod>
   </url>
   
@@ -93,11 +98,6 @@
   
   <url>
     <loc>http://higoge.github.io/2015/07/01/vm13/</loc>
-    <lastmod>2016-01-11T02:27:25.236Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://higoge.github.io/2015/07/01/vm11/</loc>
     <lastmod>2016-01-11T02:27:25.236Z</lastmod>
   </url>
   
@@ -119,6 +119,11 @@
   <url>
     <loc>http://higoge.github.io/categories/index.html</loc>
     <lastmod>2016-01-11T02:27:25.236Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://higoge.github.io/2015/08/27/th-linux06/</loc>
+    <lastmod>2016-01-11T02:27:25.233Z</lastmod>
   </url>
   
   <url>
@@ -207,12 +212,12 @@
   </url>
   
   <url>
-    <loc>http://higoge.github.io/2015/07/07/git-remote06/</loc>
+    <loc>http://higoge.github.io/2015/07/20/ad-linux01/</loc>
     <lastmod>2016-01-11T02:27:25.233Z</lastmod>
   </url>
   
   <url>
-    <loc>http://higoge.github.io/2015/07/20/ad-linux01/</loc>
+    <loc>http://higoge.github.io/2015/07/07/git-remote05/</loc>
     <lastmod>2016-01-11T02:27:25.233Z</lastmod>
   </url>
   
@@ -412,12 +417,7 @@
   </url>
   
   <url>
-    <loc>http://higoge.github.io/2015/08/27/th-linux06/</loc>
-    <lastmod>2016-01-11T02:27:25.233Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://higoge.github.io/2015/07/07/git-remote05/</loc>
+    <loc>http://higoge.github.io/2015/07/07/git-remote06/</loc>
     <lastmod>2016-01-11T02:27:25.233Z</lastmod>
   </url>
   

@@ -76,7 +76,7 @@
   <title> LearnIT </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   <!--[if lte IE 8]>
   <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
@@ -133,7 +133,7 @@
             
               <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
             
-            首頁
+            首页
           </a>
         </li>
       
@@ -143,7 +143,7 @@
             
               <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
             
-            歸檔
+            归档
           </a>
         </li>
       
@@ -153,7 +153,7 @@
             
               <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
             
-            分類
+            分类
           </a>
         </li>
       
@@ -163,7 +163,7 @@
             
               <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
             
-            標籤
+            标签
           </a>
         </li>
       
@@ -173,7 +173,7 @@
             
               <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
             
-            關於
+            关于
           </a>
         </li>
       
@@ -220,11 +220,6 @@
 
     
     
-      
-      
-
-      
-    
 
     
       
@@ -258,7 +253,7 @@
 
         <div class="post-meta">
           <span class="post-time">
-            發表於
+            发表于
             <time itemprop="dateCreated" datetime="2015-07-07T22:47:51+08:00" content="2015-07-07">
               2015-07-07
             </time>
@@ -266,7 +261,7 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
+              &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Git/" itemprop="url" rel="index">
@@ -314,7 +309,7 @@
 <li>如无特殊情况，不建议远程分支与本地分支名字不对应，建议设置好upstream，除非远程分支与本地临时分支重名。可以用<code>git branch -m [旧分支名] [新分支名]</code>进行临时分支的重名。
           <div class="post-more-link text-center">
             <a class="btn" href="/2015/07/07/git-remote08/#more" rel="contents">
-              閱讀全文 &raquo;
+              阅读全文 &raquo;
             </a>
           </div>
         
@@ -366,7 +361,7 @@
 
         <div class="post-meta">
           <span class="post-time">
-            發表於
+            发表于
             <time itemprop="dateCreated" datetime="2015-07-07T21:40:25+08:00" content="2015-07-07">
               2015-07-07
             </time>
@@ -374,7 +369,7 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
+              &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Git/" itemprop="url" rel="index">
@@ -418,7 +413,7 @@
 <p>在当前的HEAD创建标签v0.1。
           <div class="post-more-link text-center">
             <a class="btn" href="/2015/07/07/git-remote07/#more" rel="contents">
-              閱讀全文 &raquo;
+              阅读全文 &raquo;
             </a>
           </div>
         
@@ -470,7 +465,7 @@
 
         <div class="post-meta">
           <span class="post-time">
-            發表於
+            发表于
             <time itemprop="dateCreated" datetime="2015-07-07T20:35:02+08:00" content="2015-07-07">
               2015-07-07
             </time>
@@ -478,7 +473,7 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
+              &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Git/" itemprop="url" rel="index">
@@ -521,7 +516,7 @@
           <p>在执行<code>git push</code>时，git会给一个warning，然后推送更新，内容如下。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">$ git push</span><br><span class="line">warning: push.default is <span class="built_in">unset</span>; its implicit value is changing <span class="keyword">in</span></span><br><span class="line">Git <span class="number">2.0</span> from <span class="string">'matching'</span> to <span class="string">'simple'</span>. To squelch this message</span><br><span class="line">and maintain the current behavior after the default changes, use:</span><br><span class="line"></span><br><span class="line">  git config --global push.default matching</span><br><span class="line"></span><br><span class="line">To squelch this message and adopt the new behavior now, use:</span><br><span class="line"></span><br><span class="line">  git config --global push.default simple</span><br><span class="line"></span><br><span class="line">See <span class="string">'git help config'</span> and search <span class="keyword">for</span> <span class="string">'push.default'</span> <span class="keyword">for</span> further information.</span><br><span class="line">(the <span class="string">'simple'</span> mode was introduced <span class="keyword">in</span> Git <span class="number">1.7</span>.<span class="number">11</span>. Use the similar mode</span><br><span class="line"><span class="string">'current'</span> instead of <span class="string">'simple'</span> <span class="keyword">if</span> you sometimes use older versions of Git)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Counting objects: <span class="number">10</span>, done.</span><br><span class="line">Delta compression using up to <span class="number">12</span> threads.</span><br><span class="line">Compressing objects: <span class="number">100</span>% (<span class="number">2</span>/<span class="number">2</span>), done.</span><br><span class="line">Writing objects: <span class="number">100</span>% (<span class="number">6</span>/<span class="number">6</span>), <span class="number">469</span> bytes | <span class="number">0</span> bytes/s, done.</span><br><span class="line">Total <span class="number">6</span> (delta <span class="number">0</span>), reused <span class="number">0</span> (delta <span class="number">0</span>)</span><br><span class="line">To git@github0123:jeremy0123/fetch.git</span><br><span class="line">   c86dc9b..<span class="number">9</span>d7c603  dev -&gt; dev</span><br></pre></td></tr></table></figure></p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2015/07/07/git-remote06/#more" rel="contents">
-              閱讀全文 &raquo;
+              阅读全文 &raquo;
             </a>
           </div>
         
@@ -573,7 +568,7 @@
 
         <div class="post-meta">
           <span class="post-time">
-            發表於
+            发表于
             <time itemprop="dateCreated" datetime="2015-07-07T19:30:28+08:00" content="2015-07-07">
               2015-07-07
             </time>
@@ -581,7 +576,7 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
+              &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Git/" itemprop="url" rel="index">
@@ -625,7 +620,7 @@
 <p>或者：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin --delete br03</span><br></pre></td></tr></table></figure></p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2015/07/07/git-remote05/#more" rel="contents">
-              閱讀全文 &raquo;
+              阅读全文 &raquo;
             </a>
           </div>
         
@@ -677,7 +672,7 @@
 
         <div class="post-meta">
           <span class="post-time">
-            發表於
+            发表于
             <time itemprop="dateCreated" datetime="2015-07-06T23:05:54+08:00" content="2015-07-06">
               2015-07-06
             </time>
@@ -685,7 +680,7 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
+              &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Git/" itemprop="url" rel="index">
@@ -729,7 +724,7 @@
 <p>实际使用时，远程仓库名和分支名，在特定的情况下可以省略。一两句话说不清楚，采用脑图的方式展示。请一定要注意<strong>当前所在的分支是什么</strong>。<br>如果图片显示太小，请到汪汪的网盘下载(文件夹为<code>/Git</code>)，如果有XMind，请直接查看脑图源文件。
           <div class="post-more-link text-center">
             <a class="btn" href="/2015/07/06/git-remote04/#more" rel="contents">
-              閱讀全文 &raquo;
+              阅读全文 &raquo;
             </a>
           </div>
         
@@ -781,7 +776,7 @@
 
         <div class="post-meta">
           <span class="post-time">
-            發表於
+            发表于
             <time itemprop="dateCreated" datetime="2015-07-06T21:55:29+08:00" content="2015-07-06">
               2015-07-06
             </time>
@@ -789,7 +784,7 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
+              &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Git/" itemprop="url" rel="index">
@@ -835,7 +830,7 @@
 <p>或<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">git</span> <span class="keyword">branch </span>-u origin/dev</span><br></pre></td></tr></table></figure></p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2015/07/06/git-remote03/#more" rel="contents">
-              閱讀全文 &raquo;
+              阅读全文 &raquo;
             </a>
           </div>
         
@@ -887,7 +882,7 @@
 
         <div class="post-meta">
           <span class="post-time">
-            發表於
+            发表于
             <time itemprop="dateCreated" datetime="2015-07-06T20:42:19+08:00" content="2015-07-06">
               2015-07-06
             </time>
@@ -895,7 +890,7 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
+              &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Git/" itemprop="url" rel="index">
@@ -942,7 +937,7 @@
 <li>创建远程跟踪分支remote/origin/*。
           <div class="post-more-link text-center">
             <a class="btn" href="/2015/07/06/git-remote02/#more" rel="contents">
-              閱讀全文 &raquo;
+              阅读全文 &raquo;
             </a>
           </div>
         
@@ -994,7 +989,7 @@
 
         <div class="post-meta">
           <span class="post-time">
-            發表於
+            发表于
             <time itemprop="dateCreated" datetime="2015-07-06T19:36:13+08:00" content="2015-07-06">
               2015-07-06
             </time>
@@ -1002,7 +997,7 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
+              &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Git/" itemprop="url" rel="index">
@@ -1046,7 +1041,7 @@
 <p>举个栗子：
           <div class="post-more-link text-center">
             <a class="btn" href="/2015/07/06/git-remote01/#more" rel="contents">
-              閱讀全文 &raquo;
+              阅读全文 &raquo;
             </a>
           </div>
         
@@ -1098,7 +1093,7 @@
 
         <div class="post-meta">
           <span class="post-time">
-            發表於
+            发表于
             <time itemprop="dateCreated" datetime="2015-07-03T23:06:06+08:00" content="2015-07-03">
               2015-07-03
             </time>
@@ -1106,7 +1101,7 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
+              &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Git/" itemprop="url" rel="index">
@@ -1149,7 +1144,7 @@
           <h2 id="u4E34_u65F6_u5B58_u50A8_u5DE5_u4F5C_u533A"><a href="#u4E34_u65F6_u5B58_u50A8_u5DE5_u4F5C_u533A" class="headerlink" title="临时存储工作区"></a>临时存储工作区</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git stash <span class="comment"># 把当前工作现场(工作区及暂存区的修改)“储藏”起来，以后可恢复现场后继续工作</span></span><br><span class="line">Saved working directory and index state WIP on master: e353f90 Merge branch <span class="string">'br03'</span></span><br><span class="line">HEAD 现在位于 e353f90 Merge branch <span class="string">'br03'</span></span><br></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
             <a class="btn" href="/2015/07/03/git-basic04/#more" rel="contents">
-              閱讀全文 &raquo;
+              阅读全文 &raquo;
             </a>
           </div>
         
@@ -1201,7 +1196,7 @@
 
         <div class="post-meta">
           <span class="post-time">
-            發表於
+            发表于
             <time itemprop="dateCreated" datetime="2015-07-03T21:54:10+08:00" content="2015-07-03">
               2015-07-03
             </time>
@@ -1209,7 +1204,7 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
+              &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Git/" itemprop="url" rel="index">
@@ -1253,7 +1248,7 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout br01 <span class="comment"># 切换到br01分支</span></span><br><span class="line">切换到分支 <span class="string">'br01'</span></span><br></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
             <a class="btn" href="/2015/07/03/git-basic03/#more" rel="contents">
-              閱讀全文 &raquo;
+              阅读全文 &raquo;
             </a>
           </div>
         
@@ -1305,7 +1300,7 @@
 
         <div class="post-meta">
           <span class="post-time">
-            發表於
+            发表于
             <time itemprop="dateCreated" datetime="2015-07-03T20:45:38+08:00" content="2015-07-03">
               2015-07-03
             </time>
@@ -1313,7 +1308,7 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
+              &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Git/" itemprop="url" rel="index">
@@ -1356,7 +1351,7 @@
           <h2 id="u4E09_u79CD_u72B6_u6001"><a href="#u4E09_u79CD_u72B6_u6001" class="headerlink" title="三种状态"></a>三种状态</h2><h3 id="u4EC5_u4FEE_u6539_u4F46_u6CA1_u6709_u6DFB_u52A0_u5230_u6682_u5B58_u533A"><a href="#u4EC5_u4FEE_u6539_u4F46_u6CA1_u6709_u6DFB_u52A0_u5230_u6682_u5B58_u533A" class="headerlink" title="仅修改但没有添加到暂存区"></a>仅修改但没有添加到暂存区</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">位于分支 master</span><br><span class="line">尚未暂存以备提交的变更：</span><br><span class="line">  （使用 <span class="string">"git add &lt;file&gt;..."</span> 更新要提交的内容）</span><br><span class="line">  （使用 <span class="string">"git checkout -- &lt;file&gt;..."</span> 丢弃工作区的改动）</span><br><span class="line"></span><br><span class="line">        修改：     <span class="number">01</span>.txt</span><br><span class="line"></span><br><span class="line">修改尚未加入提交（使用 <span class="string">"git add"</span> 和/或 <span class="string">"git commit -a"</span>）</span><br></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
             <a class="btn" href="/2015/07/03/git-basic02/#more" rel="contents">
-              閱讀全文 &raquo;
+              阅读全文 &raquo;
             </a>
           </div>
         
@@ -1408,7 +1403,7 @@
 
         <div class="post-meta">
           <span class="post-time">
-            發表於
+            发表于
             <time itemprop="dateCreated" datetime="2015-07-03T19:42:52+08:00" content="2015-07-03">
               2015-07-03
             </time>
@@ -1416,7 +1411,7 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
+              &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Git/" itemprop="url" rel="index">
@@ -1460,7 +1455,7 @@
 <h2 id="u4E3A_u4EC0_u4E48_u662FGit"><a href="#u4E3A_u4EC0_u4E48_u662FGit" class="headerlink" title="为什么是Git"></a>为什么是Git</h2><p>一句话：Git简单，上手快，支持本地无网络提交，多人协作方便。<br>缺点：要精通，需要一定的过程。推荐使用命令行模式，对于没有看惯了GUI的人，不习惯。<br>Git入门教程很多，最简单的教程是《<a href="http://rogerdudler.github.io/git-guide/index.zh.html">git - 简明指南</a>》，稍微详细点的是廖雪峰的《<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">Git教程</a>》。<br>Git最全的教程是《<a href="http://git-scm.com/doc">Pro Git</a>》(有<a href="http://git-scm.com/book/zh/v1">中文版本</a>)。<br>2015.09.17更新：有个歪果仁给我发邮件让我添加他的教程，有兴趣的请自行查看。<a href="https://blog.udemy.com/git-tutorial-a-comprehensive-guide/">Git Tutorial: A Comprehensive Guide</a><br>Git基础系列不准备详细的展开，因为跟上述教程的内容没有太大区别。只是把最常用的基础命令介绍出来。<br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2015/07/03/git-basic01/#more" rel="contents">
-              閱讀全文 &raquo;
+              阅读全文 &raquo;
             </a>
           </div>
         
@@ -1512,7 +1507,7 @@
 
         <div class="post-meta">
           <span class="post-time">
-            發表於
+            发表于
             <time itemprop="dateCreated" datetime="2015-07-02T20:28:13+08:00" content="2015-07-02">
               2015-07-02
             </time>
@@ -1520,7 +1515,7 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
+              &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/基础/" itemprop="url" rel="index">
@@ -1564,7 +1559,7 @@
 <h2 id="u6807_u51C6_u79FB_u7801"><a href="#u6807_u51C6_u79FB_u7801" class="headerlink" title="标准移码"></a>标准移码</h2><p>在一般情况下，移码就是将补码的符号位取反。<br>-118D = -1110110B (真值)<br>-118D表示-118的十进制；-1110110B表示二进制。<br>原码: 11110110<br>反码: 10001001<br>补码: 10001010<br>移码: 00001010<br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2015/07/02/basic04/#more" rel="contents">
-              閱讀全文 &raquo;
+              阅读全文 &raquo;
             </a>
           </div>
         
@@ -1616,7 +1611,7 @@
 
         <div class="post-meta">
           <span class="post-time">
-            發表於
+            发表于
             <time itemprop="dateCreated" datetime="2015-07-02T19:13:51+08:00" content="2015-07-02">
               2015-07-02
             </time>
@@ -1624,7 +1619,7 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
+              &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/基础/" itemprop="url" rel="index">
@@ -1668,7 +1663,7 @@
 <h2 id="u673A_u5668_u6570_u4E0E_u771F_u503C"><a href="#u673A_u5668_u6570_u4E0E_u771F_u503C" class="headerlink" title="机器数与真值"></a>机器数与真值</h2><p>机器数，即数字在计算机中的二进制表示形式。<br>真值，第一位用+-表示数字的正负，其余为二进制数。<br>举个栗子：-3的机器数是10000011，真值是-0000011。<br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2015/07/02/basic03/#more" rel="contents">
-              閱讀全文 &raquo;
+              阅读全文 &raquo;
             </a>
           </div>
         
@@ -1720,7 +1715,7 @@
 
         <div class="post-meta">
           <span class="post-time">
-            發表於
+            发表于
             <time itemprop="dateCreated" datetime="2015-07-01T22:57:43+08:00" content="2015-07-01">
               2015-07-01
             </time>
@@ -1728,7 +1723,7 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
+              &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/虚拟机/" itemprop="url" rel="index">
@@ -1777,7 +1772,7 @@
 <li>用户界面改进，提高易用性和工作效率，保护您的工作并节省时间。
           <div class="post-more-link text-center">
             <a class="btn" href="/2015/07/01/vm13/#more" rel="contents">
-              閱讀全文 &raquo;
+              阅读全文 &raquo;
             </a>
           </div>
         
@@ -1845,21 +1840,21 @@
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">79</span>
-              <span class="site-state-item-name">文章</span>
+              <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
               <span class="site-state-item-count">12</span>
-              <span class="site-state-item-name">分類</span>
+              <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
               <span class="site-state-item-count">19</span>
-              <span class="site-state-item-name">標籤</span>
+              <span class="site-state-item-name">标签</span>
               </a>
           </div>
 
@@ -1934,11 +1929,11 @@
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  主題 -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Mist
   </a>
