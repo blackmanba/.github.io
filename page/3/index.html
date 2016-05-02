@@ -220,6 +220,115 @@
 
     
     
+      
+      
+
+      
+    
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/07/23/tools03/" itemprop="url">
+                  工具03：PuTTY常用配置
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2015-07-23T19:41:03+08:00" content="2015-07-23">
+              2015-07-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/系统工具/" itemprop="url" rel="index">
+                    <span itemprop="name">系统工具</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/07/23/tools03/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/23/tools03/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>如果在Windows上从事Linux开发，那么PuTTY可能是最常用的工具。小巧，绿色。正因为小巧，有些操作比较奇怪，比如配置的保存等。<br>本文介绍PuTTY的常用配置。</p>
+<h2 id="u4E0B_u8F7D"><a href="#u4E0B_u8F7D" class="headerlink" title="下载"></a>下载</h2><p>请到<a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY下载页面</a>下载最新版的PuTTY。<br><strong>特别强调</strong>：<strong>不要</strong>到其他网站下载<strong>中文汉化版</strong>的PuTTY，请参考<a href="http://www.cnbeta.com/articles/171116.htm">中文版后门事件</a>。<br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/07/23/tools03/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
 
     
       
@@ -1683,114 +1792,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/07/07/git-remote08/" itemprop="url">
-                  Git远程08：关于Git远程仓库操作的一些经验
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            發表於
-            <time itemprop="dateCreated" datetime="2015-07-07T22:47:51+08:00" content="2015-07-07">
-              2015-07-07
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/07/07/git-remote08/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/07/git-remote08/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p><strong>以下内容纯属个人观点</strong>，仅供参考。</p>
-<ul>
-<li>执行<code>git pull [远程仓库名] [远程分支名]</code>命令，注意与本地分支的对应。</li>
-<li>如果你是处女座，不要用<code>git pull</code>，而用<code>git fetch</code>，获取到更新后，手动进行merge。</li>
-<li>origin只有在<code>git fetch</code>命令才会有用，其他情况，是否起名origin都无所谓，但是，别没事找事起个奇怪的名字。</li>
-<li>如无特殊情况，不建议远程分支与本地分支名字不对应，建议设置好upstream，除非远程分支与本地临时分支重名。可以用<code>git branch -m [旧分支名] [新分支名]</code>进行临时分支的重名。
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/07/07/git-remote08/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -1837,7 +1838,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">78</span>
+              <span class="site-state-item-count">79</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -1851,7 +1852,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-count">19</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>

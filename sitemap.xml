@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://higoge.github.io/2015/06/24/vm02/</loc>
-    <lastmod>2016-01-11T02:27:25.236Z</lastmod>
+    <loc>http://higoge.github.io/2015/07/29/tools06/</loc>
+    <lastmod>2016-05-02T06:55:19.706Z</lastmod>
   </url>
   
   <url>
-    <loc>http://higoge.github.io/about/index.html</loc>
-    <lastmod>2016-01-11T02:27:25.236Z</lastmod>
+    <loc>http://higoge.github.io/2016/02/15/tools09/</loc>
+    <lastmod>2016-02-16T03:55:26.693Z</lastmod>
   </url>
   
   <url>
-    <loc>http://higoge.github.io/2015/07/01/vm11/</loc>
+    <loc>http://higoge.github.io/2015/06/24/vm01/</loc>
     <lastmod>2016-01-11T02:27:25.236Z</lastmod>
   </url>
   
@@ -57,12 +57,12 @@
   </url>
   
   <url>
-    <loc>http://higoge.github.io/2015/07/01/vm12/</loc>
+    <loc>http://higoge.github.io/2015/06/24/vm02/</loc>
     <lastmod>2016-01-11T02:27:25.236Z</lastmod>
   </url>
   
   <url>
-    <loc>http://higoge.github.io/2015/06/24/vm01/</loc>
+    <loc>http://higoge.github.io/2015/07/01/vm12/</loc>
     <lastmod>2016-01-11T02:27:25.236Z</lastmod>
   </url>
   
@@ -77,7 +77,7 @@
   </url>
   
   <url>
-    <loc>http://higoge.github.io/2015/07/29/tools06/</loc>
+    <loc>http://higoge.github.io/about/index.html</loc>
     <lastmod>2016-01-11T02:27:25.236Z</lastmod>
   </url>
   
@@ -93,6 +93,11 @@
   
   <url>
     <loc>http://higoge.github.io/2015/07/01/vm13/</loc>
+    <lastmod>2016-01-11T02:27:25.236Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://higoge.github.io/2015/07/01/vm11/</loc>
     <lastmod>2016-01-11T02:27:25.236Z</lastmod>
   </url>
   
@@ -114,11 +119,6 @@
   <url>
     <loc>http://higoge.github.io/categories/index.html</loc>
     <lastmod>2016-01-11T02:27:25.236Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://higoge.github.io/2015/08/27/th-linux06/</loc>
-    <lastmod>2016-01-11T02:27:25.233Z</lastmod>
   </url>
   
   <url>
@@ -207,12 +207,12 @@
   </url>
   
   <url>
-    <loc>http://higoge.github.io/2015/07/20/ad-linux01/</loc>
+    <loc>http://higoge.github.io/2015/07/07/git-remote06/</loc>
     <lastmod>2016-01-11T02:27:25.233Z</lastmod>
   </url>
   
   <url>
-    <loc>http://higoge.github.io/2015/07/07/git-remote05/</loc>
+    <loc>http://higoge.github.io/2015/07/20/ad-linux01/</loc>
     <lastmod>2016-01-11T02:27:25.233Z</lastmod>
   </url>
   
@@ -412,7 +412,12 @@
   </url>
   
   <url>
-    <loc>http://higoge.github.io/2015/07/07/git-remote06/</loc>
+    <loc>http://higoge.github.io/2015/08/27/th-linux06/</loc>
+    <lastmod>2016-01-11T02:27:25.233Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://higoge.github.io/2015/07/07/git-remote05/</loc>
     <lastmod>2016-01-11T02:27:25.233Z</lastmod>
   </url>
   

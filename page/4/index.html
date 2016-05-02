@@ -220,6 +220,119 @@
 
     
     
+      
+      
+
+      
+    
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/07/07/git-remote08/" itemprop="url">
+                  Git远程08：关于Git远程仓库操作的一些经验
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2015-07-07T22:47:51+08:00" content="2015-07-07">
+              2015-07-07
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分類於
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Git/" itemprop="url" rel="index">
+                    <span itemprop="name">Git</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/07/07/git-remote08/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/07/git-remote08/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p><strong>以下内容纯属个人观点</strong>，仅供参考。</p>
+<ul>
+<li>执行<code>git pull [远程仓库名] [远程分支名]</code>命令，注意与本地分支的对应。</li>
+<li>如果你是处女座，不要用<code>git pull</code>，而用<code>git fetch</code>，获取到更新后，手动进行merge。</li>
+<li>origin只有在<code>git fetch</code>命令才会有用，其他情况，是否起名origin都无所谓，但是，别没事找事起个奇怪的名字。</li>
+<li>如无特殊情况，不建议远程分支与本地分支名字不对应，建议设置好upstream，除非远程分支与本地临时分支重名。可以用<code>git branch -m [旧分支名] [新分支名]</code>进行临时分支的重名。
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/07/07/git-remote08/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
 
     
       
@@ -1685,109 +1798,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/07/01/vm12/" itemprop="url">
-                  虚拟机12：其他功能
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            發表於
-            <time itemprop="dateCreated" datetime="2015-07-01T21:50:43+08:00" content="2015-07-01">
-              2015-07-01
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/虚拟机/" itemprop="url" rel="index">
-                    <span itemprop="name">虚拟机</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/07/01/vm12/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/01/vm12/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="vmx_u6587_u4EF6"><a href="#vmx_u6587_u4EF6" class="headerlink" title="vmx文件"></a>vmx文件</h2><p>每个虚拟机都有vmx文件，保存了虚拟机的配置信息。<br>使用文本编辑器打开虚拟机保存目录的Win7.vmx，就可以看到相关信息。虚拟机设置就是读取的这个文件。可以直接更改此vmx文件，等于对虚拟机进行了设置。<br><strong>注意</strong>：对于不知道的参数，不要轻易修改。
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/07/01/vm12/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -1834,7 +1844,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">78</span>
+              <span class="site-state-item-count">79</span>
               <span class="site-state-item-name">文章</span>
             </a>
           </div>
@@ -1848,7 +1858,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-count">19</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>
