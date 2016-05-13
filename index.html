@@ -220,6 +220,15 @@
 
     
     
+      
+      
+        
+        
+        
+      
+
+      
+    
 
     
       
@@ -332,7 +341,7 @@
               
                 
                 <a class="post-title-link" href="/2016/02/15/tools09/" itemprop="url">
-                  工具09：资源管理器替代者：Total Commander的快捷键
+                  工具09：资源管理器替代者：Total Commander
                 </a>
               
             
@@ -391,9 +400,7 @@
         
           <span itemprop="articleBody">
             
-              <p>Total Commander绝对是神器，是键盘流必备的软件。TC的入门比较难，学习有一定的难度，但是学成后对于工作效率的提升有巨大的帮助。<br>本文不介绍TC的使用，强烈推荐<a href="http://weibo.com/xbeta" target="_blank" rel="external">xbeta大神</a>的教材<a href="http://yuedu.baidu.com/ebook/1ec4abf0f46527d3240ce0ab###" target="_blank" rel="external">一本关于 Total Commander 的书</a>。</p>
-<p>TC的定制化很强，而我又喜欢极简的风格，所以xbeta的TC配置文件非常符合我的口味。wincmd.ini<a href="http://img.xbeta.info/2016/wincmd.ini" target="_blank" rel="external">下载地址1</a>，<a href="/">下载地址2</a>。</p>
-<p>目前个人使用的TC的界面。<br><img src="https://raw.githubusercontent.com/higoge/image/master/tools/01.png" class="img-center"></p>
+              <p>Total Commander绝对是神器，是键盘流必备的软件。TC的入门比较难，学习有一定的难度，但是学成后对于工作效率的提升有巨大的帮助。<br>本文不介绍TC的使用，强烈推荐<a href="http://weibo.com/xbeta" target="_blank" rel="external">xbeta大神</a>的教材<a href="http://yuedu.baidu.com/ebook/1ec4abf0f46527d3240ce0ab###" target="_blank" rel="external">一本关于 Total Commander 的书</a>。<br>TC的定制化很强，而我又喜欢极简的风格，所以xbeta的TC配置文件非常符合我的口味。wincmd.ini<a href="http://img.xbeta.info/2016/wincmd.ini" target="_blank" rel="external">下载地址1</a>，<a href="/">下载地址2</a>。<br>目前个人使用的TC的界面。<br><img src="https://raw.githubusercontent.com/higoge/image/master/tools/01.png" class="img-center"></p>
 <h3 id="TC_u5FEB_u6377_u952E"><a href="#TC_u5FEB_u6377_u952E" class="headerlink" title="TC快捷键"></a>TC快捷键</h3><p>制作了一个TC快捷键脑图。<br><img src="https://raw.githubusercontent.com/higoge/image/master/tools/02.png" class="img-center"><br>此脑图使用Xmind制作。源文件<a href="https://github.com/higoge/file/raw/master/tc.xmind" target="_blank" rel="external">下载地址</a>。PDF版<a href="https://github.com/higoge/file/raw/master/tc.pdf" target="_blank" rel="external">下载地址</a>。</p>
 <h3 id="TC_u7684_u63D2_u4EF6"><a href="#TC_u7684_u63D2_u4EF6" class="headerlink" title="TC的插件"></a>TC的插件</h3><p>个人安装的插件如下。</p>
 <table>
@@ -430,7 +437,7 @@
 </tr>
 </tbody>
 </table>
-<p>一般的插件的安装直接到TC的<a href="http://www.ghisler.com/plugins.htm" target="_blank" rel="external">官网</a>插件下载，在TC中打开即可。<br>ulistr插件不在TC的官方列表中，请到<a href="http://totalcmd.net/plugring/oilister.html" target="_blank" rel="external">官网</a>下载安装。</p>
+<p>一般的插件的安装直接到TC的<a href="http://www.ghisler.com/plugins.htm" target="_blank" rel="external">官网</a>插件下载，在TC中打开即可。<br>ulistr插件不在TC的官方列表中，请到其<a href="http://totalcmd.net/plugring/oilister.html" target="_blank" rel="external">官网</a>下载安装。</p>
 <h3 id="Sftp_u63D2_u4EF6"><a href="#Sftp_u63D2_u4EF6" class="headerlink" title="Sftp插件"></a>Sftp插件</h3><p>sftpplug是比较好的插件，一般的与服务器文件的复制粘贴，只要服务器支持SSH，就可以操作，省去了搭建FTP服务的麻烦。<br>在安装完Sftp插件后，需要curl的库，在bin目录下，将<code>libeay32.dll</code>，<code>libssh2.dll</code>和<code>zlib1.dll</code>这三个文件，复制到Sftp插件的目录下，重启TC。下载地址：<a href="http://curl.haxx.se/gknw.net/7.40.0/dist-w32/renamed-curl-7.40.0-devel-mingw32.zip" target="_blank" rel="external">32位，libcurl</a>，<a href="http://curl.haxx.se/gknw.net/7.40.0/dist-w64/curl-7.40.0-devel-mingw64.7z" target="_blank" rel="external">64位，devel</a>。<br>快捷键<code>Alt+R</code>进入网络文件夹，选择<code>Secure FTP</code>进入SFTP目录。<code>F7</code>新建连接。<br>根据图片填写相关信息即可。<br><img src="https://raw.githubusercontent.com/higoge/image/master/tools/03.png" class="img-center"><br>如果使用SSH KEY直接免密码登录，则需要使用<code>puttygen.exe</code>，生成Public Key和Private Key，具体过程如下。</p>
 <ol>
 <li>开启<code>puttygen.exe</code>。点击读取Putty Key或Generate一个新Key，具体参考<a href="http://higoge.github.io/2015/07/24/tools04/">工具04：PuTTY的小伙伴PuTTYgen和Plink</a>。</li>
