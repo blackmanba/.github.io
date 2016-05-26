@@ -4,7 +4,7 @@
   <subtitle><![CDATA[跟汪汪学IT]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://higoge.github.io/"/>
-  <updated>2016-01-11T02:27:25.233Z</updated>
+  <updated>2016-05-26T14:14:06.536Z</updated>
   <id>http://higoge.github.io/</id>
   
   <author>
@@ -19,11 +19,11 @@
     <link href="http://higoge.github.io/9999/12/31/toc/"/>
     <id>http://higoge.github.io/9999/12/31/toc/</id>
     <published>9999-12-31T15:59:59.000Z</published>
-    <updated>2016-01-11T02:27:25.233Z</updated>
+    <updated>2016-05-26T14:14:06.536Z</updated>
     <content type="html"><![CDATA[<p>博客文章越来越多，分类和标签已经不能满足快速搜索的要求，将所有的文章列一个目录置顶，直接在本文搜索可以大大提高效率。<br>据目测，本文将会很长很长，而且会一直变长。<br><a id="more"></a></p>
 <h2 id="u968F_u7B14"><a href="#u968F_u7B14" class="headerlink" title="随笔"></a>随笔</h2><p>非技术类文章。<br><a href="http://higoge.github.io/2015/06/19/essay01/">随笔01：第一篇</a><br><a href="http://higoge.github.io/2015/06/23/essay02/">随笔02：关于海狗哥的流媒体空间资料一些说明</a><br><a href="http://higoge.github.io/2015/08/31/essay03/">随笔03：无题</a></p>
 <h2 id="Linux_u7406_u8BBA"><a href="#Linux_u7406_u8BBA" class="headerlink" title="Linux理论"></a>Linux理论</h2><p>介绍Linux的理论知识。<br><a href="http://higoge.github.io/2015/07/28/th-linux01/">Linux理论01：Linux发行版的选择</a><br><a href="http://higoge.github.io/2015/07/30/th-linux02/">Linux理论02：CentOS6.6的安装</a><br><a href="http://higoge.github.io/2015/07/31/th-linux03/">Linux理论03：CentOS6.6安装VMware Tools和配置共享文件夹</a><br><a href="http://higoge.github.io/2015/08/03/th-linux04/">Linux理论04：CentOS6.6的网络配置</a><br><a href="http://higoge.github.io/2015/08/10/th-linux05/">Linux理论05：Linux的目录结构</a><br><a href="http://higoge.github.io/2015/08/27/th-linux06/">Linux理论06：Linux的启动级别</a></p>
-<h2 id="Linux_u547D_u4EE4"><a href="#Linux_u547D_u4EE4" class="headerlink" title="Linux命令"></a>Linux命令</h2><p>介绍Linux的基础命令，是每个Linux从业者必须掌握的命令。<br><a href="http://higoge.github.io/2015/08/12/cm-linux01/">Linux命令01：命令的反馈形式</a><br><a href="http://higoge.github.io/2015/08/13/cm-linux02/">Linux命令02：nano编辑器</a><br><a href="http://higoge.github.io/2015/08/17/cm-linux03/">Linux命令03：man</a><br><a href="http://higoge.github.io/2015/08/18/cm-linux04/">Linux命令04：info</a><br><a href="http://higoge.github.io/2015/08/21/cm-linux05/">Linux命令05：重启关机</a></p>
+<h2 id="Linux_u547D_u4EE4"><a href="#Linux_u547D_u4EE4" class="headerlink" title="Linux命令"></a>Linux命令</h2><p>介绍Linux的基础命令，是每个Linux从业者必须掌握的命令。<br><a href="http://higoge.github.io/2015/08/12/cm-linux01/">Linux命令01：命令的反馈形式</a><br><a href="http://higoge.github.io/2015/08/13/cm-linux02/">Linux命令02：nano编辑器</a><br><a href="http://higoge.github.io/2015/08/17/cm-linux03/">Linux命令03：man</a><br><a href="http://higoge.github.io/2015/08/18/cm-linux04/">Linux命令04：info</a><br><a href="http://higoge.github.io/2015/08/21/cm-linux05/">Linux命令05：重启关机</a><br><a href="http://higoge.github.io/2016/05/15/cm-linux06/">Linux命令06：VIM及快捷键脑图</a>)</p>
 <h2 id="Linux_u8FDB_u9636"><a href="#Linux_u8FDB_u9636" class="headerlink" title="Linux进阶"></a>Linux进阶</h2><p>介绍Linux的进阶命令和配置，初学者可略过。<br><a href="http://higoge.github.io/2015/07/20/ad-linux01/">Linux进阶01：tmux</a><br><a href="http://higoge.github.io/2015/07/21/ad-linux02/">Linux进阶02：tmux好基友Tmuxinator</a><br><a href="http://higoge.github.io/2015/08/14/ad-linux03/">Linux进阶03：双网卡绑定</a><br><a href="http://higoge.github.io/2015/08/20/ad-linux04/">Linux进阶04：cheat–命令的栗子</a><br><a href="http://higoge.github.io/2015/08/28/ad-linux05/">Linux进阶05：忘记root密码咋办</a></p>
 <h2 id="u7CFB_u7EDF_u5DE5_u5177"><a href="#u7CFB_u7EDF_u5DE5_u5177" class="headerlink" title="系统工具"></a>系统工具</h2><p>介绍本人包括但不限于Windows的常用工具。<br><a href="http://higoge.github.io/2015/07/15/tools01/">工具01：Cygwin的安装配置</a><br><a href="http://higoge.github.io/2015/07/22/tools02/">工具02：cmd的替代品ConEmu+Clink</a><br><a href="http://higoge.github.io/2015/07/23/tools03/">工具03：PuTTY常用配置</a><br><a href="http://higoge.github.io/2015/07/24/tools04/">工具04：PuTTY的小伙伴PuTTYgen和Plink</a><br><a href="http://higoge.github.io/2015/07/27/tools05/">工具05：XShell</a><br><a href="http://higoge.github.io/2015/07/29/tools06/">工具06：快速打开程序的方法</a><br><a href="http://higoge.github.io/2015/08/04/tools07/">工具07：等宽字体</a><br><a href="http://higoge.github.io/2015/12/08/tools08/">工具08：Hexo博客搭建过程</a></p>
 <h2 id="u7F51_u7EDC"><a href="#u7F51_u7EDC" class="headerlink" title="网络"></a>网络</h2><p><a href="http://higoge.github.io/2015/12/17/net01/">网络01：双无线路由器无缝对接设置</a></p>
@@ -78,8 +78,8 @@
     <link href="http://higoge.github.io/2016/02/15/tools09/"/>
     <id>http://higoge.github.io/2016/02/15/tools09/</id>
     <published>2016-02-15T11:41:24.000Z</published>
-    <updated>2016-05-02T07:07:09.473Z</updated>
-    <content type="html"><![CDATA[<p>Total Commander绝对是神器，是键盘流必备的软件。TC的入门比较难，学习有一定的难度，但是学成后对于工作效率的提升有巨大的帮助。<br>本文不介绍TC的使用，强烈推荐<a href="http://weibo.com/xbeta" target="_blank" rel="external">xbeta大神</a>的教材<a href="http://yuedu.baidu.com/ebook/1ec4abf0f46527d3240ce0ab###" target="_blank" rel="external">一本关于 Total Commander 的书</a>。<br>TC的定制化很强，而我又喜欢极简的风格，所以xbeta的TC配置文件非常符合我的口味。wincmd.ini<a href="http://img.xbeta.info/2016/wincmd.ini" target="_blank" rel="external">下载地址1</a>，<a href="/">下载地址2</a>。<br>目前个人使用的TC的界面。<br><img src="https://raw.githubusercontent.com/higoge/image/master/tools/01.png" class="img-center"></p>
+    <updated>2016-05-26T14:12:38.463Z</updated>
+    <content type="html"><![CDATA[<p>Total Commander绝对是神器，是键盘流必备的软件。TC的入门比较难，学习有一定的难度，但是学成后对于工作效率的提升有巨大的帮助。<br>本文不介绍TC的使用，强烈推荐<a href="http://weibo.com/xbeta" target="_blank" rel="external">xbeta大神</a>的教材<a href="http://yuedu.baidu.com/ebook/1ec4abf0f46527d3240ce0ab###" target="_blank" rel="external">一本关于 Total Commander 的书</a>。<br>TC的定制化很强，而我又喜欢极简的风格，所以xbeta的TC配置文件非常符合我的口味。wincmd.ini<a href="http://img.xbeta.info/2016/wincmd.ini" target="_blank" rel="external">下载地址</a>。<br><a id="more"></a><br>目前个人使用的TC的界面。<br><img src="https://raw.githubusercontent.com/higoge/image/master/tools/01.png" class="img-center"></p>
 <h3 id="TC_u5FEB_u6377_u952E"><a href="#TC_u5FEB_u6377_u952E" class="headerlink" title="TC快捷键"></a>TC快捷键</h3><p>制作了一个TC快捷键脑图。<br><img src="https://raw.githubusercontent.com/higoge/image/master/tools/02.png" class="img-center"><br>此脑图使用Xmind制作。源文件<a href="https://github.com/higoge/file/raw/master/tc.xmind" target="_blank" rel="external">下载地址</a>。PDF版<a href="https://github.com/higoge/file/raw/master/tc.pdf" target="_blank" rel="external">下载地址</a>。</p>
 <h3 id="TC_u7684_u63D2_u4EF6"><a href="#TC_u7684_u63D2_u4EF6" class="headerlink" title="TC的插件"></a>TC的插件</h3><p>个人安装的插件如下。</p>
 <table>
@@ -127,7 +127,8 @@
 </ol>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>Total Commander绝对是神器，是键盘流必备的软件。TC的入门比较难，学习有一定的难度，但是学成后对于工作效率的提升有巨大的帮助。<br>本文不介绍TC的使用，强烈推荐<a href="http://weibo.com/xbeta" target="_blank"]]>
+    <![CDATA[<p>Total Commander绝对是神器，是键盘流必备的软件。TC的入门比较难，学习有一定的难度，但是学成后对于工作效率的提升有巨大的帮助。<br>本文不介绍TC的使用，强烈推荐<a href="http://weibo.com/xbeta">xbeta大神</a>的教材<a href="http://yuedu.baidu.com/ebook/1ec4abf0f46527d3240ce0ab###">一本关于 Total Commander 的书</a>。<br>TC的定制化很强，而我又喜欢极简的风格，所以xbeta的TC配置文件非常符合我的口味。wincmd.ini<a href="http://img.xbeta.info/2016/wincmd.ini">下载地址</a>。<br>]]>
+    
     </summary>
     
       <category term="Total Commader" scheme="http://higoge.github.io/tags/Total-Commader/"/>
